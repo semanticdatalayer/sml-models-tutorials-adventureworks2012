@@ -1,7 +1,7 @@
 unique_name: Reseller Dataset
 object_type: dataset
 label: Reseller Dataset
-connection_id: con1
+connection_id: Connection - AdventureWorks2012
 table: dimreseller
 
 columns:

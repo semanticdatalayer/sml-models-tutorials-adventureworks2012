@@ -1,7 +1,7 @@
 unique_name: Product Subcategory
 object_type: dataset
 label: Product Subcategory
-connection_id: con1
+connection_id: Connection - AdventureWorks2012
 table: dimproductsubcategory
 
 columns:

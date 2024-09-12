@@ -1,7 +1,7 @@
 unique_name: Reseller Sales
 object_type: dataset
 label: Reseller Sales
-connection_id: con1
+connection_id: Connection - AdventureWorks2012
 table: factresellersales
 
 columns:
