@@ -1,7 +1,7 @@
 unique_name: Customer Dataset
 object_type: dataset
 label: Customer Dataset
-connection_id: con1
+connection_id: Connection - AdventureWorks2012
 table: dimcustomer
 
 columns:

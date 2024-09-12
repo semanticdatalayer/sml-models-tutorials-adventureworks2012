@@ -1,7 +1,7 @@
 unique_name: Internet Sales
 object_type: dataset
 label: Internet Sales
-connection_id: con1
+connection_id: Connection - AdventureWorks2012
 table: factinternetsales
 
 columns:

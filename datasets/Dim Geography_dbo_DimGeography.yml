@@ -1,7 +1,7 @@
 unique_name: Dim Geography_dbo_DimGeography
 object_type: dataset
 label: Dim Geography_dbo_DimGeography
-connection_id: con1
+connection_id: Connection - AdventureWorks2012
 sql: SELECT * from "adventureworks2012"."dimgeography"
 
 columns:

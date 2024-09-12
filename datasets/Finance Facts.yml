@@ -1,7 +1,7 @@
 unique_name: Finance Facts
 object_type: dataset
 label: Finance Facts
-connection_id: con1
+connection_id: Connection - AdventureWorks2012
 table: factfinance
 
 columns:
