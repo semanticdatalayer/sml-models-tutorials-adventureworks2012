@@ -1,0 +1,5 @@
+unique_name: SportHelmets-IOC
+object_type: metric_calc
+label: SportHelmets-IOC
+expression: "([Product].[Product Categories].[Category].&[4].&[31].&[214], [Measures].[Internet\
+  \ Order Count])"

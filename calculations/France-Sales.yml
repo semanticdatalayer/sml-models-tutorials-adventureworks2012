@@ -1,0 +1,5 @@
+unique_name: France-Sales
+object_type: metric_calc
+label: France-Sales
+expression: "([Customer].[Customer Geography].[Customer Country].&[France],[Measures].[Internet\
+  \ Sales Amount Local])"

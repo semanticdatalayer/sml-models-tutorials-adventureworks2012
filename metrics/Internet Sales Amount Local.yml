@@ -1,0 +1,8 @@
+unique_name: Internet Sales Amount Local
+object_type: metric
+label: Internet Sales Amount Local
+description: URDH = Repeated Values
+calculation_method: sum
+unrelated_dimensions_handling: repeat
+dataset: Internet Sales
+column: salesamount_1

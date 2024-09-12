@@ -1,0 +1,23 @@
+unique_name: Finance Facts
+object_type: dataset
+label: Finance Facts
+connection_id: con1
+table: factfinance
+
+columns:
+  - name: accountkey
+    data_type: "decimal(38,0)"
+  - name: amount
+    data_type: double
+  - name: date
+    data_type: string
+  - name: datekey
+    data_type: "decimal(38,0)"
+  - name: departmentgroupkey
+    data_type: "decimal(38,0)"
+  - name: financekey
+    data_type: "decimal(38,0)"
+  - name: organizationkey
+    data_type: "decimal(38,0)"
+  - name: scenariokey
+    data_type: "decimal(38,0)"

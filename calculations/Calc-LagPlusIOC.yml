@@ -1,0 +1,4 @@
+unique_name: Calc-LagPlusIOC
+object_type: metric_calc
+label: Calc-LagPlusIOC
+expression: "[Measures].[Lag-IOC] + [Measures].[Internet Order Count]"

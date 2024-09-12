@@ -1,0 +1,9 @@
+unique_name: Reseller Sales Amount Local
+object_type: metric
+label: Reseller Sales Amount Local
+description: URDH = Empty Cells
+calculation_method: sum
+format: "#,##0.00"
+unrelated_dimensions_handling: empty
+dataset: Reseller Sales
+column: salesamount

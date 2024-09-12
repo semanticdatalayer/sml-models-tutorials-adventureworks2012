@@ -1,0 +1,8 @@
+unique_name: P2DSum-IOC
+object_type: metric_calc
+label: P2DSum-IOC
+expression: |-
+  Sum(
+      PeriodsToDate([Date Custom].[StandardMonth].[Year]),
+      [Measures].[Internet Order Count]
+    )

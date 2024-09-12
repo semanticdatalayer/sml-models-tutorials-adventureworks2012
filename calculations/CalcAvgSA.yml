@@ -1,0 +1,5 @@
+unique_name: CalcAvgSA
+object_type: metric_calc
+label: CalcAvgSA
+expression: "[Measures].[Internet Sales Amount Local] / [Measures].[Internet Order\
+  \ Count]"

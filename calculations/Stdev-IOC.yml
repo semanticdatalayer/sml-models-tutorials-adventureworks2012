@@ -1,0 +1,9 @@
+unique_name: Stdev-IOC
+object_type: metric_calc
+label: Stdev-IOC
+expression: |-
+  Stdev(
+      [Date Custom].[StandardMonth].CurrentMember.Lag(10) :
+      [Date Custom].[StandardMonth].CurrentMember,
+      [Measures].[Internet Order Count]
+    )

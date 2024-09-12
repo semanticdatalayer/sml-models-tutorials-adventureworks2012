@@ -1,0 +1,5 @@
+unique_name: Rolling-IOC
+object_type: metric_calc
+label: Rolling-IOC
+expression: "sum([Date Custom].[StandardMonth].CurrentMember.Lag(1):[Date Custom].[StandardMonth].CurrentMember,\
+  \ \n[Measures].[Internet Order Count])"

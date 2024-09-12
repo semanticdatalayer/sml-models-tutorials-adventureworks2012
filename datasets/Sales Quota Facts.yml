@@ -1,0 +1,21 @@
+unique_name: Sales Quota Facts
+object_type: dataset
+label: Sales Quota Facts
+connection_id: con1
+table: factsalesquota
+
+columns:
+  - name: calendarquarter
+    data_type: "decimal(38,0)"
+  - name: calendaryear
+    data_type: "decimal(38,0)"
+  - name: date
+    data_type: string
+  - name: datekey
+    data_type: "decimal(38,0)"
+  - name: employeekey
+    data_type: "decimal(38,0)"
+  - name: salesamountquota
+    data_type: double
+  - name: salesquotakey
+    data_type: "decimal(38,0)"

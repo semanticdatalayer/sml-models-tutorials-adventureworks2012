@@ -1,0 +1,8 @@
+unique_name: PP_StandardMonth-IOC
+object_type: metric_calc
+label: PP_StandardMonth-IOC
+expression: |-
+  (ParallelPeriod(
+        [Date Custom].[StandardMonth].[Year], 1,
+        [Date Custom].[StandardMonth].CurrentMember
+      ), [Measures].[Internet Order Count])

@@ -1,0 +1,4 @@
+unique_name: LagPlusConstant-IOC
+object_type: metric_calc
+label: LagPlusConstant-IOC
+expression: "([Measures].[Lag-IOC] + 5)"

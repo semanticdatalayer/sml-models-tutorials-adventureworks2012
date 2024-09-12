@@ -1,0 +1,247 @@
+unique_name: Reseller
+object_type: dimension
+label: Reseller
+type: standard
+
+hierarchies:
+
+  - unique_name: Reseller Type
+    label: Reseller Type
+
+    levels:
+
+      - unique_name: Business Type
+
+      - unique_name: Reseller
+
+        secondary_attributes:
+
+          - unique_name: Annual Revenue
+            label: Annual Revenue
+            folder: Sales Data
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: annualrevenue
+            key_columns:
+              - annualrevenue
+            sort_column: annualrevenue
+
+          - unique_name: Annual Sales
+            label: Annual Sales
+            folder: Sales Data
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: annualsales
+            key_columns:
+              - annualsales
+            sort_column: annualsales
+
+          - unique_name: Bank Name2
+            label: Bank Name2
+            folder: Order Data
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: bankname
+            key_columns:
+              - bankname
+            sort_column: bankname
+
+          - unique_name: Business Type2
+            label: Business Type2
+            associated_hierarchy: Reseller Type
+            dataset: Reseller Dataset
+            name_column: businesstype
+            key_columns:
+              - businesstype
+            sort_column: businesstype
+
+          - unique_name: First Order Year
+            label: First Order Year
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: firstorderyear
+            key_columns:
+              - firstorderyear
+            sort_column: firstorderyear
+
+          - unique_name: Geography Key2
+            label: Geography Key2
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: geographykey
+            key_columns:
+              - geographykey
+            sort_column: geographykey
+
+          - unique_name: Last Order Year
+            label: Last Order Year
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: lastorderyear
+            key_columns:
+              - lastorderyear
+            sort_column: lastorderyear
+
+          - unique_name: Min Payment Amount
+            label: Min Payment Amount
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: minpaymentamountdesc
+            key_columns:
+              - minpaymentamount
+            sort_column: minpaymentamountdesc
+
+          - unique_name: Min Payment Type
+            label: Min Payment Type
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: minpaymenttypedesc
+            key_columns:
+              - minpaymenttype
+            sort_column: minpaymenttype
+
+          - unique_name: Number of Employees
+            label: Number of Employees
+            folder: Order Data
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: numberemployees
+            key_columns:
+              - numberemployees
+            sort_column: numberemployees
+
+          - unique_name: Order Frequency2
+            label: Order Frequency2
+            folder: Order Data
+            associated_hierarchy: Reseller Order Frequency
+            dataset: Reseller Dataset
+            name_column: orderfrequencydesc
+            key_columns:
+              - orderfrequency
+            sort_column: orderfrequencydesc
+
+          - unique_name: Order Month2
+            label: Order Month2
+            folder: Order Data
+            associated_hierarchy: Reseller Order Month
+            dataset: Reseller Dataset
+            name_column: ordermonthdesc
+            key_columns:
+              - ordermonth
+            sort_column: ordermonthdesc
+
+          - unique_name: Reseller Product Line
+            label: Reseller Product Line
+            folder: Order Data
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: productline
+            key_columns:
+              - productline
+            sort_column: productline
+
+          - unique_name: ResellerName
+            label: ResellerName
+            associated_hierarchy: Reseller Type
+            dataset: Reseller Dataset
+            name_column: resellername
+            key_columns:
+              - resellerkey
+            sort_column: resellername
+
+          - unique_name: Year Opened
+            label: Year Opened
+            associated_hierarchy: Reseller Bank
+            dataset: Reseller Dataset
+            name_column: yearopened
+            key_columns:
+              - yearopened
+            sort_column: yearopened
+
+  - unique_name: Reseller Bank
+    label: Reseller Bank
+    folder: Order Data
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Bank Name
+
+      - unique_name: Reseller
+
+  - unique_name: Reseller Order Frequency
+    label: Reseller Order Frequency
+    folder: Order Data
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Order Frequency
+
+      - unique_name: Reseller
+
+  - unique_name: Reseller Order Month
+    label: Reseller Order Month
+    folder: Order Data
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Order Month
+
+      - unique_name: Reseller
+
+level_attributes:
+
+  - unique_name: Bank Name
+    label: Bank Name
+    dataset: Reseller Dataset
+    name_column: bankname
+    key_columns:
+      - bankname
+
+  - unique_name: Business Type
+    label: Business Type
+    dataset: Reseller Dataset
+    name_column: businesstype
+    key_columns:
+      - businesstype
+
+  - unique_name: Order Frequency
+    label: Order Frequency
+    dataset: Reseller Dataset
+    name_column: orderfrequencydesc
+    key_columns:
+      - orderfrequency
+
+  - unique_name: Order Month
+    label: Order Month
+    dataset: Reseller Dataset
+    name_column: ordermonthdesc
+    key_columns:
+      - ordermonth
+
+  - unique_name: Reseller
+    label: Reseller
+    dataset: Reseller Dataset
+    name_column: resellername
+    key_columns:
+      - resellerkey
+
+relationships:
+
+  - unique_name: Reseller_Geography
+    from:
+      hierarchy: Reseller Type
+      level: Reseller
+      dataset: Reseller Dataset
+      join_columns:
+        - geographykey
+    to:
+      dimension: Geography
+      level: Geography Key Level
+    type: embedded
+
+modeler_metadata:
+  version: 0
+  modified: "false"

@@ -1,0 +1,11 @@
+unique_name: P2D_RNG_SM_Sum-IOC
+object_type: metric_calc
+label: P2D_RNG_SM_Sum-IOC
+expression: |-
+  Sum(
+      PeriodsToDate(
+        [Date Custom].[StandardMonth].[Year],
+        [Date Custom].[StandardMonth].[Year].&[2007-01-01T00:00:00]
+      ),
+      [Measures].[Internet Order Count]
+    )

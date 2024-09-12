@@ -1,0 +1,12 @@
+unique_name: PP_RNG_SM_Sum-IOC
+object_type: metric_calc
+label: PP_RNG_SM_Sum-IOC
+expression: |-
+  Sum(
+      ParallelPeriod(
+        [Date Custom].[StandardMonth].[Year], 1,
+        [Date Custom].[StandardMonth].CurrentMember
+      ) :
+      [Date Custom].[StandardMonth].[Year].&[2007-01-01T00:00:00],
+      [Measures].[Internet Order Count]
+    )

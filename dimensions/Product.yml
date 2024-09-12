@@ -1,0 +1,343 @@
+unique_name: Product
+object_type: dimension
+label: Product
+type: standard
+
+hierarchies:
+
+  - unique_name: Product Categories
+    label: Product Categories
+
+    levels:
+
+      - unique_name: Category
+
+      - unique_name: Subcategory
+
+      - unique_name: 'Product '
+
+        secondary_attributes:
+
+          - unique_name: Category2
+            label: Category2
+            associated_hierarchy: Product Categories
+            dataset: Product Category
+            name_column: englishproductcategoryname
+            key_columns:
+              - productcategorykey
+            sort_column: englishproductcategoryname
+
+          - unique_name: Class1
+            label: Class
+            folder: Stocking
+            custom_empty_member:
+              key:
+                - NA
+              name: Not Applicable
+              sort_name: Not Applicable
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: classdesc
+            key_columns:
+              - classNoNull
+            sort_column: classdesc
+
+          - unique_name: Color
+            label: Color
+            folder: Stocking
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: color
+            key_columns:
+              - color
+            sort_column: color
+
+          - unique_name: Days to Manufacture
+            label: Days to Manufacture
+            folder: Stocking
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: daystomanufacture
+            key_columns:
+              - daystomanufacture
+            sort_column: daystomanufacture
+
+          - unique_name: Dealer Price
+            label: Dealer Price
+            folder: Financial
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: dealerprice
+            key_columns:
+              - dealerprice
+            sort_column: dealerprice
+
+          - unique_name: End Date
+            label: End Date
+            folder: History
+            custom_empty_member:
+              key:
+                - 1970-01-01 00:00:00
+              name: Active
+              sort_name: 1970-01-01 00:00:00
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: simpleenddate
+            key_columns:
+              - enddateNoNull
+            sort_column: enddateNoNull
+
+          - unique_name: Large Photo
+            label: Large Photo
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: productkey
+            key_columns:
+              - productkey
+            sort_column: productkey
+
+          - unique_name: List Price
+            label: List Price
+            folder: Financial
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: listPriceNoNull
+            key_columns:
+              - listPriceNoNull
+            sort_column: listPriceNoNull
+
+          - unique_name: Model Name
+            label: Model Name
+            custom_empty_member:
+              key:
+                - Assembly Components
+              name: Assembly Components
+              sort_name: Assembly Components
+            associated_hierarchy: Product Model Lines
+            dataset: Product Dataset
+            name_column: modelnameassembly
+            key_columns:
+              - modelnameassembly
+            sort_column: modelnameassembly
+
+          - unique_name: Product Line2
+            label: Product Line2
+            associated_hierarchy: Product Model Lines
+            dataset: Product Dataset
+            name_column: productlinename
+            key_columns:
+              - productline
+            sort_column: productlinename
+
+          - unique_name: Product2
+            label: Product2
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: englishproductname
+            key_columns:
+              - productkey
+            sort_column: englishproductname
+
+          - unique_name: Reorder Point
+            label: Reorder Point
+            folder: Stocking
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: reorderpoint
+            key_columns:
+              - reorderpoint
+            sort_column: reorderpoint
+
+          - unique_name: Safety Stock Level2
+            label: Safety Stock Level2
+            associated_hierarchy: Stock Level
+            dataset: Product Dataset
+            name_column: safetystocklevel
+            key_columns:
+              - safetystocklevel
+            sort_column: safetystocklevel
+
+          - unique_name: Size Range
+            label: Size Range
+            folder: Stocking
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: sizerange
+            key_columns:
+              - sizerange
+            sort_column: sizerange
+
+          - unique_name: Size1
+            label: Size
+            folder: Stocking
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: size
+            key_columns:
+              - size
+            sort_column: size
+
+          - unique_name: Standard Cost
+            label: Standard Cost
+            folder: Financial
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: standardcost
+            key_columns:
+              - standardcost
+            sort_column: standardcost
+
+          - unique_name: Start Date
+            label: Start Date
+            folder: History
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: simplestartdate
+            key_columns:
+              - startdate
+            sort_column: startdate
+
+          - unique_name: Status2
+            label: Status2
+            folder: History
+            custom_empty_member:
+              key:
+                - NA
+              name: Historical
+              sort_name: Historical
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: statusdesc
+            key_columns:
+              - statusNoNull
+            sort_column: statusdesc
+
+          - unique_name: Style
+            label: Style
+            custom_empty_member:
+              key:
+                - NA
+              name: Not Applicable
+              sort_name: Not Applicable
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: styledesc
+            key_columns:
+              - styleNoNull
+            sort_column: styledesc
+
+          - unique_name: Subcategory2
+            label: Subcategory2
+            associated_hierarchy: Product Categories
+            dataset: Product Subcategory
+            name_column: englishproductsubcategoryname
+            key_columns:
+              - productsubcategorykey
+            sort_column: englishproductsubcategoryname
+
+          - unique_name: Weight
+            label: Weight
+            folder: Stocking
+            custom_empty_member:
+              key:
+                - 0
+              name: '0'
+              sort_name: '0'
+            associated_hierarchy: Product Categories
+            dataset: Product Dataset
+            name_column: weightNoNull
+            key_columns:
+              - weightNoNull
+            sort_column: weightNoNull
+
+  - unique_name: Product Model Lines
+    label: Product Model Lines
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Product Line
+
+      - unique_name: Model
+
+      - unique_name: 'Product '
+
+  - unique_name: Stock Level
+    label: Stock Level
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Safety Stock Level
+
+      - unique_name: 'Product '
+
+level_attributes:
+
+  - unique_name: Category
+    label: Category
+    dataset: Product Category
+    name_column: englishproductcategoryname
+    key_columns:
+      - productcategorykey
+
+  - unique_name: Model
+    label: Model
+    custom_empty_member:
+      key:
+        - Assembly Components
+      name: Assembly Components
+    dataset: Product Dataset
+    name_column: modelnameassembly
+    key_columns:
+      - modelnameassembly
+
+  - unique_name: 'Product '
+    label: 'Product '
+    dataset: Product Dataset
+    name_column: englishproductname
+    key_columns:
+      - productkey
+
+  - unique_name: Product Line
+    label: Product Line
+    dataset: Product Dataset
+    name_column: productlinename
+    key_columns:
+      - productline
+
+  - unique_name: Safety Stock Level
+    label: Safety Stock Level
+    dataset: Product Dataset
+    name_column: safetystocklevel
+    key_columns:
+      - safetystocklevel
+
+  - unique_name: Subcategory
+    label: Subcategory
+    dataset: Product Subcategory
+    name_column: englishproductsubcategoryname
+    key_columns:
+      - productsubcategorykey
+
+relationships:
+
+  - from:
+      dataset: Product Dataset
+      join_columns:
+        - productsubcategorykey
+    to:
+      level: Subcategory
+    type: snowflake
+
+  - from:
+      dataset: Product Subcategory
+      join_columns:
+        - productcategorykey
+    to:
+      level: Category
+    type: snowflake
+
+modeler_metadata:
+  version: 0
+  modified: "false"

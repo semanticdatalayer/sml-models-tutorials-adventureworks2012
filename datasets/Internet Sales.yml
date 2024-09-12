@@ -1,0 +1,77 @@
+unique_name: Internet Sales
+object_type: dataset
+label: Internet Sales
+connection_id: con1
+table: factinternetsales
+
+columns:
+  - name: carriertrackingnumber
+    data_type: string
+  - name: currencykey
+    data_type: "decimal(38,0)"
+  - name: customerkey
+    data_type: "decimal(38,0)"
+  - name: customerponumber
+    data_type: string
+  - name: discountamount
+    data_type: "decimal(38,0)"
+  - name: duedate
+    data_type: datetime
+  - name: duedatekey
+    data_type: "decimal(38,0)"
+  - name: extendedamount
+    data_type: double
+  - name: freight
+    data_type: double
+  - name: orderdate
+    data_type: datetime
+  - name: orderdatekey
+    data_type: "decimal(38,0)"
+  - name: orderquantity
+    data_type: "decimal(38,0)"
+  - name: productkey
+    data_type: "decimal(38,0)"
+  - name: productstandardcost
+    data_type: double
+  - name: promotionkey
+    data_type: "decimal(38,0)"
+  - name: revisionnumber
+    data_type: "decimal(38,0)"
+  - name: salesamount
+    data_type: double
+  - name: salesamount_1
+    data_type: "decimal(38,9)"
+    sql: "CAST(\"salesamount\" AS DECIMAL(38,9))"
+    dialects:
+    - dialect: Postgresql
+      sql: CAST(salesamount AS DECIMAL(38,9))
+    - dialect: Snowflake 
+      sql: CAST("salesamount" AS DECIMAL(38,9))
+    - dialect: BigQuery
+      sql: CAST(salesamount AS NUMERIC)
+  - name: salesorderlinename
+    data_type: string
+    sql: "concat(\"salesordernumber\", '-', cast(\"salesorderlinenumber\" as string))"
+    dialects:
+    - dialect: Postgresql
+      sql: concat(salesordernumber, '-', cast(salesorderlinenumber as VARCHAR))
+    - dialect: Snowflake
+      sql: concat("salesordernumber", '-', cast("salesorderlinenumber" as string))
+  - name: salesorderlinenumber
+    data_type: "decimal(38,0)"
+  - name: salesordernumber
+    data_type: string
+  - name: salesterritorykey
+    data_type: "decimal(38,0)"
+  - name: shipdate
+    data_type: datetime
+  - name: shipdatekey
+    data_type: "decimal(38,0)"
+  - name: taxamt
+    data_type: double
+  - name: totalproductcost
+    data_type: double
+  - name: unitprice
+    data_type: double
+  - name: unitpricediscountpct
+    data_type: "decimal(38,0)"

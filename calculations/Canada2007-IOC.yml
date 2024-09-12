@@ -1,0 +1,6 @@
+unique_name: Canada2007-IOC
+object_type: metric_calc
+label: Canada2007-IOC
+expression: "([Customer].[Customer Geography].[Customer Country].&[Canada], \n   \
+  \ [Date Custom].[StandardMonth].[Year].&[2007-01-01T00:00:00],\n    [Measures].[Internet\
+  \ Order Count])"

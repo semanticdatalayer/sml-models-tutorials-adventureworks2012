@@ -1,0 +1,5 @@
+unique_name: Curr-IOC
+object_type: metric_calc
+label: Curr-IOC
+expression: "([Date Custom].[StandardMonth].CurrentMember,[Measures].[Internet Order\
+  \ Count])"

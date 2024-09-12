@@ -1,0 +1,29 @@
+unique_name: Dim Customer_dbo_DimGeography
+object_type: dataset
+label: Dim Customer_dbo_DimGeography
+connection_id: con1
+table: dimgeography
+
+columns:
+  - name: city
+    data_type: string
+  - name: countryregioncode
+    data_type: string
+  - name: englishcountryregionname
+    data_type: string
+  - name: frenchcountryregionname
+    data_type: string
+  - name: geographykey
+    data_type: "decimal(38,0)"
+  - name: ipaddresslocator
+    data_type: string
+  - name: postalcode
+    data_type: string
+  - name: salesterritorykey
+    data_type: "decimal(38,0)"
+  - name: spanishcountryregionname
+    data_type: string
+  - name: stateprovincecode
+    data_type: string
+  - name: stateprovincename
+    data_type: string

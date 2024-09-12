@@ -1,0 +1,19 @@
+unique_name: Product Subcategory
+object_type: dataset
+label: Product Subcategory
+connection_id: con1
+table: dimproductsubcategory
+
+columns:
+  - name: englishproductsubcategoryname
+    data_type: string
+  - name: frenchproductsubcategoryname
+    data_type: string
+  - name: productcategorykey
+    data_type: "decimal(38,0)"
+  - name: productsubcategoryalternatekey
+    data_type: "decimal(38,0)"
+  - name: productsubcategorykey
+    data_type: "decimal(38,0)"
+  - name: spanishproductsubcategoryname
+    data_type: string

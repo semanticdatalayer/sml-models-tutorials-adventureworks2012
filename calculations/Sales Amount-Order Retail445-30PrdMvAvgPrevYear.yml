@@ -1,0 +1,7 @@
+unique_name: Sales Amount-Order Retail445-30PrdMvAvgPrevYear
+object_type: metric_calc
+label: Sales Amount-Order Retail445-30PrdMvAvgPrevYear
+expression: "Avg(\n    ParallelPeriod([Date Custom].[StandardMonth].[Year], 1, [Date\
+  \ Custom].[StandardMonth].CurrentMember).Lag(1): \n    ParallelPeriod([Date Custom].[StandardMonth].[Year],\
+  \ 1, [Date Custom].[StandardMonth].CurrentMember), \n    [Measures].[Internet Order\
+  \ Count]\n)"

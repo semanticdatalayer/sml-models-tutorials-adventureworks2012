@@ -1,0 +1,61 @@
+unique_name: Reseller Sales
+object_type: dataset
+label: Reseller Sales
+connection_id: con1
+table: factresellersales
+
+columns:
+  - name: carriertrackingnumber
+    data_type: string
+  - name: currencykey
+    data_type: "decimal(38,0)"
+  - name: customerponumber
+    data_type: string
+  - name: discountamount
+    data_type: "decimal(38,9)"
+  - name: duedate
+    data_type: datetime
+  - name: duedatekey
+    data_type: "decimal(38,0)"
+  - name: employeekey
+    data_type: "decimal(38,0)"
+  - name: extendedamount
+    data_type: "decimal(38,9)"
+  - name: freight
+    data_type: "decimal(38,9)"
+  - name: orderdate
+    data_type: datetime
+  - name: orderdatekey
+    data_type: "decimal(38,0)"
+  - name: orderquantity
+    data_type: "decimal(38,0)"
+  - name: productkey
+    data_type: "decimal(38,0)"
+  - name: productstandardcost
+    data_type: "decimal(38,9)"
+  - name: promotionkey
+    data_type: "decimal(38,0)"
+  - name: resellerkey
+    data_type: "decimal(38,0)"
+  - name: revisionnumber
+    data_type: "decimal(38,0)"
+  - name: salesamount
+    data_type: "decimal(38,9)"
+  - name: salesorderlinenumber
+    data_type: "decimal(38,0)"
+  - name: salesordernumber
+    data_type: string
+  - name: salesterritorykey
+    data_type: "decimal(38,0)"
+  - name: shipdate
+    data_type: datetime
+  - name: shipdatekey
+    data_type: "decimal(38,0)"
+  - name: taxamt
+    data_type: "decimal(38,9)"
+  - name: totalproductcost
+    data_type: "decimal(38,9)"
+  - name: unitprice
+    data_type: "decimal(38,9)"
+  - name: unitpricediscountpct
+    data_type: "decimal(38,9)"

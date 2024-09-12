@@ -1,0 +1,511 @@
+unique_name: Date Custom
+object_type: dimension
+label: Date Custom
+hierarchies:
+  - unique_name: StandardMonth
+    label: StandardMonth
+    levels:
+      - unique_name: Year
+      - unique_name: Half Year
+      - unique_name: Quarter
+        secondary_attributes:
+          - unique_name: Half Year Of Year
+            label: Half Year Of Year
+            dataset: DateCustom
+            key_columns:
+              - half_year_of_year
+            name_column: half_year_of_year_name
+            sort_column: half_year_of_year
+      - unique_name: Month
+        secondary_attributes:
+          - unique_name: Quarter Of Half Year
+            label: Quarter Of Half Year
+            dataset: DateCustom
+            key_columns:
+              - quarter_of_half_year
+            name_column: quarter_of_half_year_name
+            sort_column: quarter_of_half_year
+          - unique_name: Quarter Of Year
+            label: Quarter Of Year
+            dataset: DateCustom
+            key_columns:
+              - quarter_of_year
+            name_column: quarter_of_year_name
+            sort_column: quarter_of_year
+      - unique_name: Date1
+        secondary_attributes:
+          - unique_name: DateAttr
+            label: DateAttr
+            description: 'Date secondary attribute '
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - datekey
+            name_column: datekey
+            sort_column: datekey
+          - unique_name: Day Of Month
+            label: Day Of Month
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - day_of_month
+            name_column: day_of_month_name
+            sort_column: day_of_month_name
+          - unique_name: Day Of Quarter
+            label: Day Of Quarter
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - day_of_quarter
+            name_column: day_of_quarter_name
+            sort_column: day_of_quarter
+          - unique_name: Day Of Week
+            label: Day Of Week
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - day_of_week
+            name_column: day_of_week_name
+            sort_column: day_of_week
+          - unique_name: Day Of Year
+            label: Day Of Year
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - day_of_year
+            name_column: day_of_year_name
+            sort_column: day_of_year
+          - unique_name: Half Year2
+            label: Half Year2
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - half_year
+            name_column: half_year_name
+            sort_column: half_year
+          - unique_name: Month Of Half Year
+            label: Month Of Half Year
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - month_of_half_year
+            name_column: month_of_half_year_name
+            sort_column: month_of_half_year
+          - unique_name: Month Of Quarter
+            label: Month Of Quarter
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - month_of_quarter
+            name_column: month_of_quarter_name
+            sort_column: month_of_quarter
+          - unique_name: Month Of Year
+            label: Month Of Year
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - month_of_year
+            name_column: month_of_year
+            sort_column: month_of_year
+          - unique_name: Month2
+            label: Month2
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - month
+            name_column: month_name
+            sort_column: month
+          - unique_name: Quarter2
+            label: Quarter2
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - quarter
+            name_column: quarter_name
+            sort_column: quarter
+          - unique_name: Week Of Year
+            label: Week Of Year
+            associated_hierarchy: StandardWeek
+            dataset: DateCustom
+            key_columns:
+              - week_of_year
+            name_column: week_of_year
+            sort_column: week_of_year
+          - unique_name: Week2
+            label: Week2
+            associated_hierarchy: StandardWeek
+            dataset: DateCustom
+            key_columns:
+              - week
+            name_column: week_name
+            sort_column: week
+          - unique_name: Year2
+            label: Year2
+            associated_hierarchy: StandardMonth
+            dataset: DateCustom
+            key_columns:
+              - year
+            name_column: year_name
+            sort_column: year
+  - unique_name: StandardWeek
+    label: StandardWeek
+    filter_empty: 'yes'
+    levels:
+      - unique_name: Year1
+      - unique_name: Week
+      - unique_name: Date1
+  - unique_name: Retail445
+    label: Retail445
+    filter_empty: 'yes'
+    levels:
+      - unique_name: Reporting Year
+      - unique_name: Reporting Half Year
+      - unique_name: Reporting Quarter
+        secondary_attributes:
+          - unique_name: Reporting Half Year Of Year
+            label: Reporting Half Year Of Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_half_year_of_year
+            name_column: reporting_half_year_of_year_name
+            sort_column: reporting_half_year_of_year
+      - unique_name: Reporting Month
+        secondary_attributes:
+          - unique_name: Reporting Quarter Of Half Year
+            label: Reporting Quarter Of Half Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_quarter_of_half_year
+            name_column: reporting_quarter_of_half_year_name
+            sort_column: reporting_quarter_of_half_year
+          - unique_name: Reporting Quarter Of Year
+            label: Reporting Quarter Of Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_quarter_of_year
+            name_column: reporting_quarter_of_year_name
+            sort_column: reporting_quarter_of_year
+      - unique_name: Reporting Week
+        secondary_attributes:
+          - unique_name: Reporting Month Of Half Year
+            label: Reporting Month Of Half Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_month_of_half_year
+            name_column: reporting_month_of_half_year_name
+            sort_column: reporting_month_of_half_year
+          - unique_name: Reporting Month Of Quarter
+            label: Reporting Month Of Quarter
+            dataset: DateCustom
+            key_columns:
+              - reporting_month_of_quarter
+            name_column: reporting_month_of_quarter_name
+            sort_column: reporting_month_of_quarter
+          - unique_name: Reporting Month Of Year
+            label: Reporting Month Of Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_month_of_year
+            name_column: reporting_month_of_year_name
+            sort_column: reporting_month_of_year
+      - unique_name: Reporting Day
+        secondary_attributes:
+          - unique_name: Reporting Day Of Half Year
+            label: Reporting Day Of Half Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_day_of_half_year
+            name_column: reporting_day_of_half_year_name
+            sort_column: reporting_day_of_half_year_name
+          - unique_name: Reporting Day Of Month
+            label: Reporting Day Of Month
+            dataset: DateCustom
+            key_columns:
+              - reporting_day_of_month
+            name_column: reporting_day_of_month_name
+            sort_column: reporting_day_of_month_name
+          - unique_name: Reporting Day Of Quarter
+            label: Reporting Day Of Quarter
+            dataset: DateCustom
+            key_columns:
+              - reporting_day_of_quarter
+            name_column: reporting_day_of_quarter_name
+            sort_column: reporting_day_of_quarter_name
+          - unique_name: Reporting Day Of Week
+            label: Reporting Day Of Week
+            dataset: DateCustom
+            key_columns:
+              - reporting_day_of_week
+            name_column: reporting_day_of_week_name
+            sort_column: reporting_day_of_week
+          - unique_name: Reporting Day Of Year
+            label: Reporting Day Of Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_day_of_year
+            name_column: reporting_day_of_year_name
+            sort_column: reporting_day_of_year_name
+          - unique_name: Reporting Day2
+            label: Reporting Day2
+            dataset: DateCustom
+            format: yyyy-MM-dd HH:mm:ss
+            key_columns:
+              - reporting_day
+            name_column: reporting_day
+            sort_column: reporting_day
+          - unique_name: Reporting Half Year2
+            label: Reporting Half Year2
+            dataset: DateCustom
+            key_columns:
+              - reporting_half_year
+            name_column: reporting_half_year_name
+            sort_column: reporting_half_year_name
+          - unique_name: Reporting Month2
+            label: Reporting Month2
+            dataset: DateCustom
+            key_columns:
+              - reporting_month
+            name_column: reporting_month_name
+            sort_column: reporting_month_name
+          - unique_name: Reporting Quarter2
+            label: Reporting Quarter2
+            dataset: DateCustom
+            key_columns:
+              - reporting_year
+              - reporting_quarter_of_year
+            name_column: reporting_quarter_name
+            sort_column: reporting_quarter
+          - unique_name: Reporting Week Of Half Year
+            label: Reporting Week Of Half Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_week_of_half_year
+            name_column: reporting_week_of_half_year_name
+            sort_column: reporting_week_of_half_year_name
+          - unique_name: Reporting Week Of Month
+            label: Reporting Week Of Month
+            dataset: DateCustom
+            key_columns:
+              - reporting_week_of_month
+            name_column: reporting_week_of_month_name
+            sort_column: reporting_week_of_month_name
+          - unique_name: Reporting Week Of Quarter
+            label: Reporting Week Of Quarter
+            dataset: DateCustom
+            key_columns:
+              - reporting_week_of_quarter
+            name_column: reporting_week_of_quarter_name
+            sort_column: reporting_week_of_quarter_name
+          - unique_name: Reporting Week Of Year
+            label: Reporting Week Of Year
+            dataset: DateCustom
+            key_columns:
+              - reporting_week_of_year
+            name_column: reporting_week_of_year_name
+            sort_column: reporting_week_of_year
+          - unique_name: Reporting Week2
+            label: Reporting Week2
+            dataset: DateCustom
+            key_columns:
+              - reporting_week
+            name_column: reporting_week_name
+            sort_column: reporting_week
+          - unique_name: Reporting Year2
+            label: Reporting Year2
+            dataset: DateCustom
+            key_columns:
+              - reporting_year
+            name_column: reporting_year_name
+            sort_column: reporting_year
+      - unique_name: Date1
+        is_hidden: true
+  - unique_name: ISO8601Week
+    label: ISO8601Week
+    filter_empty: 'yes'
+    levels:
+      - unique_name: ISO 8601 Year
+      - unique_name: ISO 8601 Week
+      - unique_name: ISO 8601 Day
+        secondary_attributes:
+          - unique_name: ISO 8601 Day Of Week
+            label: ISO 8601 Day Of Week
+            dataset: DateCustom
+            key_columns:
+              - iso_8601_day_of_week
+            name_column: iso_8601_day_of_week_name
+            sort_column: iso_8601_day_of_week
+          - unique_name: ISO 8601 Day Of Year
+            label: ISO 8601 Day Of Year
+            dataset: DateCustom
+            key_columns:
+              - iso_8601_day_of_year
+            name_column: iso_8601_day_of_year_name
+            sort_column: iso_8601_day_of_year
+          - unique_name: ISO 8601 Day2
+            label: ISO 8601 Day2
+            dataset: DateCustom
+            key_columns:
+              - iso_8601_day
+            name_column: iso_8601_day_name
+            sort_column: iso_8601_day
+          - unique_name: ISO 8601 Week Of Year
+            label: ISO 8601 Week Of Year
+            dataset: DateCustom
+            key_columns:
+              - iso_8601_week_of_year
+            name_column: iso_8601_week_of_year_name_reporting_day_ctl
+            sort_column: iso_8601_week_of_year
+          - unique_name: ISO 8601 Week2
+            label: ISO 8601 Week2
+            dataset: DateCustom
+            key_columns:
+              - iso_8601_week
+            name_column: iso_8601_week_name
+            sort_column: iso_8601_week
+          - unique_name: ISO 8601 Year2
+            label: ISO 8601 Year2
+            dataset: DateCustom
+            key_columns:
+              - iso_8601_year
+            name_column: iso_8601_year_name
+            sort_column: iso_8601_year
+      - unique_name: Date1
+        is_hidden: true
+level_attributes:
+  - unique_name: Date1
+    label: Date1
+    dataset: DateCustom
+    is_hidden: true
+    is_unique_key: true
+    key_columns:
+      - datekey
+    name_column: datekey
+    sort_column: datekey
+    time_unit: day
+  - unique_name: Half Year
+    label: Half Year
+    dataset: DateCustom
+    key_columns:
+      - half_year
+    name_column: half_year
+    sort_column: half_year
+    time_unit: halfyear
+  - unique_name: ISO 8601 Day
+    label: ISO 8601 Day
+    dataset: DateCustom
+    is_unique_key: true
+    key_columns:
+      - iso_8601_day
+    name_column: iso_8601_day_name
+    time_unit: day
+  - unique_name: ISO 8601 Week
+    label: ISO 8601 Week
+    dataset: DateCustom
+    key_columns:
+      - iso_8601_week
+    name_column: iso_8601_week_name
+    sort_column: iso_8601_week
+    time_unit: week
+  - unique_name: ISO 8601 Year
+    label: ISO 8601 Year
+    dataset: DateCustom
+    key_columns:
+      - iso_8601_year
+    name_column: iso_8601_year_name
+    sort_column: iso_8601_year
+    time_unit: year
+  - unique_name: Month
+    label: Month
+    dataset: DateCustom
+    key_columns:
+      - month
+    name_column: month_name
+    sort_column: month
+    time_unit: month
+  - unique_name: Quarter
+    label: Quarter
+    dataset: DateCustom
+    key_columns:
+      - quarter
+    name_column: quarter_name
+    sort_column: quarter
+    time_unit: quarter
+  - unique_name: Reporting Day
+    label: Reporting Day
+    dataset: DateCustom
+    format: yyyy-MM-dd HH:mm:ss
+    is_unique_key: true
+    key_columns:
+      - reporting_day
+    name_column: reporting_day_date
+    sort_column: reporting_day
+    time_unit: day
+  - unique_name: Reporting Half Year
+    label: Reporting Half Year
+    dataset: DateCustom
+    key_columns:
+      - reporting_half_year
+    name_column: reporting_half_year_name
+    sort_column: reporting_half_year_name
+    time_unit: halfyear
+  - unique_name: Reporting Month
+    label: Reporting Month
+    dataset: DateCustom
+    key_columns:
+      - reporting_month
+    name_column: reporting_month_name
+    sort_column: reporting_month
+    time_unit: month
+  - unique_name: Reporting Quarter
+    label: Reporting Quarter
+    dataset: DateCustom
+    key_columns:
+      - reporting_quarter_of_year
+      - reporting_year
+    name_column: reporting_quarter_of_year
+    sort_column: reporting_quarter
+    time_unit: quarter
+  - unique_name: Reporting Week
+    label: Reporting Week
+    dataset: DateCustom
+    key_columns:
+      - reporting_week
+    name_column: reporting_week_name
+    sort_column: reporting_week
+    time_unit: week
+  - unique_name: Reporting Year
+    label: Reporting Year
+    dataset: DateCustom
+    key_columns:
+      - reporting_year
+    name_column: reporting_year_name
+    sort_column: reporting_year
+    time_unit: year
+  - unique_name: Week
+    label: Week
+    dataset: DateCustom
+    key_columns:
+      - week
+    name_column: week_name
+    sort_column: week
+    time_unit: week
+  - unique_name: Year1
+    label: Year
+    dataset: DateCustom
+    key_columns:
+      - year
+    name_column: year_name
+    sort_column: year
+    time_unit: year
+  - unique_name: Year
+    label: Year
+    dataset: DateCustom
+    key_columns:
+      - year
+    name_column: year_name
+    sort_column: year
+    time_unit: year
+modeler_metadata:
+  modified: 'false'
+  version: 0
+type: time

@@ -1,0 +1,4 @@
+unique_name: Calc-LagPlusLag2-IOC
+object_type: metric_calc
+label: Calc-LagPlusLag2-IOC
+expression: "[Measures].[Lag-IOC] + [Measures].[Lag2-IOC]"

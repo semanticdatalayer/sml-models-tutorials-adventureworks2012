@@ -1,0 +1,7 @@
+unique_name: Internet Sales Reason Count
+object_type: metric
+label: Internet Sales Reason Count
+calculation_method: count non-null
+visible: false
+dataset: InternetSalesReason
+column: salesorderlinenumber

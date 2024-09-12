@@ -1,0 +1,4 @@
+unique_name: LagTimesIOC
+object_type: metric_calc
+label: LagTimesIOC
+expression: "[Measures].[Lag-IOC] * [Measures].[Internet Order Count]"

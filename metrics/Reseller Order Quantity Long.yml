@@ -1,0 +1,9 @@
+unique_name: Reseller Order Quantity Long
+object_type: metric
+label: Reseller Order Quantity Long
+description: URDH = Empty Cells
+calculation_method: sum
+format: "#,##0"
+unrelated_dimensions_handling: empty
+dataset: Reseller Sales
+column: orderquantity

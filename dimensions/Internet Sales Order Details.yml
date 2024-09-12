@@ -1,0 +1,37 @@
+unique_name: Internet Sales Order Details
+object_type: dimension
+label: Internet Sales Order Details
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: Internet Sales Orders
+    label: Internet Sales Orders
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Order Number
+
+      - unique_name: Item Description
+
+level_attributes:
+
+  - unique_name: Item Description
+    label: Item Description
+    dataset: Internet Sales
+    name_column: salesordernumber
+    key_columns:
+      - salesordernumber
+      - salesorderlinenumber
+
+  - unique_name: Order Number
+    label: Order Number
+    dataset: Internet Sales
+    name_column: salesordernumber
+    key_columns:
+      - salesordernumber
+
+modeler_metadata:
+  version: 0
+  modified: "false"

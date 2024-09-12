@@ -1,0 +1,5 @@
+unique_name: Helmets-IOC
+object_type: metric_calc
+label: Helmets-IOC
+expression: "([Product].[Product Categories].[Category].&[4].&[31], [Measures].[Internet\
+  \ Order Count])"

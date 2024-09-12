@@ -1,0 +1,10 @@
+unique_name: Order Quantity Long
+object_type: metric
+label: Order Quantity Long
+description: URDH = Repeated Values.  Created to match the Long version of Order Quantity
+  in the SSAS Adventure Works Cube.
+calculation_method: sum
+format: "#,##0"
+unrelated_dimensions_handling: repeat
+dataset: Internet Sales
+column: orderquantity

@@ -1,0 +1,8 @@
+unique_name: Unit Price Discount Percent
+object_type: metric
+label: Unit Price Discount Percent
+calculation_method: sum
+visible: false
+unrelated_dimensions_handling: empty
+dataset: Reseller Sales
+column: unitpricediscountpct

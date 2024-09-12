@@ -1,0 +1,4 @@
+unique_name: LagCanada-IOC
+object_type: metric_calc
+label: LagCanada-IOC
+expression: "[Measures].[Lag-IOC] + [Measures].[Canada-IOC]"

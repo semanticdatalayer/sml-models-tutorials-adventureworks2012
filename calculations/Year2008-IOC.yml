@@ -1,0 +1,6 @@
+unique_name: Year2008-IOC
+object_type: metric_calc
+label: Year2008-IOC
+expression: |-
+  ([Date Custom].[StandardMonth].[Year].&[2008-01-01T00:00:00],
+      [Measures].[Internet Order Count])

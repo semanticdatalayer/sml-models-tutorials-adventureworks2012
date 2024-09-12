@@ -1,0 +1,5 @@
+unique_name: France-IOC
+object_type: metric_calc
+label: France-IOC
+expression: "([Customer].[Customer Geography].[Customer Country].&[France], [Measures].[Internet\
+  \ Order Count])"

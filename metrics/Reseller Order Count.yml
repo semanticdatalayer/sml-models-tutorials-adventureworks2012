@@ -1,0 +1,9 @@
+unique_name: Reseller Order Count
+object_type: metric
+label: Reseller Order Count
+description: URDH = Repeated Values
+calculation_method: count distinct
+format: "#,##0"
+unrelated_dimensions_handling: repeat
+dataset: Reseller Sales
+column: salesordernumber

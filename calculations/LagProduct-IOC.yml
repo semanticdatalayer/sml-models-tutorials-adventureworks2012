@@ -1,0 +1,5 @@
+unique_name: LagProduct-IOC
+object_type: metric_calc
+label: LagProduct-IOC
+expression: "([Product].[Product Categories].CurrentMember.Lag(1), [Measures].[Internet\
+  \ Order Count])"

@@ -1,0 +1,9 @@
+unique_name: RangeSMSum-IOC
+object_type: metric_calc
+label: RangeSMSum-IOC
+expression: |-
+  Sum(
+      [Date Custom].[StandardMonth].[Year].&[2005-01-01T00:00:00] :
+      [Date Custom].[StandardMonth].[Year].&[2008-01-01T00:00:00],
+      [Measures].[Internet Order Count]
+    )

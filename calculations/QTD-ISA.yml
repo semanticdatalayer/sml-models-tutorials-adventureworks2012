@@ -1,0 +1,7 @@
+unique_name: QTD-ISA
+object_type: metric_calc
+label: QTD-ISA
+expression: "CASE WHEN ISEMPTY([Measures].[Internet Sales Amount Local]) THEN NULL\
+  \ \nELSE\nAggregate(\nPeriodsToDate(\n[Date Custom].[StandardMonth].[Quarter],\n\
+  [Date Custom].[StandardMonth].CurrentMember),\n[Measures].[Internet Sales Amount\
+  \ Local])\nEND"

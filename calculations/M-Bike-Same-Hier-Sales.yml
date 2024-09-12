@@ -1,0 +1,5 @@
+unique_name: M-Bike-Same-Hier-Sales
+object_type: metric_calc
+label: M-Bike-Same-Hier-Sales
+expression: "([Product].[Product Categories].[Category].&[1],[Product].[Product Categories].[Subcategory].&[1],[Measures].[Internet\
+  \ Sales Amount Local])"

@@ -1,0 +1,6 @@
+unique_name: Mountain-Bike-IOC
+object_type: metric_calc
+label: Mountain-Bike-IOC
+expression: |-
+  ([Product].[Product Categories].[Category].&[1],[Product].[Product Model Lines].[Product Line].&[M],
+  [Measures].[Internet Order Count])

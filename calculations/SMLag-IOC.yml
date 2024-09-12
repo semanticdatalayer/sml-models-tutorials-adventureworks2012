@@ -1,0 +1,5 @@
+unique_name: SMLag-IOC
+object_type: metric_calc
+label: SMLag-IOC
+expression: "([Date Custom].[StandardMonth].[Year].&[2007-01-01T00:00:00].Lag(1),\
+  \ [Measures].[Internet Order Count])"

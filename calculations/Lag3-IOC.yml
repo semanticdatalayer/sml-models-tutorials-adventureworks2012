@@ -1,0 +1,5 @@
+unique_name: Lag3-IOC
+object_type: metric_calc
+label: Lag3-IOC
+expression: "([Date Custom].[StandardMonth].CurrentMember.Lag(3), [Measures].[Internet\
+  \ Order Count])"

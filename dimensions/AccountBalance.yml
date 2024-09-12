@@ -1,0 +1,62 @@
+unique_name: AccountBalance
+object_type: dimension
+label: AccountBalance
+type: standard
+
+hierarchies:
+
+  - unique_name: AccountBalance Hierarchy
+    label: AccountBalance Hierarchy
+
+    levels:
+
+      - unique_name: AccountKey
+        is_hidden: true
+
+        secondary_attributes:
+
+          - unique_name: Account Description
+            label: Account Description
+            dataset: Account
+            name_column: accountdescription
+            key_columns:
+              - accountdescription
+            sort_column: accountdescription
+
+          - unique_name: Account Number
+            label: Account Number
+            dataset: Account
+            name_column: accountcodealternatekey
+            key_columns:
+              - accountcodealternatekey
+            sort_column: accountcodealternatekey
+
+          - unique_name: Account Type
+            label: Account Type
+            dataset: Account
+            name_column: accounttype
+            key_columns:
+              - accounttype
+            sort_column: accounttype
+
+          - unique_name: Value Type
+            label: Value Type
+            dataset: Account
+            name_column: valuetype
+            key_columns:
+              - valuetype
+            sort_column: valuetype
+
+level_attributes:
+
+  - unique_name: AccountKey
+    label: AccountKey
+    is_hidden: true
+    dataset: Account
+    name_column: accountkey
+    key_columns:
+      - accountkey
+
+modeler_metadata:
+  version: 0
+  modified: "false"

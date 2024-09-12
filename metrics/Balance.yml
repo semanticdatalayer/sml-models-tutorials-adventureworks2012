@@ -1,0 +1,7 @@
+unique_name: Balance
+object_type: metric
+label: Balance
+calculation_method: sum
+unrelated_dimensions_handling: repeat
+dataset: Finance Facts
+column: amount

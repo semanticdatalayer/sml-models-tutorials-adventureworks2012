@@ -1,0 +1,6 @@
+unique_name: Sales Amount-Order Retail445-30PrdMvAvg
+object_type: metric_calc
+label: Sales Amount-Order Retail445-30PrdMvAvg
+expression: "Avg(\n    [Date Custom].[StandardMonth].CurrentMember.Lag(1):\n    [Date\
+  \ Custom].[StandardMonth].CurrentMember, \n    [Measures].[Internet Order Count]\n\
+  )"

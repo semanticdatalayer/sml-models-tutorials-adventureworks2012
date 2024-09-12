@@ -1,0 +1,9 @@
+unique_name: RangeLagSum-IOC
+object_type: metric_calc
+label: RangeLagSum-IOC
+expression: |-
+  Sum(
+      [Date Custom].[StandardMonth].CurrentMember.Lag(2) :
+      [Date Custom].[StandardMonth].CurrentMember.Lag(1),
+      [Measures].[Internet Order Count]
+    )

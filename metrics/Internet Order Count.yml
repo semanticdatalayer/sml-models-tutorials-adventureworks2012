@@ -1,0 +1,9 @@
+unique_name: Internet Order Count
+object_type: metric
+label: Internet Order Count
+description: URDH = Empty Cells
+calculation_method: count distinct
+format: "#,##0"
+unrelated_dimensions_handling: empty
+dataset: Internet Sales
+column: salesordernumber

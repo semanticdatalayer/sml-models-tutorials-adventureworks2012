@@ -1,0 +1,5 @@
+unique_name: YTDSum-IOC
+object_type: metric_calc
+label: YTDSum-IOC
+expression: "Sum(YTD([Date Custom].[StandardMonth].CurrentMember), [Measures].[Internet\
+  \ Order Count])"

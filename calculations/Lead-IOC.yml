@@ -1,0 +1,5 @@
+unique_name: Lead-IOC
+object_type: metric_calc
+label: Lead-IOC
+expression: "([Date Custom].[StandardMonth].CurrentMember.Lead(1),[Measures].[Internet\
+  \ Order Count])"

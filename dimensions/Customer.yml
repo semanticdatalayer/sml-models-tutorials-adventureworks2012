@@ -1,0 +1,259 @@
+unique_name: Customer
+object_type: dimension
+label: Customer
+type: standard
+
+hierarchies:
+
+  - unique_name: Customer Geography
+    label: Customer Geography
+
+    levels:
+
+      - unique_name: Customer Country
+
+      - unique_name: Customer State-Province
+
+      - unique_name: Customer City
+
+      - unique_name: Customer Postal Code
+
+      - unique_name: Customer
+
+        secondary_attributes:
+
+          - unique_name: Address
+            label: Address
+            folder: Location
+            dataset: Customer Dataset
+            name_column: addressline1
+            key_columns:
+              - addressline1
+            sort_column: addressline1
+
+          - unique_name: Birth Date
+            label: Birth Date
+            dataset: Customer Dataset
+            name_column: birthdate
+            key_columns:
+              - birthdate
+            sort_column: birthdate
+
+          - unique_name: City2
+            label: City2
+            description: Customer City attribute
+            folder: Location
+            dataset: Dim Customer_dbo_DimGeography
+            name_column: city
+            key_columns:
+              - city
+              - stateprovincecode
+            sort_column: city
+
+          - unique_name: Commute Distance
+            label: Commute Distance
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: commutedistance
+            key_columns:
+              - commutedistance
+            sort_column: commutedistancesort
+
+          - unique_name: CommuteDistanceSort
+            label: Commute Distance Sort
+            dataset: Customer Dataset
+            name_column: commutedistancesort
+            key_columns:
+              - commutedistancesort
+            sort_column: commutedistancesort
+
+          - unique_name: Country2
+            label: Country2
+            description: Customer Country Name
+            folder: Location
+            dataset: Dim Customer_dbo_DimGeography
+            name_column: englishcountryregionname
+            key_columns:
+              - englishcountryregionname
+            sort_column: englishcountryregionname
+
+          - unique_name: CustomerFullName
+            label: CustomerFullName
+            description: Customer Full Name distinguished by customer key
+            dataset: Customer Dataset
+            name_column: fullname
+            key_columns:
+              - customerkey
+            sort_column: fullname
+
+          - unique_name: Education
+            label: Education
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: englisheducation
+            key_columns:
+              - englisheducation
+            sort_column: englisheducation
+
+          - unique_name: Email Address
+            label: Customer Email Address
+            dataset: Customer Dataset
+            name_column: emailaddress
+            key_columns:
+              - emailaddress
+            sort_column: emailaddress
+
+          - unique_name: Gender
+            label: Gender
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: gender
+            key_columns:
+              - gender
+            sort_column: gender
+
+          - unique_name: Home Owner
+            label: Home Owner
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: houseownerdesc
+            key_columns:
+              - houseownerflag
+            sort_column: houseownerdesc
+
+          - unique_name: Marital Status
+            label: Marital Status
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: maritalstatusdesc
+            key_columns:
+              - maritalstatus
+            sort_column: maritalstatusdesc
+
+          - unique_name: Number of Cars Owned
+            label: Number of Cars Owned
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: numbercarsowned
+            key_columns:
+              - numbercarsowned
+            sort_column: numbercarsowned
+
+          - unique_name: Number of Children At Home
+            label: Number of Children At Home
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: numberchildrenathome
+            key_columns:
+              - numberchildrenathome
+            sort_column: numberchildrenathome
+
+          - unique_name: Occupation
+            label: Occupation
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: englishoccupation
+            key_columns:
+              - englishoccupation
+            sort_column: englishoccupation
+
+          - unique_name: Phone
+            label: Customer Phone
+            dataset: Customer Dataset
+            name_column: phone
+            key_columns:
+              - phone
+            sort_column: phone
+
+          - unique_name: Postal Code 2
+            label: Postal Code 2
+            description: Customer's Postal Code
+            folder: Location
+            dataset: Dim Customer_dbo_DimGeography
+            name_column: postalcode
+            key_columns:
+              - postalcode
+              - city
+              - stateprovincecode
+            sort_column: postalcode
+
+          - unique_name: State-Province2
+            label: State-Province2
+            folder: Location
+            dataset: Dim Customer_dbo_DimGeography
+            name_column: stateprovincecode
+            key_columns:
+              - stateprovincecode
+              - countryregioncode
+            sort_column: stateprovincecode
+
+          - unique_name: Total Children
+            label: Total Children
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: totalchildren
+            key_columns:
+              - totalchildren
+            sort_column: totalchildren
+
+          - unique_name: Yearly Income
+            label: Yearly Income
+            folder: Demographic
+            dataset: Customer Dataset
+            name_column: yearlyincome
+            key_columns:
+              - yearlyincome
+            sort_column: yearlyincome
+
+level_attributes:
+
+  - unique_name: Customer City
+    label: Customer City
+    dataset: Dim Customer_dbo_DimGeography
+    name_column: city
+    key_columns:
+      - city
+      - stateprovincecode
+
+  - unique_name: Customer Country
+    label: Customer Country
+    dataset: Dim Customer_dbo_DimGeography
+    name_column: englishcountryregionname
+    key_columns:
+      - englishcountryregionname
+
+  - unique_name: Customer Postal Code
+    label: Customer Postal Code
+    dataset: Dim Customer_dbo_DimGeography
+    name_column: postalcode
+    key_columns:
+      - geographykey
+
+  - unique_name: Customer State-Province
+    label: Customer State-Province
+    dataset: Dim Customer_dbo_DimGeography
+    name_column: stateprovincecode
+    key_columns:
+      - stateprovincecode
+      - countryregioncode
+
+  - unique_name: Customer
+    label: Customer
+    dataset: Customer Dataset
+    name_column: customerkey
+    key_columns:
+      - customerkey
+
+relationships:
+
+  - from:
+      dataset: Customer Dataset
+      join_columns:
+        - geographykey
+    to:
+      level: Customer Postal Code
+    type: snowflake
+
+modeler_metadata:
+  version: 0
+  modified: "false"

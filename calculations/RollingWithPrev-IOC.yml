@@ -1,0 +1,6 @@
+unique_name: RollingWithPrev-IOC
+object_type: metric_calc
+label: RollingWithPrev-IOC
+expression: |-
+  sum([Date Custom].[StandardMonth].CurrentMember.PrevMember:[Date Custom].[StandardMonth].CurrentMember,
+  [Measures].[Internet Order Count])

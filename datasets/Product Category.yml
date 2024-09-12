@@ -1,0 +1,17 @@
+unique_name: Product Category
+object_type: dataset
+label: Product Category
+connection_id: con1
+table: dimproductcategory
+
+columns:
+  - name: englishproductcategoryname
+    data_type: string
+  - name: frenchproductcategoryname
+    data_type: string
+  - name: productcategoryalternatekey
+    data_type: "decimal(38,0)"
+  - name: productcategorykey
+    data_type: "decimal(38,0)"
+  - name: spanishproductcategoryname
+    data_type: string

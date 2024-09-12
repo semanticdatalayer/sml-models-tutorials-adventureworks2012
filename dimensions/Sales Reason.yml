@@ -1,0 +1,35 @@
+unique_name: Sales Reason
+object_type: dimension
+label: Sales Reason
+type: standard
+
+hierarchies:
+
+  - unique_name: Sales Reasons
+    label: Sales Reasons
+
+    levels:
+
+      - unique_name: Sales Reason Reason Type
+
+      - unique_name: 'Sales Reason '
+
+level_attributes:
+
+  - unique_name: 'Sales Reason '
+    label: 'Sales Reason '
+    dataset: Sales Reason Dataset
+    name_column: salesreasonname
+    key_columns:
+      - salesreasonkey
+
+  - unique_name: Sales Reason Reason Type
+    label: Sales Reason Type
+    dataset: Sales Reason Dataset
+    name_column: salesreasonreasontype
+    key_columns:
+      - salesreasonreasontype
+
+modeler_metadata:
+  version: 0
+  modified: "false"

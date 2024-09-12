@@ -1,0 +1,7 @@
+unique_name: Sales Amount Quota
+object_type: metric
+label: Sales Amount Quota
+calculation_method: sum
+unrelated_dimensions_handling: repeat
+dataset: Sales Quota Facts
+column: salesamountquota
