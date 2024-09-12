@@ -1,6 +1,0 @@
-unique_name: Connection - AdventureWorks2012
-label: Connection - AdventureWorks2012
-object_type: connection
-as_connection: Postgres
-database: atscale_tutorial_data
-schema: adventureworks2012
