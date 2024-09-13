@@ -43,7 +43,7 @@ hierarchies:
             label: City2
             description: Customer City attribute
             folder: Location
-            dataset: Dim Customer_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: city
             key_columns:
               - city
@@ -71,7 +71,7 @@ hierarchies:
             label: Country2
             description: Customer Country Name
             folder: Location
-            dataset: Dim Customer_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: englishcountryregionname
             key_columns:
               - englishcountryregionname
@@ -169,7 +169,7 @@ hierarchies:
             label: Postal Code 2
             description: Customer's Postal Code
             folder: Location
-            dataset: Dim Customer_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: postalcode
             key_columns:
               - postalcode
@@ -180,7 +180,7 @@ hierarchies:
           - unique_name: State-Province2
             label: State-Province2
             folder: Location
-            dataset: Dim Customer_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: stateprovincecode
             key_columns:
               - stateprovincecode
@@ -209,7 +209,7 @@ level_attributes:
 
   - unique_name: Customer City
     label: Customer City
-    dataset: Dim Customer_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: city
     key_columns:
       - city
@@ -217,21 +217,21 @@ level_attributes:
 
   - unique_name: Customer Country
     label: Customer Country
-    dataset: Dim Customer_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: englishcountryregionname
     key_columns:
       - englishcountryregionname
 
   - unique_name: Customer Postal Code
     label: Customer Postal Code
-    dataset: Dim Customer_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: postalcode
     key_columns:
       - geographykey
 
   - unique_name: Customer State-Province
     label: Customer State-Province
-    dataset: Dim Customer_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: stateprovincecode
     key_columns:
       - stateprovincecode
