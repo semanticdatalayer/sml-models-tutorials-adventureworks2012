@@ -1,6 +1,6 @@
-unique_name: Dim Customer_dbo_DimGeography
+unique_name: Geography
 object_type: dataset
-label: Dim Customer_dbo_DimGeography
+label: Geography
 connection_id: Connection - AdventureWorks2012
 table: dimgeography
 
