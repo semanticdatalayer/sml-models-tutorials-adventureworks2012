@@ -22,7 +22,7 @@ hierarchies:
 
           - unique_name: City3
             label: City3
-            dataset: Dim Geography_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: city
             key_columns:
               - city
@@ -31,7 +31,7 @@ hierarchies:
 
           - unique_name: Country3
             label: Country3
-            dataset: Dim Geography_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: englishcountryregionname
             key_columns:
               - englishcountryregionname
@@ -39,7 +39,7 @@ hierarchies:
 
           - unique_name: Postal Code3
             label: Postal Code3
-            dataset: Dim Geography_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: postalcode
             key_columns:
               - postalcode
@@ -49,7 +49,7 @@ hierarchies:
 
           - unique_name: State-Province3
             label: State-Province3
-            dataset: Dim Geography_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: stateprovincecode
             key_columns:
               - stateprovincecode
@@ -63,7 +63,7 @@ hierarchies:
 
           - unique_name: Geography Key
             label: Geography Key
-            dataset: Dim Geography_dbo_DimGeography
+            dataset: Geography Dataset
             name_column: geographykey
             key_columns:
               - geographykey
@@ -73,7 +73,7 @@ level_attributes:
 
   - unique_name: City
     label: City
-    dataset: Dim Geography_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: city
     key_columns:
       - city
@@ -81,7 +81,7 @@ level_attributes:
 
   - unique_name: Country
     label: Country
-    dataset: Dim Geography_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: englishcountryregionname
     key_columns:
       - englishcountryregionname
@@ -89,14 +89,14 @@ level_attributes:
   - unique_name: Geography Key Level
     label: Geography Key Level
     is_hidden: true
-    dataset: Dim Geography_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: geographykey
     key_columns:
       - geographykey
 
   - unique_name: Postal Code
     label: Postal Code
-    dataset: Dim Geography_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: postalcode
     key_columns:
       - postalcode
@@ -105,7 +105,7 @@ level_attributes:
 
   - unique_name: State-Province
     label: State-Province
-    dataset: Dim Geography_dbo_DimGeography
+    dataset: Geography Dataset
     name_column: stateprovincename
     key_columns:
       - stateprovincecode
