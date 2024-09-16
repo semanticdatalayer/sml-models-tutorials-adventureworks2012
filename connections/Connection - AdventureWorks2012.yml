@@ -2,5 +2,5 @@ unique_name: Connection - AdventureWorks2012
 label: Connection - AdventureWorks2012
 object_type: connection
 as_connection: BigQuery
-database: atscale_tutorial_data
+database: atscale-tutorial-data
 schema: adventureworks2012
