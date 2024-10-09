@@ -1,6 +1,0 @@
-unique_name: AdventureWorksDW2012
-label: AdventureWorksDW2012
-object_type: catalog
-version: 1.0
-aggressive_agg_promotion: false
-build_speculative_aggs: false
