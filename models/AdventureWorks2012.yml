@@ -41,61 +41,63 @@ metrics:
   - unique_name: Balance
     folder: Finance
   - unique_name: Internet Order Count
-    folder: InternetSales
+    folder: Internet Sales
   - unique_name: Internet Sales Amount Local
-    folder: InternetSales
+    folder: Internet Sales
   - unique_name: Internet Sales Reason Count
+    folder: Internet Sales
   - unique_name: Order Quantity Long
-    folder: InternetSales
+    folder: Internet Sales
   - unique_name: Reseller Order Count
-    folder: ResellerSales
+    folder: Reseller Sales
   - unique_name: Reseller Order Quantity Long
-    folder: ResellerSales
+    folder: Reseller Sales
   - unique_name: Reseller Sales Amount Local
-    folder: ResellerSales
+    folder: Reseller Sales
   - unique_name: Sales Amount Quota
     folder: Quotas
   - unique_name: Unit Price Discount Percent
+    folder: Reseller Sales
   - unique_name: Accessories-IOC
     folder: Tuple
   - unique_name: Calc-LagPlusIOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Calc-LagPlusLag2-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: CalcAvgSA
     folder: Tuple
   - unique_name: Canada-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Canada2007-IOC
     folder: Tuple
   - unique_name: Curr-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: France-Bike-Sales
     folder: Tuple
   - unique_name: France-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: France-Sales
     folder: Tuple
   - unique_name: Helmets-IOC
     folder: Tuple
   - unique_name: Lag-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Lag2-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Lag3-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: LagCanada-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: LagPlusConstant-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: LagProduct-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: LagTimesConstant-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: LagTimesIOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Lead-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: M-Bike-Same-Hier-Sales
     folder: Tuple
   - unique_name: Mountain-Bike-IOC
@@ -103,42 +105,43 @@ metrics:
   - unique_name: Mountain-Bike-Sales
     folder: Tuple
   - unique_name: P2DSum-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: P2D_RNG_SM_Sum-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: PP_RNG_SM_Sum-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: PP_StandardMonth-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: PrevMonth-IOC
     folder: Tuple
   - unique_name: QTD-ISA
+    folder: Time Relative
   - unique_name: RNG_SM_Sum-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: RangeLagSum-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: RangeSMSum-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Rolling-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: RollingWithPrev-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: SMLag-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Sales Amount-Order Retail445-30PrdMvAvg
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Sales Amount-Order Retail445-30PrdMvAvgPrevYear
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Sales Amount-Order Retail445-30PrdMvAvgPrevYearGrowthPct
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: SportHelmets-IOC
     folder: Tuple
   - unique_name: Stdev-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: YTDSum-IOC
-    folder: TimeRelative
+    folder: Time Relative
   - unique_name: Year2008-IOC
-    folder: TimeRelative
+    folder: Time Relative
 perspectives:
   - unique_name: ResellerPerspective
     dimensions:

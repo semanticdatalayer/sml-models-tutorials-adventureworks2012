@@ -4,6 +4,7 @@ label: Date Custom
 hierarchies:
   - unique_name: StandardMonth
     label: StandardMonth
+    folder: Dates
     levels:
       - unique_name: Year
       - unique_name: Half Year
@@ -11,6 +12,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Half Year Of Year
             label: Half Year Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - half_year_of_year
@@ -20,6 +22,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Quarter Of Half Year
             label: Quarter Of Half Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - quarter_of_half_year
@@ -27,6 +30,7 @@ hierarchies:
             sort_column: quarter_of_half_year
           - unique_name: Quarter Of Year
             label: Quarter Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - quarter_of_year
@@ -36,6 +40,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: DateAttr
             label: DateAttr
+            folder: Dates
             description: 'Date secondary attribute '
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -45,6 +50,7 @@ hierarchies:
             sort_column: datekey
           - unique_name: Day Of Month
             label: Day Of Month
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -53,6 +59,7 @@ hierarchies:
             sort_column: day_of_month_name
           - unique_name: Day Of Quarter
             label: Day Of Quarter
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -61,6 +68,7 @@ hierarchies:
             sort_column: day_of_quarter
           - unique_name: Day Of Week
             label: Day Of Week
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -69,6 +77,7 @@ hierarchies:
             sort_column: day_of_week
           - unique_name: Day Of Year
             label: Day Of Year
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -77,6 +86,7 @@ hierarchies:
             sort_column: day_of_year
           - unique_name: Half Year2
             label: Half Year2
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -85,6 +95,7 @@ hierarchies:
             sort_column: half_year
           - unique_name: Month Of Half Year
             label: Month Of Half Year
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -93,6 +104,7 @@ hierarchies:
             sort_column: month_of_half_year
           - unique_name: Month Of Quarter
             label: Month Of Quarter
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -101,6 +113,7 @@ hierarchies:
             sort_column: month_of_quarter
           - unique_name: Month Of Year
             label: Month Of Year
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -109,6 +122,7 @@ hierarchies:
             sort_column: month_of_year
           - unique_name: Month2
             label: Month2
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -117,6 +131,7 @@ hierarchies:
             sort_column: month
           - unique_name: Quarter2
             label: Quarter2
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -125,6 +140,7 @@ hierarchies:
             sort_column: quarter
           - unique_name: Week Of Year
             label: Week Of Year
+            folder: Dates
             associated_hierarchy: StandardWeek
             dataset: DateCustom
             key_columns:
@@ -133,6 +149,7 @@ hierarchies:
             sort_column: week_of_year
           - unique_name: Week2
             label: Week2
+            folder: Dates
             associated_hierarchy: StandardWeek
             dataset: DateCustom
             key_columns:
@@ -141,6 +158,7 @@ hierarchies:
             sort_column: week
           - unique_name: Year2
             label: Year2
+            folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
             key_columns:
@@ -149,6 +167,7 @@ hierarchies:
             sort_column: year
   - unique_name: StandardWeek
     label: StandardWeek
+    folder: Dates
     filter_empty: 'yes'
     levels:
       - unique_name: Year1
@@ -156,6 +175,7 @@ hierarchies:
       - unique_name: Date1
   - unique_name: Retail445
     label: Retail445
+    folder: Dates
     filter_empty: 'yes'
     levels:
       - unique_name: Reporting Year
@@ -164,6 +184,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Half Year Of Year
             label: Reporting Half Year Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_half_year_of_year
@@ -173,6 +194,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Quarter Of Half Year
             label: Reporting Quarter Of Half Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_quarter_of_half_year
@@ -180,6 +202,7 @@ hierarchies:
             sort_column: reporting_quarter_of_half_year
           - unique_name: Reporting Quarter Of Year
             label: Reporting Quarter Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_quarter_of_year
@@ -189,6 +212,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Month Of Half Year
             label: Reporting Month Of Half Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_month_of_half_year
@@ -196,6 +220,7 @@ hierarchies:
             sort_column: reporting_month_of_half_year
           - unique_name: Reporting Month Of Quarter
             label: Reporting Month Of Quarter
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_month_of_quarter
@@ -203,6 +228,7 @@ hierarchies:
             sort_column: reporting_month_of_quarter
           - unique_name: Reporting Month Of Year
             label: Reporting Month Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_month_of_year
@@ -212,6 +238,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Day Of Half Year
             label: Reporting Day Of Half Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_day_of_half_year
@@ -219,6 +246,7 @@ hierarchies:
             sort_column: reporting_day_of_half_year_name
           - unique_name: Reporting Day Of Month
             label: Reporting Day Of Month
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_day_of_month
@@ -226,6 +254,7 @@ hierarchies:
             sort_column: reporting_day_of_month_name
           - unique_name: Reporting Day Of Quarter
             label: Reporting Day Of Quarter
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_day_of_quarter
@@ -233,6 +262,7 @@ hierarchies:
             sort_column: reporting_day_of_quarter_name
           - unique_name: Reporting Day Of Week
             label: Reporting Day Of Week
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_day_of_week
@@ -240,6 +270,7 @@ hierarchies:
             sort_column: reporting_day_of_week
           - unique_name: Reporting Day Of Year
             label: Reporting Day Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_day_of_year
@@ -247,6 +278,7 @@ hierarchies:
             sort_column: reporting_day_of_year_name
           - unique_name: Reporting Day2
             label: Reporting Day2
+            folder: Dates
             dataset: DateCustom
             format: yyyy-MM-dd HH:mm:ss
             key_columns:
@@ -255,6 +287,7 @@ hierarchies:
             sort_column: reporting_day
           - unique_name: Reporting Half Year2
             label: Reporting Half Year2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_half_year
@@ -262,6 +295,7 @@ hierarchies:
             sort_column: reporting_half_year_name
           - unique_name: Reporting Month2
             label: Reporting Month2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_month
@@ -269,6 +303,7 @@ hierarchies:
             sort_column: reporting_month_name
           - unique_name: Reporting Quarter2
             label: Reporting Quarter2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_year
@@ -277,6 +312,7 @@ hierarchies:
             sort_column: reporting_quarter
           - unique_name: Reporting Week Of Half Year
             label: Reporting Week Of Half Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_week_of_half_year
@@ -284,6 +320,7 @@ hierarchies:
             sort_column: reporting_week_of_half_year_name
           - unique_name: Reporting Week Of Month
             label: Reporting Week Of Month
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_week_of_month
@@ -291,6 +328,7 @@ hierarchies:
             sort_column: reporting_week_of_month_name
           - unique_name: Reporting Week Of Quarter
             label: Reporting Week Of Quarter
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_week_of_quarter
@@ -298,6 +336,7 @@ hierarchies:
             sort_column: reporting_week_of_quarter_name
           - unique_name: Reporting Week Of Year
             label: Reporting Week Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_week_of_year
@@ -305,6 +344,7 @@ hierarchies:
             sort_column: reporting_week_of_year
           - unique_name: Reporting Week2
             label: Reporting Week2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_week
@@ -312,6 +352,7 @@ hierarchies:
             sort_column: reporting_week
           - unique_name: Reporting Year2
             label: Reporting Year2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_year
@@ -321,6 +362,7 @@ hierarchies:
         is_hidden: true
   - unique_name: ISO8601Week
     label: ISO8601Week
+    folder: Dates
     filter_empty: 'yes'
     levels:
       - unique_name: ISO 8601 Year
@@ -329,6 +371,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: ISO 8601 Day Of Week
             label: ISO 8601 Day Of Week
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_day_of_week
@@ -336,6 +379,7 @@ hierarchies:
             sort_column: iso_8601_day_of_week
           - unique_name: ISO 8601 Day Of Year
             label: ISO 8601 Day Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_day_of_year
@@ -343,6 +387,7 @@ hierarchies:
             sort_column: iso_8601_day_of_year
           - unique_name: ISO 8601 Day2
             label: ISO 8601 Day2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_day
@@ -350,6 +395,7 @@ hierarchies:
             sort_column: iso_8601_day
           - unique_name: ISO 8601 Week Of Year
             label: ISO 8601 Week Of Year
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_week_of_year
@@ -357,6 +403,7 @@ hierarchies:
             sort_column: iso_8601_week_of_year
           - unique_name: ISO 8601 Week2
             label: ISO 8601 Week2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_week
@@ -364,6 +411,7 @@ hierarchies:
             sort_column: iso_8601_week
           - unique_name: ISO 8601 Year2
             label: ISO 8601 Year2
+            folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_year

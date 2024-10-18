@@ -13,20 +13,28 @@ columns:
     data_type: string
   - name: classNoNull
     data_type: string
-    sql: CASE WHEN class IS NULL THEN 'NA' ELSE class END
+    sql: CASE WHEN class IS NULL OR class = '' THEN 'NA' ELSE class END
     dialects:
       - dialect: Postgresql
-        sql: CASE WHEN class IS NULL THEN 'NA' ELSE class END
+        sql: CASE WHEN class IS NULL OR class = '' THEN 'NA' ELSE class END
       - dialect: Snowflake
-        sql: CASE WHEN "class" IS NULL THEN 'NA' ELSE "class" END
+        sql: CASE WHEN "class" IS NULL OR "class"='' THEN 'NA' ELSE "class" END
+      - dialect: BigQuery
+        sql: CASE WHEN class IS NULL OR class = '' THEN 'NA' ELSE class END  
+      - dialect: DatabricksSQL  
+        sql: CASE WHEN class IS NULL OR class='' THEN 'NA' ELSE class END   
   - name: classdesc
     data_type: string
-    sql: CASE WHEN "class" IS NULL THEN 'Not Applicable' WHEN "class" = 'H' THEN  'High' WHEN "class" = 'M' THEN 'Medium' WHEN "class" = 'L' THEN 'Low' END
+    sql: CASE WHEN class IS NULL class = '' THEN 'Not Applicable' WHEN class = 'H' THEN  'High' WHEN class = 'M' THEN 'Medium' WHEN class = 'L' THEN 'Low' END
     dialects:
       - dialect: Postgresql
-        sql: CASE WHEN class IS NULL THEN 'Not Applicable' WHEN class = 'H' THEN  'High' WHEN class = 'M' THEN 'Medium' WHEN class = 'L' THEN 'Low' END
+        sql: CASE WHEN class IS NULL class = '' THEN 'Not Applicable' WHEN class = 'H' THEN  'High' WHEN class = 'M' THEN 'Medium' WHEN class = 'L' THEN 'Low' END
       - dialect: Snowflake
-        sql: CASE WHEN "class" IS NULL THEN 'Not Applicable' WHEN "class" = 'H' THEN  'High' WHEN "class" = 'M' THEN 'Medium' WHEN "class" = 'L' THEN 'Low' END
+        sql: CASE WHEN "class" IS NULL OR "class" = '' THEN 'Not Applicable' WHEN "class" = 'H' THEN  'High' WHEN "class" = 'M' THEN 'Medium' WHEN "class" = 'L' THEN 'Low' END
+      - dialect: BigQuery
+        sql: CASE WHEN class IS NULL OR class = '' THEN 'Not Applicable' WHEN class = 'H' THEN  'High' WHEN class = 'M' THEN 'Medium' WHEN class = 'L' THEN 'Low' END 
+      - dialect: DatabricksSQL  
+        sql: CASE WHEN class IS NULL OR class = '' THEN 'Not Applicable' WHEN class = 'H' THEN  'High' WHEN class = 'M' THEN 'Medium' WHEN class = 'L' THEN 'Low' END
   - name: color
     data_type: string
   - name: daystomanufacture
@@ -37,7 +45,7 @@ columns:
     data_type: datetime
   - name: enddateNoNull
     data_type: datetime
-    sql: CASE WHEN "enddate" IS NULL THEN TO_TIMESTAMP('1970-01-01 00:00:00') ELSE "enddate" END
+    sql: CASE WHEN enddate IS NULL THEN cast('1970-01-01 00:00:00' as TIMESTAMP) ELSE enddate END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN enddate IS NULL THEN cast('1970-01-01 00:00:00' as TIMESTAMP) ELSE enddate END
@@ -45,6 +53,8 @@ columns:
         sql: CASE WHEN "enddate" IS NULL THEN TO_TIMESTAMP('1970-01-01 00:00:00') ELSE "enddate" END
       - dialect: BigQuery
         sql: CASE WHEN enddate IS NULL THEN TIMESTAMP("1970-01-01 00:00:00") ELSE enddate END
+      - dialect: DatabricksSQL
+        sql: CASE WHEN enddate IS NULL THEN TIMESTAMP("1970-01-01 00:00:00") ELSE enddate END  
   - name: englishdescription
     data_type: string
   - name: englishproductname
@@ -65,24 +75,32 @@ columns:
     data_type: string
   - name: listPriceNoNull
     data_type: double
-    sql: CASE WHEN "listprice" IS NULL THEN 0 ELSE "listprice" END
+    sql: CASE WHEN listprice IS NULL THEN 0 ELSE listprice END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN listprice IS NULL THEN 0 ELSE listprice END
       - dialect: Snowflake
         sql: CASE WHEN "listprice" IS NULL THEN 0 ELSE "listprice" END
+      - dialect: BigQuery
+        sql: CASE WHEN listprice IS NULL THEN 0 ELSE listprice END
+      - dialect: DatabricksSQL
+        sql: CASE WHEN listprice IS NULL THEN 0 ELSE listprice END  
   - name: listprice
     data_type: double
   - name: modelname
     data_type: string
   - name: modelnameassembly
     data_type: string
-    sql: CASE WHEN ("modelname" IS NULL or trim("modelname") = '') THEN 'Assembly Components' ELSE "modelname" END
+    sql: CASE WHEN (modelname IS NULL or trim(modelname) = '') THEN 'Assembly Components' ELSE modelname END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN (modelname IS NULL or trim(modelname) = '') THEN 'Assembly Components' ELSE modelname END
       - dialect: Snowflake
         sql: CASE WHEN ("modelname" IS NULL or trim("modelname") = '') THEN 'Assembly Components' ELSE "modelname" END
+      - dialect: BigQuery
+        sql: CASE WHEN (modelname IS NULL or trim(modelname) = '') THEN 'Assembly Components' ELSE modelname END
+      - dialect: DatabricksSQL
+        sql: CASE WHEN (modelname IS NULL or trim(modelname) = '') THEN 'Assembly Components' ELSE modelname END  
   - name: productalternatekey
     data_type: string
   - name: productkey
@@ -91,13 +109,16 @@ columns:
     data_type: string
   - name: productlinename
     data_type: string
-    sql: CASE trim("productline") WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN
-      'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END
+    sql: CASE trim(productline) WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN 'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END
     dialects:
       - dialect: Postgresql
         sql: CASE trim(productline) WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN 'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END
       - dialect: Snowflake
-        sql: CASE trim("productline") WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN 'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END    
+        sql: CASE trim("productline") WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN 'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END
+      - dialect: BigQuery      
+        sql: CASE trim(productline) WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN 'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END
+      - dialect: DatabricksSQL      
+        sql: CASE trim(productline) WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN 'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END  
   - name: productsubcategorykey
     data_type: "decimal(38,0)"
   - name: reorderpoint
@@ -106,7 +127,7 @@ columns:
     data_type: "decimal(38,0)"
   - name: simplestartdate 
     data_type: string
-    sql: DAY("startdate") ||' '|| MONTH("startdate") || ', ' || YEAR("startdate")
+    sql: format(CAST(startdate as TEXT),'d M, yyyy')
     dialects:
       - dialect: Postgresql
         sql: format(CAST(startdate as TEXT),'d M, yyyy')
@@ -118,7 +139,7 @@ columns:
         sql: date_format(startdate,'MMMM dd, yyyy')             
   - name: simpleenddate
     data_type: string
-    sql: CASE WHEN "enddate" IS NULL THEN 'Active' ELSE DAY("enddate") ||' '|| MONTH("enddate") || ', ' || YEAR("enddate") END
+    sql: CASE WHEN enddate IS NULL THEN 'Active' ELSE format(CAST(enddate as TEXT),'d M, yyyy') END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN enddate IS NULL THEN 'Active' ELSE format(CAST(enddate as TEXT),'d M, yyyy') END        
@@ -144,40 +165,54 @@ columns:
     data_type: string
   - name: statusNoNull
     data_type: string
-    sql: CASE WHEN "status" IS NULL THEN 'NA' ELSE "status" END
+    sql: CASE WHEN status IS NULL THEN 'NA' ELSE status END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN status IS NULL THEN 'NA' ELSE status END
       - dialect: Snowflake
         sql: CASE WHEN "status" IS NULL THEN 'NA' ELSE "status" END
+      - dialect: BigQuery  
+        sql: CASE WHEN status IS NULL THEN 'NA' ELSE status END
+      - dialect: DatabricksSQL  
+        sql: CASE WHEN status IS NULL THEN 'NA' ELSE status END  
   - name: statusdesc
     data_type: string
-    sql: CASE WHEN ("status" IS NULL or trim("status") = '') THEN 'Historical' ELSE
-      "status" END
+    sql: CASE WHEN (status IS NULL or trim(status) = '') THEN 'Historical' ELSE status END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN (status IS NULL or trim(status) = '') THEN 'Historical' ELSE status END
       - dialect: Snowflake
-        sql: CASE WHEN ("status" IS NULL or trim("status") = '') THEN 'Historical' ELSE "status" END       
+        sql: CASE WHEN ("status" IS NULL or trim("status") = '') THEN 'Historical' ELSE "status" END 
+      - dialect: BigQuery     
+        sql: CASE WHEN (status IS NULL or trim(status) = '') THEN 'Historical' ELSE status END
+      - dialect: DatabricksSQL     
+        sql: CASE WHEN (status IS NULL or trim(status) = '') THEN 'Historical' ELSE status END     
   - name: style
     data_type: string
   - name: styleNoNull
     data_type: string
-    sql: CASE WHEN "style" IS NULL THEN 'NA' ELSE "style" END
+    sql: CASE WHEN style IS NULL THEN 'NA' ELSE style END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN style IS NULL THEN 'NA' ELSE style END
       - dialect: Snowflake  
         sql: CASE WHEN "style" IS NULL THEN 'NA' ELSE "style" END
+      - dialect: BigQuery  
+        sql: CASE WHEN style IS NULL OR style = '' THEN 'NA' ELSE style END
+      - dialect: DatabricksSQL  
+        sql: CASE WHEN style IS NULL OR style = '' THEN 'NA' ELSE style END  
   - name: styledesc
     data_type: string
-    sql: CASE WHEN "style" IS NULL THEN 'Not Applicable'  WHEN "style" = 'U' THEN
-      'Unisex' WHEN "style" = 'M' THEN 'Mens' WHEN "style" = 'W' THEN 'Womens' END
+    sql: CASE WHEN style IS NULL THEN 'Not Applicable' WHEN style = 'U' THEN 'Unisex' WHEN style = 'M' THEN 'Mens' WHEN style = 'W' THEN 'Womens' END
     dialects:
       - dialect: Postgresql
-        sql: CASE WHEN (status IS NULL or trim(status) = '') THEN 'Historical' ELSE status END
+        sql: CASE WHEN style IS NULL THEN 'Not Applicable' WHEN style = 'U' THEN 'Unisex' WHEN style = 'M' THEN 'Mens' WHEN style = 'W' THEN 'Womens' END
       - dialect: Snowflake
-        sql: CASE WHEN ("status" IS NULL or trim("status") = '') THEN 'Historical' ELSE "status" END  
+        sql: CASE WHEN "style" IS NULL THEN 'Not Applicable'  WHEN "style" = 'U' THEN 'Unisex' WHEN "style" = 'M' THEN 'Mens' WHEN "style" = 'W' THEN 'Womens' END
+      - dialect: BigQuery   
+        sql: CASE WHEN style IS NULL or style = '' THEN 'Not Applicable' WHEN style = 'U' THEN 'Unisex' WHEN style = 'M' THEN 'Mens' WHEN style = 'W' THEN 'Womens' END
+      - dialect: DatabricksSQL   
+        sql: CASE WHEN style IS NULL or style = '' THEN 'Not Applicable' WHEN style = 'U' THEN 'Unisex' WHEN style = 'M' THEN 'Mens' WHEN style = 'W' THEN 'Womens' END  
   - name: thaidescription
     data_type: string
   - name: turkishdescription
@@ -186,11 +221,15 @@ columns:
     data_type: double
   - name: weightNoNull
     data_type: double
-    sql: CASE WHEN "weight" IS NULL THEN 0 ELSE "weight" END
+    sql: CASE WHEN weight IS NULL THEN 0 ELSE weight END
     dialects:
       - dialect: Postgresql
         sql: CASE WHEN weight IS NULL THEN 0 ELSE weight END
       - dialect: Snowflake  
         sql: CASE WHEN "weight" IS NULL THEN 0 ELSE "weight" END
+      - dialect: BigQuery  
+        sql: CASE WHEN weight IS NULL THEN 0 ELSE weight END
+      - dialect: DatabricksSQL  
+        sql: CASE WHEN weight IS NULL THEN 0 ELSE weight END  
   - name: weightunitmeasurecode
     data_type: string

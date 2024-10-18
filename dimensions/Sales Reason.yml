@@ -7,7 +7,7 @@ hierarchies:
 
   - unique_name: Sales Reasons
     label: Sales Reasons
-
+    folder: Sales Reasons
     levels:
 
       - unique_name: Sales Reason Reason Type

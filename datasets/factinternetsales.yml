@@ -41,7 +41,7 @@ columns:
     data_type: double
   - name: salesamount_1
     data_type: "decimal(38,9)"
-    sql: "CAST(\"salesamount\" AS DECIMAL(38,9))"
+    sql: CAST(salesamount AS DECIMAL(38,9))
     dialects:
     - dialect: Postgresql
       sql: CAST(salesamount AS DECIMAL(38,9))
@@ -49,14 +49,20 @@ columns:
       sql: CAST("salesamount" AS DECIMAL(38,9))
     - dialect: BigQuery
       sql: CAST(salesamount AS NUMERIC)
+    - dialect: DatabricksSQL
+      sql: CAST(salesamount AS DECIMAL(38,9))  
   - name: salesorderlinename
     data_type: string
-    sql: "concat(\"salesordernumber\", '-', cast(\"salesorderlinenumber\" as string))"
+    sql: concat(salesordernumber, '-', cast(salesorderlinenumber as VARCHAR))
     dialects:
     - dialect: Postgresql
       sql: concat(salesordernumber, '-', cast(salesorderlinenumber as VARCHAR))
     - dialect: Snowflake
       sql: concat("salesordernumber", '-', cast("salesorderlinenumber" as string))
+    - dialect: BigQuery  
+      sql: concat(salesordernumber, '-', cast(salesorderlinenumber as STRING))
+    - dialect: DatabricksSQL  
+      sql: concat(salesordernumber, '-', cast(salesorderlinenumber as STRING))  
   - name: salesorderlinenumber
     data_type: "decimal(38,0)"
   - name: salesordernumber

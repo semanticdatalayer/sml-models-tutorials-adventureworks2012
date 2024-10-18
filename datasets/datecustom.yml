@@ -205,5 +205,14 @@ columns:
     data_type: datetime
   - name: reporting_day_date
     data_type: date
-    sql: date("reporting_day")
+    sql: date(reporting_day)
+    dialects:
+      - dialect: Postgresql
+        sql: date(reporting_day)
+      - dialect: Snowflake
+        sql: date("reporting_day")
+      - dialect: BigQuery
+        sql: date(reporting_day)  
+      - dialect: DatabricksSQL
+        sql: date(reporting_day)   
 

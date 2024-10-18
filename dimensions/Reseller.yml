@@ -7,7 +7,7 @@ hierarchies:
 
   - unique_name: Reseller Type
     label: Reseller Type
-
+    folder: Reseller Data
     levels:
 
       - unique_name: Business Type
@@ -48,6 +48,7 @@ hierarchies:
 
           - unique_name: Business Type2
             label: Business Type2
+            folder: Reseller Data
             associated_hierarchy: Reseller Type
             dataset: Reseller Dataset
             name_column: businesstype
@@ -57,6 +58,7 @@ hierarchies:
 
           - unique_name: First Order Year
             label: First Order Year
+            folder: Order Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: firstorderyear
@@ -66,6 +68,7 @@ hierarchies:
 
           - unique_name: Geography Key2
             label: Geography Key2
+            folder: ResellerLocation
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: geographykey
@@ -75,6 +78,7 @@ hierarchies:
 
           - unique_name: Last Order Year
             label: Last Order Year
+            folder: Order Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: lastorderyear
@@ -102,7 +106,7 @@ hierarchies:
 
           - unique_name: Number of Employees
             label: Number of Employees
-            folder: Order Data
+            folder: Reseller Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: numberemployees
@@ -132,7 +136,7 @@ hierarchies:
 
           - unique_name: Reseller Product Line
             label: Reseller Product Line
-            folder: Order Data
+            folder: Reseller Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: productline
@@ -142,8 +146,10 @@ hierarchies:
 
           - unique_name: ResellerName
             label: ResellerName
+
             associated_hierarchy: Reseller Type
             dataset: Reseller Dataset
+            folder: Reseller Data
             name_column: resellername
             key_columns:
               - resellerkey
@@ -151,6 +157,7 @@ hierarchies:
 
           - unique_name: Year Opened
             label: Year Opened
+            folder: Reseller Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: yearopened

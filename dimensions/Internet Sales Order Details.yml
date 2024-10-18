@@ -7,6 +7,7 @@ hierarchies:
 
   - unique_name: Internet Sales Orders
     label: Internet Sales Orders
+    folder: Internet Sales Orders
     filter_empty: "yes"
 
     levels:

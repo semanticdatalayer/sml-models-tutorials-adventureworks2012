@@ -2,12 +2,14 @@ unique_name: InternetSalesReason
 object_type: dataset
 label: InternetSalesReason
 connection_id: Connection - AdventureWorks2012
-sql: SELECT * from "as_adventure_small"."factinternetsalesreason"
+sql: SELECT * from as_adventure_small.factinternetsalesreason
 dialects:
-  - dialect: Snowflake
-    sql: SELECT * from "adventureworks2012"."factinternetsalesreason"
   - dialect: Postgresql
     sql: SELECT * from as_adventure_small.factinternetsalesreason
+  - dialect: Snowflake
+    sql: SELECT * from "adventureworks2012"."factinternetsalesreason"
+  - dialect: BigQuery
+    sql: SELECT * from as_adventure_small.factinternetsalesreason  
 columns:
   - name: salesorderlinenumber
     data_type: "decimal(38,0)"

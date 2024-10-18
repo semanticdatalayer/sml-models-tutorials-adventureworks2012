@@ -7,7 +7,7 @@ hierarchies:
 
   - unique_name: Product Categories
     label: Product Categories
-
+    folder: Product Data
     levels:
 
       - unique_name: Category
@@ -20,6 +20,7 @@ hierarchies:
 
           - unique_name: Category2
             label: Category2
+            folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Category
             name_column: englishproductcategoryname
@@ -89,6 +90,7 @@ hierarchies:
 
           - unique_name: Large Photo
             label: Large Photo
+            folder: Stocking
             associated_hierarchy: Product Categories
             dataset: Product Dataset
             name_column: productkey
@@ -108,6 +110,7 @@ hierarchies:
 
           - unique_name: Model Name
             label: Model Name
+            folder: Product Data
             custom_empty_member:
               key:
                 - Assembly Components
@@ -122,6 +125,7 @@ hierarchies:
 
           - unique_name: Product Line2
             label: Product Line2
+            folder: Product Data
             associated_hierarchy: Product Model Lines
             dataset: Product Dataset
             name_column: productlinename
@@ -131,6 +135,7 @@ hierarchies:
 
           - unique_name: Product2
             label: Product2
+            folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Dataset
             name_column: englishproductname
@@ -150,6 +155,7 @@ hierarchies:
 
           - unique_name: Safety Stock Level2
             label: Safety Stock Level2
+            folder: Stocking
             associated_hierarchy: Stock Level
             dataset: Product Dataset
             name_column: safetystocklevel
@@ -214,6 +220,7 @@ hierarchies:
 
           - unique_name: Style
             label: Style
+            folder: Stocking
             custom_empty_member:
               key:
                 - NA
@@ -228,6 +235,7 @@ hierarchies:
 
           - unique_name: Subcategory2
             label: Subcategory2
+            folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Subcategory
             name_column: englishproductsubcategoryname
@@ -252,6 +260,7 @@ hierarchies:
 
   - unique_name: Product Model Lines
     label: Product Model Lines
+    folder: Product Data
     filter_empty: "yes"
 
     levels:
@@ -264,6 +273,7 @@ hierarchies:
 
   - unique_name: Stock Level
     label: Stock Level
+    folder: Stocking
     filter_empty: "yes"
 
     levels:

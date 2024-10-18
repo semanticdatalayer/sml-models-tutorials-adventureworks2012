@@ -7,7 +7,7 @@ hierarchies:
 
   - unique_name: Geography
     label: Geography
-
+    folder: Reseller Location
     levels:
 
       - unique_name: Country
@@ -22,6 +22,7 @@ hierarchies:
 
           - unique_name: City3
             label: City3
+            folder: Reseller Location
             dataset: Geography Dataset
             name_column: city
             key_columns:
@@ -31,6 +32,7 @@ hierarchies:
 
           - unique_name: Country3
             label: Country3
+            folder: Reseller Location
             dataset: Geography Dataset
             name_column: englishcountryregionname
             key_columns:
@@ -39,6 +41,7 @@ hierarchies:
 
           - unique_name: Postal Code3
             label: Postal Code3
+            folder: Reseller Location
             dataset: Geography Dataset
             name_column: postalcode
             key_columns:
@@ -49,6 +52,7 @@ hierarchies:
 
           - unique_name: State-Province3
             label: State-Province3
+            folder: Reseller Location
             dataset: Geography Dataset
             name_column: stateprovincecode
             key_columns:
@@ -63,6 +67,7 @@ hierarchies:
 
           - unique_name: Geography Key
             label: Geography Key
+            folder: Reseller Location
             dataset: Geography Dataset
             name_column: geographykey
             key_columns:

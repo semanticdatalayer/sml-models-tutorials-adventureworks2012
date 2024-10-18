@@ -7,7 +7,7 @@ hierarchies:
 
   - unique_name: Internet Sales Reason
     label: Internet Sales Reason
-
+    folder: Internet Sales Reason
     levels:
 
       - unique_name: SalesOrderAndLineToReason
