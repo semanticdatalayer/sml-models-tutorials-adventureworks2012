@@ -127,10 +127,10 @@ columns:
     data_type: "decimal(38,0)"
   - name: simplestartdate 
     data_type: string
-    sql: format(CAST(startdate as TEXT),'d M, yyyy')
+    sql: format(CAST(startdate as STRING),'d M, yyyy')
     dialects:
       - dialect: Postgresql
-        sql: format(CAST(startdate as TEXT),'d M, yyyy')
+        sql: format(CAST(startdate as STRING),'d M, yyyy')
       - dialect: Snowflake
         sql: DAY("startdate") ||' '|| MONTH("startdate") || ', ' || YEAR("startdate")
       - dialect: BigQuery
@@ -139,10 +139,10 @@ columns:
         sql: date_format(startdate,'MMMM dd, yyyy')             
   - name: simpleenddate
     data_type: string
-    sql: CASE WHEN enddate IS NULL THEN 'Active' ELSE format(CAST(enddate as TEXT),'d M, yyyy') END
+    sql: CASE WHEN enddate IS NULL THEN 'Active' ELSE format(CAST(enddate as STRING),'d M, yyyy') END
     dialects:
       - dialect: Postgresql
-        sql: CASE WHEN enddate IS NULL THEN 'Active' ELSE format(CAST(enddate as TEXT),'d M, yyyy') END        
+        sql: CASE WHEN enddate IS NULL THEN 'Active' ELSE format(CAST(enddate as STRING),'d M, yyyy') END        
       - dialect: Snowflake
         sql: CASE WHEN "enddate" IS NULL THEN 'Active' ELSE DAY("enddate") ||' '|| MONTH("enddate") || ', ' || YEAR("enddate") END
       - dialect: BigQuery
