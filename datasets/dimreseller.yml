@@ -65,10 +65,10 @@ columns:
     data_type: "decimal(38,0)"
   - name: minpaymenttypedesc
     data_type: string
-    sql: CASE WHEN minpaymenttype = 1 THEN CAST('No Minimum' AS VARCHAR) WHEN minpaymenttype = 2 THEN CAST('Percent' AS Varchar) WHEN minpaymenttype = 3 THEN CAST('Amount' AS Varchar) ELSE 'Unspecifed' END
+    sql: CASE WHEN minpaymenttype = 1 THEN CAST('No Minimum' AS STRING) WHEN minpaymenttype = 2 THEN CAST('Percent' AS Varchar) WHEN minpaymenttype = 3 THEN CAST('Amount' AS Varchar) ELSE 'Unspecifed' END
     dialects:
       - dialect: Postgresql 
-        sql: CASE WHEN minpaymenttype = 1 THEN CAST('No Minimum' AS VARCHAR) WHEN minpaymenttype = 2 THEN CAST('Percent' AS Varchar) WHEN minpaymenttype = 3 THEN CAST('Amount' AS Varchar) ELSE 'Unspecifed' END
+        sql: CASE WHEN minpaymenttype = 1 THEN CAST('No Minimum' AS STRING) WHEN minpaymenttype = 2 THEN CAST('Percent' AS Varchar) WHEN minpaymenttype = 3 THEN CAST('Amount' AS Varchar) ELSE 'Unspecifed' END
       - dialect: Snowflake  
         sql: CASE WHEN "minpaymenttype" = 1 THEN CAST('No Minimum' AS STRING) WHEN "minpaymenttype" = 2 THEN CAST('Percent' AS STRING) WHEN "minpaymenttype" = 3 THEN CAST('Amount' AS STRING) ELSE 'Unspecifed' END   
       - dialect: BigQuery
