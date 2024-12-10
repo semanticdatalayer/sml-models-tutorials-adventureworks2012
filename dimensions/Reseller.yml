@@ -68,7 +68,7 @@ hierarchies:
 
           - unique_name: Geography Key
             label: Geography Key
-            folder: ResellerLocation
+            folder: Reseller Location
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: geographykey
