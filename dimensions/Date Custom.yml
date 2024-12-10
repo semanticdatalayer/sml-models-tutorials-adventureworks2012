@@ -36,7 +36,7 @@ hierarchies:
               - quarter_of_year
             name_column: quarter_of_year_name
             sort_column: quarter_of_year
-      - unique_name: Date1
+      - unique_name: Date
         secondary_attributes:
           - unique_name: DateAttr
             label: DateAttr
@@ -120,7 +120,7 @@ hierarchies:
               - month_of_year
             name_column: month_of_year
             sort_column: month_of_year
-          - unique_name: Month2
+          - unique_name: Month Name
             label: Month2
             folder: Dates
             associated_hierarchy: StandardMonth
@@ -129,8 +129,8 @@ hierarchies:
               - month
             name_column: month_name
             sort_column: month
-          - unique_name: Quarter2
-            label: Quarter2
+          - unique_name: Quarter Name
+            label: Quarter
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -147,8 +147,8 @@ hierarchies:
               - week_of_year
             name_column: week_of_year
             sort_column: week_of_year
-          - unique_name: Week2
-            label: Week2
+          - unique_name: Week Name
+            label: Week Name
             folder: Dates
             associated_hierarchy: StandardWeek
             dataset: DateCustom
@@ -156,8 +156,8 @@ hierarchies:
               - week
             name_column: week_name
             sort_column: week
-          - unique_name: Year2
-            label: Year2
+          - unique_name: Year Name
+            label: Year Name
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -170,9 +170,9 @@ hierarchies:
     folder: Dates
     filter_empty: 'yes'
     levels:
-      - unique_name: Year1
+      - unique_name: Year
       - unique_name: Week
-      - unique_name: Date1
+      - unique_name: Date
   - unique_name: Retail445
     label: Retail445
     folder: Dates
@@ -285,8 +285,8 @@ hierarchies:
               - reporting_day
             name_column: reporting_day
             sort_column: reporting_day
-          - unique_name: Reporting Half Year2
-            label: Reporting Half Year2
+          - unique_name: Reporting Half Year Name
+            label: Reporting Half Year Name
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -342,23 +342,23 @@ hierarchies:
               - reporting_week_of_year
             name_column: reporting_week_of_year_name
             sort_column: reporting_week_of_year
-          - unique_name: Reporting Week2
-            label: Reporting Week2
+          - unique_name: Reporting Week Name
+            label: Reporting Week Name
             folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_week
             name_column: reporting_week_name
             sort_column: reporting_week
-          - unique_name: Reporting Year2
-            label: Reporting Year2
+          - unique_name: Reporting Year Name
+            label: Reporting Year Name
             folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_year
             name_column: reporting_year_name
             sort_column: reporting_year
-      - unique_name: Date1
+      - unique_name: Date
         is_hidden: true
   - unique_name: ISO8601Week
     label: ISO8601Week
@@ -385,8 +385,8 @@ hierarchies:
               - iso_8601_day_of_year
             name_column: iso_8601_day_of_year_name
             sort_column: iso_8601_day_of_year
-          - unique_name: ISO 8601 Day2
-            label: ISO 8601 Day2
+          - unique_name: ISO 8601 Day Name
+            label: ISO 8601 Day Name
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -401,27 +401,27 @@ hierarchies:
               - iso_8601_week_of_year
             name_column: iso_8601_week_of_year_name_reporting_day_ctl
             sort_column: iso_8601_week_of_year
-          - unique_name: ISO 8601 Week2
-            label: ISO 8601 Week2
+          - unique_name: ISO 8601 Week Name
+            label: ISO 8601 Week Name
             folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_week
             name_column: iso_8601_week_name
             sort_column: iso_8601_week
-          - unique_name: ISO 8601 Year2
-            label: ISO 8601 Year2
+          - unique_name: ISO 8601 Year Name
+            label: ISO 8601 Year Name
             folder: Dates
             dataset: DateCustom
             key_columns:
               - iso_8601_year
             name_column: iso_8601_year_name
             sort_column: iso_8601_year
-      - unique_name: Date1
+      - unique_name: Date
         is_hidden: true
 level_attributes:
-  - unique_name: Date1
-    label: Date1
+  - unique_name: Date
+    label: Date
     dataset: DateCustom
     is_hidden: true
     is_unique_key: true
@@ -537,14 +537,6 @@ level_attributes:
     name_column: week_name
     sort_column: week
     time_unit: week
-  - unique_name: Year1
-    label: Year
-    dataset: DateCustom
-    key_columns:
-      - year
-    name_column: year_name
-    sort_column: year
-    time_unit: year
   - unique_name: Year
     label: Year
     dataset: DateCustom

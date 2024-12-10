@@ -179,7 +179,7 @@ relationships:
         - orderdatekey
     to:
       dimension: Date Custom
-      level: Date1
+      level: Date
   - unique_name: Reseller_Sales_Date_Custom_Due.
     from:
       dataset: Reseller Sales
@@ -188,7 +188,7 @@ relationships:
     role_play: Due {0}
     to:
       dimension: Date Custom
-      level: Date1
+      level: Date
   - unique_name: Reseller_Sales_Date_Custom_Ship.
     from:
       dataset: Reseller Sales
@@ -197,7 +197,7 @@ relationships:
     role_play: Ship {0}
     to:
       dimension: Date Custom
-      level: Date1
+      level: Date
   - unique_name: Reseller_Sales_Product
     from:
       dataset: Reseller Sales
@@ -221,7 +221,7 @@ relationships:
         - orderdatekey
     to:
       dimension: Date Custom
-      level: Date1
+      level: Date
   - unique_name: Internet_Sales_Customer
     from:
       dataset: Internet Sales
@@ -254,7 +254,7 @@ relationships:
         - datekey
     to:
       dimension: Date Custom
-      level: Date1
+      level: Date
   - unique_name: Finance_Facts_AccountBalance
     from:
       dataset: Finance Facts
