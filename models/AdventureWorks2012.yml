@@ -8,13 +8,13 @@ drillthroughs:
     attributes:
       - name: Business Type
         dimension: Reseller
-      - name: Reporting Day2
+      - name: Reporting Day
         dimension: Date Custom
-      - name: Reporting Day2
+      - name: Reporting Day
         dimension: Date Custom
         relationships_path:
           - Reseller_Sales_Date_Custom_Ship.
-      - name: Reporting Day2
+      - name: Reporting Day
         dimension: Date Custom
         relationships_path:
           - Reseller_Sales_Date_Custom_Due.

@@ -84,15 +84,6 @@ hierarchies:
               - day_of_year
             name_column: day_of_year_name
             sort_column: day_of_year
-          - unique_name: Half Year2
-            label: Half Year2
-            folder: Dates
-            associated_hierarchy: StandardMonth
-            dataset: DateCustom
-            key_columns:
-              - half_year
-            name_column: half_year_name
-            sort_column: half_year
           - unique_name: Month Of Half Year
             label: Month Of Half Year
             folder: Dates
@@ -121,7 +112,7 @@ hierarchies:
             name_column: month_of_year
             sort_column: month_of_year
           - unique_name: Month Name
-            label: Month2
+            label: Month Name
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -276,8 +267,8 @@ hierarchies:
               - reporting_day_of_year
             name_column: reporting_day_of_year_name
             sort_column: reporting_day_of_year_name
-          - unique_name: Reporting Day2
-            label: Reporting Day2
+          - unique_name: Reporting Day Name
+            label: Reporting Day Name
             folder: Dates
             dataset: DateCustom
             format: yyyy-MM-dd HH:mm:ss
@@ -293,16 +284,16 @@ hierarchies:
               - reporting_half_year
             name_column: reporting_half_year_name
             sort_column: reporting_half_year_name
-          - unique_name: Reporting Month2
-            label: Reporting Month2
+          - unique_name: Reporting Month Name
+            label: Reporting Month Name
             folder: Dates
             dataset: DateCustom
             key_columns:
               - reporting_month
             name_column: reporting_month_name
             sort_column: reporting_month_name
-          - unique_name: Reporting Quarter2
-            label: Reporting Quarter2
+          - unique_name: Reporting Quarter Name
+            label: Reporting Quarter Name
             folder: Dates
             dataset: DateCustom
             key_columns:
