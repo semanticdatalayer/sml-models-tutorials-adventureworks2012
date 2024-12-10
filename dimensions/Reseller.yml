@@ -66,8 +66,8 @@ hierarchies:
               - firstorderyear
             sort_column: firstorderyear
 
-          - unique_name: Geography Key
-            label: Geography Key
+          - unique_name: Reseller Geography Key
+            label: Reseller Geography Key
             folder: Reseller Location
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
