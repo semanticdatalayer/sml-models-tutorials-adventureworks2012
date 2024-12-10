@@ -14,12 +14,12 @@ hierarchies:
 
       - unique_name: Subcategory
 
-      - unique_name: 'Product '
+      - unique_name: Product
 
         secondary_attributes:
 
-          - unique_name: Category2
-            label: Category2
+          - unique_name: Category Name
+            label: Category Name
             folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Category
@@ -28,7 +28,7 @@ hierarchies:
               - productcategorykey
             sort_column: englishproductcategoryname
 
-          - unique_name: Class1
+          - unique_name: Class
             label: Class
             folder: Stocking
             custom_empty_member:
@@ -123,8 +123,8 @@ hierarchies:
               - modelnameassembly
             sort_column: modelnameassembly
 
-          - unique_name: Product Line2
-            label: Product Line2
+          - unique_name: Product Line Name
+            label: Product Line Name
             folder: Product Data
             associated_hierarchy: Product Model Lines
             dataset: Product Dataset
@@ -133,8 +133,8 @@ hierarchies:
               - productline
             sort_column: productlinename
 
-          - unique_name: Product2
-            label: Product2
+          - unique_name: Product Name
+            label: Product Name
             folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -153,8 +153,8 @@ hierarchies:
               - reorderpoint
             sort_column: reorderpoint
 
-          - unique_name: Safety Stock Level2
-            label: Safety Stock Level2
+          - unique_name: Safety Stock Level Name
+            label: Safety Stock Level Name
             folder: Stocking
             associated_hierarchy: Stock Level
             dataset: Product Dataset
@@ -173,7 +173,7 @@ hierarchies:
               - sizerange
             sort_column: sizerange
 
-          - unique_name: Size1
+          - unique_name: Size
             label: Size
             folder: Stocking
             associated_hierarchy: Product Categories
@@ -203,8 +203,8 @@ hierarchies:
               - startdate
             sort_column: startdate
 
-          - unique_name: Status2
-            label: Status2
+          - unique_name: Status
+            label: Status
             folder: History
             custom_empty_member:
               key:
@@ -233,8 +233,8 @@ hierarchies:
               - styleNoNull
             sort_column: styledesc
 
-          - unique_name: Subcategory2
-            label: Subcategory2
+          - unique_name: Subcategory Name
+            label: Subcategory Name
             folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Subcategory
@@ -269,7 +269,7 @@ hierarchies:
 
       - unique_name: Model
 
-      - unique_name: 'Product '
+      - unique_name: Product
 
   - unique_name: Stock Level
     label: Stock Level
@@ -280,7 +280,7 @@ hierarchies:
 
       - unique_name: Safety Stock Level
 
-      - unique_name: 'Product '
+      - unique_name: Product
 
 level_attributes:
 
@@ -302,7 +302,7 @@ level_attributes:
     key_columns:
       - modelnameassembly
 
-  - unique_name: 'Product '
+  - unique_name: Product
     label: 'Product '
     dataset: Product Dataset
     name_column: englishproductname

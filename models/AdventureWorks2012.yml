@@ -28,7 +28,7 @@ drillthroughs:
         dimension: Product
       - name: Color
         dimension: Product
-      - name: Size1
+      - name: Size
         dimension: Product
       - name: Weight
         dimension: Product
@@ -205,7 +205,7 @@ relationships:
         - productkey
     to:
       dimension: Product
-      level: 'Product '
+      level: Product
   - unique_name: Reseller_Sales_Reseller
     from:
       dataset: Reseller Sales
@@ -237,7 +237,7 @@ relationships:
         - productkey
     to:
       dimension: Product
-      level: 'Product '
+      level: Product
   - unique_name: Internet_Sales_Internet_Sales_Reason
     from:
       dataset: Internet Sales
