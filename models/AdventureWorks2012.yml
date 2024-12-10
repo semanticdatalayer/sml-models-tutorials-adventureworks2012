@@ -185,7 +185,7 @@ relationships:
       dataset: Reseller Sales
       join_columns:
         - duedatekey
-    role_play: Due.{0}
+    role_play: Due {0}
     to:
       dimension: Date Custom
       level: Date1
@@ -194,7 +194,7 @@ relationships:
       dataset: Reseller Sales
       join_columns:
         - shipdatekey
-    role_play: Ship.{0}
+    role_play: Ship {0}
     to:
       dimension: Date Custom
       level: Date1
