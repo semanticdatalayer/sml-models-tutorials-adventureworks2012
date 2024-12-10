@@ -40,8 +40,8 @@ hierarchies:
               - birthdate
             sort_column: birthdate
 
-          - unique_name: City2
-            label: City2
+          - unique_name: City
+            label: City
             description: Customer City attribute
             folder: Location
             dataset: Geography Dataset
@@ -170,8 +170,8 @@ hierarchies:
               - phone
             sort_column: phone
 
-          - unique_name: Postal Code 2
-            label: Postal Code 2
+          - unique_name: Postal Code
+            label: Postal Code
             description: Customer's Postal Code
             folder: Location
             dataset: Geography Dataset
