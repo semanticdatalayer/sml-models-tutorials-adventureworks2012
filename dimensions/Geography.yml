@@ -20,8 +20,8 @@ hierarchies:
 
         secondary_attributes:
 
-          - unique_name: City3
-            label: City3
+          - unique_name: City Name
+            label: City Name
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: city
@@ -30,8 +30,8 @@ hierarchies:
               - stateprovincecode
             sort_column: city
 
-          - unique_name: Country3
-            label: Country3
+          - unique_name: Country Name
+            label: Country Name
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: englishcountryregionname
@@ -39,8 +39,8 @@ hierarchies:
               - englishcountryregionname
             sort_column: englishcountryregionname
 
-          - unique_name: Postal Code3
-            label: Postal Code3
+          - unique_name: Postal Code Name
+            label: Postal Code Name
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: postalcode
@@ -50,8 +50,8 @@ hierarchies:
               - stateprovincecode
             sort_column: postalcode
 
-          - unique_name: State-Province3
-            label: State-Province3
+          - unique_name: State-Province Name
+            label: State-Province Name
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: stateprovincecode
