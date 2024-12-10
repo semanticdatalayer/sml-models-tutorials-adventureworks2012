@@ -170,8 +170,8 @@ hierarchies:
               - phone
             sort_column: phone
 
-          - unique_name: Postal Code
-            label: Postal Code
+          - unique_name: Customer Postal Code
+            label: Customer Postal Code
             description: Customer's Postal Code
             folder: Location
             dataset: Geography Dataset
