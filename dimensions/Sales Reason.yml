@@ -12,12 +12,12 @@ hierarchies:
 
       - unique_name: Sales Reason Reason Type
 
-      - unique_name: 'Sales Reason '
+      - unique_name: Sales Reason
 
 level_attributes:
 
-  - unique_name: 'Sales Reason '
-    label: 'Sales Reason '
+  - unique_name: Sales Reason
+    label: Sales Reason
     dataset: Sales Reason Dataset
     name_column: salesreasonname
     key_columns:

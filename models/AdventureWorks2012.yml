@@ -246,7 +246,7 @@ relationships:
         - salesorderlinenumber
     to:
       dimension: Internet Sales Reason
-      level: SalesOrderAndLineToReason
+      level: Sales Order And Line To Reason
   - unique_name: Finance_Facts_Date_Custom
     from:
       dataset: Finance Facts
