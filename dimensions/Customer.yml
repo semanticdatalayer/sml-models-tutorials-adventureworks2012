@@ -40,8 +40,8 @@ hierarchies:
               - birthdate
             sort_column: birthdate
 
-          - unique_name: City
-            label: City
+          - unique_name: Customer City
+            label: Customer City
             description: Customer City attribute
             folder: Location
             dataset: Geography Dataset
