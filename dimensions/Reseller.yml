@@ -36,8 +36,8 @@ hierarchies:
               - annualsales
             sort_column: annualsales
 
-          - unique_name: Bank Name2
-            label: Bank Name2
+          - unique_name: Bank
+            label: Bank
             folder: Order Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -46,8 +46,8 @@ hierarchies:
               - bankname
             sort_column: bankname
 
-          - unique_name: Business Type2
-            label: Business Type2
+          - unique_name: Business Type Name
+            label: Business Type Name
             folder: Reseller Data
             associated_hierarchy: Reseller Type
             dataset: Reseller Dataset
@@ -66,8 +66,8 @@ hierarchies:
               - firstorderyear
             sort_column: firstorderyear
 
-          - unique_name: Geography Key2
-            label: Geography Key2
+          - unique_name: Geography Key
+            label: Geography Key
             folder: ResellerLocation
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -114,8 +114,8 @@ hierarchies:
               - numberemployees
             sort_column: numberemployees
 
-          - unique_name: Order Frequency2
-            label: Order Frequency2
+          - unique_name: Order Frequency Name
+            label: Order Frequency Name
             folder: Order Data
             associated_hierarchy: Reseller Order Frequency
             dataset: Reseller Dataset
@@ -124,8 +124,8 @@ hierarchies:
               - orderfrequency
             sort_column: orderfrequencydesc
 
-          - unique_name: Order Month2
-            label: Order Month2
+          - unique_name: Order Month Name
+            label: Order Month Name
             folder: Order Data
             associated_hierarchy: Reseller Order Month
             dataset: Reseller Dataset

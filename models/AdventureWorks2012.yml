@@ -6,7 +6,7 @@ dimensions:
 drillthroughs:
   - unique_name: ResellerDetails
     attributes:
-      - name: Business Type2
+      - name: Business Type
         dimension: Reseller
       - name: Reporting Day2
         dimension: Date Custom
