@@ -40,7 +40,7 @@ hierarchies:
               - birthdate
             sort_column: birthdate
 
-          - unique_name: Customer City Name
+          - unique_name: City
             label: Customer City Name
             description: Customer City attribute
             folder: Location
