@@ -38,8 +38,8 @@ hierarchies:
             sort_column: quarter_of_year
       - unique_name: Date
         secondary_attributes:
-          - unique_name: DateAttr
-            label: DateAttr
+          - unique_name: Date Key Name
+            label: Date Key Name
             folder: Dates
             description: 'Date secondary attribute '
             associated_hierarchy: StandardMonth
