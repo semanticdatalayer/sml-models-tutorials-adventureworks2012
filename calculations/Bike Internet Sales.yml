@@ -1,5 +1,5 @@
-unique_name: Mountain-Bike-Sales
+unique_name: Bike Internet Sales
 object_type: metric_calc
-label: Mountain-Bike-Sales
+label: Bike Internet Sales
 expression: "([Product].[Product Categories].[Category].&[1],[Product].[Product Model\
   \ Lines].[Product Line].&[M],[Measures].[Internet Sales Amount Local])"

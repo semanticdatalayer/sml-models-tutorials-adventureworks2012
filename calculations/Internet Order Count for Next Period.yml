@@ -1,5 +1,5 @@
-unique_name: Lead-IOC
+unique_name: Internet Order Count for Next Period
 object_type: metric_calc
-label: Lead-IOC
+label: Internet Order Count for Next Period
 expression: "([Date Custom].[StandardMonth].CurrentMember.Lead(1),[Measures].[Internet\
   \ Order Count])"

@@ -1,6 +1,6 @@
-unique_name: Canada2007-IOC
+unique_name: Internet Order Count for Canada for 2007
 object_type: metric_calc
-label: Canada2007-IOC
+label: Internet Order Count for Canada for 2007
 expression: "([Customer].[Customer Geography].[Customer Country].&[Canada], \n   \
   \ [Date Custom].[StandardMonth].[Year].&[2007-01-01T00:00:00],\n    [Measures].[Internet\
   \ Order Count])"

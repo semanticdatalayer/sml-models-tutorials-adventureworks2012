@@ -1,6 +1,6 @@
-unique_name: Mountain-Bike-IOC
+unique_name: Internet Order Count for Bikes
 object_type: metric_calc
-label: Mountain-Bike-IOC
+label: Internet Order Count for Bikes
 expression: |-
   ([Product].[Product Categories].[Category].&[1],[Product].[Product Model Lines].[Product Line].&[M],
   [Measures].[Internet Order Count])

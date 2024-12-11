@@ -1,5 +1,5 @@
-unique_name: Lag-IOC
+unique_name: Internet Order Count for Last Period
 object_type: metric_calc
-label: Lag-IOC
+label: Internet Order Count for Last Period
 expression: "([Date Custom].[StandardMonth].CurrentMember.Lag(1), [Measures].[Internet\
   \ Order Count])"

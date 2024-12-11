@@ -1,6 +1,6 @@
-unique_name: P2D_RNG_SM_Sum-IOC
+unique_name: Internet Order Count for 2007 Periods to Date
 object_type: metric_calc
-label: P2D_RNG_SM_Sum-IOC
+label: Internet Order Count for 2007 Periods to Date
 expression: |-
   Sum(
       PeriodsToDate(

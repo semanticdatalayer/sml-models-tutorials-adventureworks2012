@@ -1,5 +1,5 @@
-unique_name: CalcAvgSA
+unique_name: Average Internet Sales Amount Per Order
 object_type: metric_calc
-label: CalcAvgSA
+label: Average Internet Sales Amount Per Order
 expression: "[Measures].[Internet Sales Amount Local] / [Measures].[Internet Order\
   \ Count]"
