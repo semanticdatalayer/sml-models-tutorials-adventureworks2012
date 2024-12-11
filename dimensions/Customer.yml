@@ -70,8 +70,8 @@ hierarchies:
               - englishcountryregionname
             sort_column: englishcountryregionname
 
-          - unique_name: CustomerFullName
-            label: CustomerFullName
+          - unique_name: Customer Full Name
+            label: Customer Full Name
             folder: Customer Data
             description: Customer Full Name distinguished by customer key
             dataset: Customer Dataset
