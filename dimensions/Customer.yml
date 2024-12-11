@@ -60,15 +60,6 @@ hierarchies:
               - commutedistance
             sort_column: commutedistancesort
 
-          - unique_name: CommuteDistanceSort
-            label: Commute Distance Sort
-            folder: Demographic
-            dataset: Customer Dataset
-            name_column: commutedistancesort
-            key_columns:
-              - commutedistancesort
-            sort_column: commutedistancesort
-
           - unique_name: Country2
             label: Country2
             description: Customer Country Name
