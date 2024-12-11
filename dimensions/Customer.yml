@@ -60,8 +60,8 @@ hierarchies:
               - commutedistance
             sort_column: commutedistancesort
 
-          - unique_name: Country2
-            label: Country2
+          - unique_name: Customer Country Name
+            label: Customer Country Name
             description: Customer Country Name
             folder: Location
             dataset: Geography Dataset
