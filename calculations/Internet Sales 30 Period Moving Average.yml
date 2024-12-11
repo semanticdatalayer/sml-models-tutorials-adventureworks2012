@@ -1,6 +1,6 @@
-unique_name: Sales Amount-Order Retail445-30PrdMvAvg
+unique_name: Internet Sales 30 Period Moving Average
 object_type: metric_calc
-label: Sales Amount-Order Retail445-30PrdMvAvg
+label: Internet Sales 30 Period Moving Average
 expression: "Avg(\n    [Date Custom].[StandardMonth].CurrentMember.Lag(1):\n    [Date\
   \ Custom].[StandardMonth].CurrentMember, \n    [Measures].[Internet Order Count]\n\
   )"

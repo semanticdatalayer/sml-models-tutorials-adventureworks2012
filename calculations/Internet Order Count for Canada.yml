@@ -1,5 +1,5 @@
-unique_name: Canada-IOC
+unique_name: Internet Order Count for Canada
 object_type: metric_calc
-label: Canada-IOC
+label: Internet Order Count for Canada
 expression: "([Customer].[Customer Geography].[Customer Country].&[Canada], [Measures].[Internet\
   \ Order Count])"

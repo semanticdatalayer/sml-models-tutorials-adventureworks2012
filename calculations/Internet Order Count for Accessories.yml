@@ -1,5 +1,5 @@
-unique_name: Accessories-IOC
+unique_name: Internet Order Count for Accessories
 object_type: metric_calc
-label: Accessories-IOC
+label: Internet Order Count for Accessories
 expression: "([Product].[Product Categories].[Category].&[4],[Measures].[Internet\
   \ Order Count])"

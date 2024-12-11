@@ -1,5 +1,5 @@
-unique_name: France-Bike-Sales
+unique_name: Bike Internet Sales in France
 object_type: metric_calc
-label: France-Bike-Sales
+label: Bike Internet Sales in France
 expression: "( [Customer].[Customer Geography].[Customer Country].&[France], [Product].[Product\
   \ Categories].[Category].&[1],[Measures].[Internet Sales Amount Local])"

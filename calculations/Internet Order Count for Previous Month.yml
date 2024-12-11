@@ -1,6 +1,6 @@
-unique_name: PrevMonth-IOC
+unique_name: Internet Order Count for Previous Month
 object_type: metric_calc
-label: PrevMonth-IOC
+label: Internet Order Count for Previous Month
 expression: |-
   ([Date Custom].[StandardMonth].CurrentMember.PrevMember,
       [Measures].[Internet Order Count])

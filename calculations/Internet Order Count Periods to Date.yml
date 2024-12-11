@@ -1,6 +1,6 @@
-unique_name: P2DSum-IOC
+unique_name: Internet Order Count Periods to Date
 object_type: metric_calc
-label: P2DSum-IOC
+label: Internet Order Count Periods to Date
 expression: |-
   Sum(
       PeriodsToDate([Date Custom].[StandardMonth].[Year]),

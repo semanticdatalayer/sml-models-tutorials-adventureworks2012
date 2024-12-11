@@ -1,5 +1,5 @@
-unique_name: Curr-IOC
+unique_name: Internet Order Count for Current Period
 object_type: metric_calc
-label: Curr-IOC
+label: Internet Order Count for Current Period
 expression: "([Date Custom].[StandardMonth].CurrentMember,[Measures].[Internet Order\
   \ Count])"
