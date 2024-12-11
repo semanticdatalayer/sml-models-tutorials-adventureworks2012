@@ -144,8 +144,8 @@ hierarchies:
               - productline
             sort_column: productline
 
-          - unique_name: ResellerName
-            label: ResellerName
+          - unique_name: Reseller Name
+            label: Reseller Name
 
             associated_hierarchy: Reseller Type
             dataset: Reseller Dataset

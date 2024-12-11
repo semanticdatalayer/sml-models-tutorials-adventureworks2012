@@ -18,7 +18,7 @@ drillthroughs:
         dimension: Date Custom
         relationships_path:
           - Reseller_Sales_Date_Custom_Due.
-      - name: ResellerName
+      - name: Reseller Name
         dimension: Reseller
     metrics:
       - Reseller Sales Amount Local
