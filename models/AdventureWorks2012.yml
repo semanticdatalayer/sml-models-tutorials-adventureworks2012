@@ -60,10 +60,6 @@ metrics:
     folder: Reseller Sales
   - unique_name: Internet Order Count for Accessories
     folder: Tuple
-  - unique_name: Calc-LagPlusIOC
-    folder: Time Relative
-  - unique_name: Calc-LagPlusLag2-IOC
-    folder: Time Relative
   - unique_name: Average Internet Sales Amount Per Order
     folder: Tuple
   - unique_name: Internet Order Count for Canada
@@ -74,32 +70,10 @@ metrics:
     folder: Time Relative
   - unique_name: Bike Internet Sales in France
     folder: Tuple
-  - unique_name: France-IOC
-    folder: Time Relative
-  - unique_name: France-Sales
-    folder: Tuple
-  - unique_name: Helmets-IOC
-    folder: Tuple
   - unique_name: Internet Order Count for Last Period
-    folder: Time Relative
-  - unique_name: Lag2-IOC
-    folder: Time Relative
-  - unique_name: Lag3-IOC
-    folder: Time Relative
-  - unique_name: LagCanada-IOC
-    folder: Time Relative
-  - unique_name: LagPlusConstant-IOC
-    folder: Time Relative
-  - unique_name: LagProduct-IOC
-    folder: Time Relative
-  - unique_name: LagTimesConstant-IOC
-    folder: Time Relative
-  - unique_name: LagTimesIOC
     folder: Time Relative
   - unique_name: Internet Order Count for Next Period
     folder: Time Relative
-  - unique_name: M-Bike-Same-Hier-Sales
-    folder: Tuple
   - unique_name: Internet Order Count for Bikes
     folder: Tuple
   - unique_name: Bike Internet Sales
@@ -108,39 +82,13 @@ metrics:
     folder: Time Relative
   - unique_name: Internet Order Count for 2007 Periods to Date
     folder: Time Relative
-  - unique_name: PP_RNG_SM_Sum-IOC
-    folder: Time Relative
-  - unique_name: PP_StandardMonth-IOC
-    folder: Time Relative
   - unique_name: Internet Order Count for Previous Month
     folder: Tuple
   - unique_name: Internet Sales Quarter to Date
     folder: Time Relative
-  - unique_name: RNG_SM_Sum-IOC
-    folder: Time Relative
-  - unique_name: RangeLagSum-IOC
-    folder: Time Relative
-  - unique_name: RangeSMSum-IOC
-    folder: Time Relative
-  - unique_name: Rolling-IOC
-    folder: Time Relative
-  - unique_name: RollingWithPrev-IOC
-    folder: Time Relative
-  - unique_name: SMLag-IOC
-    folder: Time Relative
   - unique_name: Internet Sales 30 Period Moving Average
     folder: Time Relative
-  - unique_name: Sales Amount-Order Retail445-30PrdMvAvgPrevYear
-    folder: Time Relative
-  - unique_name: Sales Amount-Order Retail445-30PrdMvAvgPrevYearGrowthPct
-    folder: Time Relative
-  - unique_name: SportHelmets-IOC
-    folder: Tuple
-  - unique_name: Stdev-IOC
-    folder: Time Relative
   - unique_name: Internet Order Count Year to Date
-    folder: Time Relative
-  - unique_name: Year2008-IOC
     folder: Time Relative
 perspectives:
   - unique_name: ResellerPerspective
