@@ -14,7 +14,7 @@ columns:
   - name: commutedistance
     data_type: string
   - name: commutedistancesort
-    data_type: "decimal(1,0)"
+    data_type: "long"
     sql: CASE
               WHEN commutedistance = '0-1 Miles' THEN 1 
               WHEN commutedistance = '1-2 Miles' THEN 2
