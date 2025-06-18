@@ -161,7 +161,7 @@ hierarchies:
     folder: Dates
     filter_empty: 'yes'
     levels:
-      - unique_name: Year
+      - unique_name: Year-Week
       - unique_name: Week
       - unique_name: Date
   - unique_name: Retail445
@@ -529,6 +529,14 @@ level_attributes:
     sort_column: week
     time_unit: week
   - unique_name: Year
+    label: Year
+    dataset: DateCustom
+    key_columns:
+      - year
+    name_column: year_name
+    sort_column: year
+    time_unit: year
+  - unique_name: Year-Week
     label: Year
     dataset: DateCustom
     key_columns:
