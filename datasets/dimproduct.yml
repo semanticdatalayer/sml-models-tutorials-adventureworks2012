@@ -38,7 +38,7 @@ columns:
   - name: color
     data_type: string
   - name: daystomanufacture
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: dealerprice
     data_type: double
   - name: enddate
@@ -104,7 +104,7 @@ columns:
   - name: productalternatekey
     data_type: string
   - name: productkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: productline
     data_type: string
   - name: productlinename
@@ -120,11 +120,11 @@ columns:
       - dialect: DatabricksSQL      
         sql: CASE trim(productline) WHEN 'M' THEN 'Mountain' WHEN 'R' THEN 'Road' WHEN 'S' THEN 'Accessory' WHEN 'T' THEN 'Touring' ELSE 'Components' END  
   - name: productsubcategorykey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: reorderpoint
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: safetystocklevel
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: simplestartdate 
     data_type: string
     sql: format(CAST(startdate as STRING),'d M, yyyy')

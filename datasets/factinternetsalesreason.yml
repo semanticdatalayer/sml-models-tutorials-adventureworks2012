@@ -12,8 +12,8 @@ dialects:
     sql: SELECT * from as_adventure_small.factinternetsalesreason  
 columns:
   - name: salesorderlinenumber
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: salesordernumber
     data_type: string
   - name: salesreasonkey
-    data_type: "decimal(38,0)"
+    data_type: "long"

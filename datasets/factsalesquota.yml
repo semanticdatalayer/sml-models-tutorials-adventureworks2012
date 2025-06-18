@@ -6,16 +6,16 @@ table: factsalesquota
 
 columns:
   - name: calendarquarter
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: calendaryear
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: date
     data_type: string
   - name: datekey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: employeekey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: salesamountquota
     data_type: double
   - name: salesquotakey
-    data_type: "decimal(38,0)"
+    data_type: "long"

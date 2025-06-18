@@ -14,13 +14,13 @@ columns:
   - name: frenchcountryregionname
     data_type: string
   - name: geographykey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: ipaddresslocator
     data_type: string
   - name: postalcode
     data_type: string
   - name: salesterritorykey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: spanishcountryregionname
     data_type: string
   - name: stateprovincecode

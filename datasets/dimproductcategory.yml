@@ -10,8 +10,8 @@ columns:
   - name: frenchproductcategoryname
     data_type: string
   - name: productcategoryalternatekey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: productcategorykey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: spanishproductcategoryname
     data_type: string

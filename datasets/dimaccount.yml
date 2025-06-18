@@ -6,11 +6,11 @@ table: dimaccount
 
 columns:
   - name: accountcodealternatekey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: accountdescription
     data_type: string
   - name: accountkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: accounttype
     data_type: string
   - name: custommemberoptions
@@ -20,8 +20,8 @@ columns:
   - name: operator
     data_type: string
   - name: parentaccountcodealternatekey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: parentaccountkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: valuetype
     data_type: string

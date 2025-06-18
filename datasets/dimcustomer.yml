@@ -58,7 +58,7 @@ columns:
   - name: customeralternatekey
     data_type: string
   - name: customerkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: datefirstpurchase
     data_type: date
   - name: emailaddress
@@ -116,7 +116,7 @@ columns:
     - dialect: DatabricksSQL  
       sql: CASE WHEN gender = 'M' THEN 'Male' ELSE 'Female' END  
   - name: geographykey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: houseownerdesc
     data_type: string
     sql: CASE WHEN houseownerflag = 1 THEN 'Yes' ELSE 'No' END
@@ -130,7 +130,7 @@ columns:
     - dialect: DatabricksSQL  
       sql: CASE WHEN houseownerflag = 1 THEN 'Yes' ELSE 'No' END  
   - name: houseownerflag
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: lastname
     data_type: string
   - name: maritalstatus
@@ -152,9 +152,9 @@ columns:
   - name: namestyle
     data_type: boolean
   - name: numbercarsowned
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: numberchildrenathome
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: phone
     data_type: string
   - name: simpledatefirstpurchase
@@ -178,6 +178,6 @@ columns:
   - name: title
     data_type: string
   - name: totalchildren
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: yearlyincome
     data_type: double

@@ -18,7 +18,7 @@ columns:
   - name: businesstype
     data_type: string
   - name: firstorderyear
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: firstorderyeardesc
     data_type: string
     sql: CASE WHEN NOT lastorderyear IS NULL THEN cast(lastorderyear as STRING) ELSE 'Never Ordered' END
@@ -32,9 +32,9 @@ columns:
       - dialect: DatabricksSQL
         sql: CASE WHEN NOT firstorderyear IS NULL THEN CAST(firstorderyear AS STRING) ELSE 'Never Ordered' END  
   - name: geographykey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: lastorderyear
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: lastorderyeardesc
     data_type: string
     sql: CASE WHEN NOT lastorderyear IS NULL THEN cast(lastorderyear as STRING) ELSE 'Never Ordered' END
@@ -62,7 +62,7 @@ columns:
       - dialect: DatabricksSQL  
         sql: CASE WHEN NOT minpaymentamount IS NULL THEN CAST(minpaymentamount AS STRING) ELSE 'Not Applicable' END   
   - name: minpaymenttype
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: minpaymenttypedesc
     data_type: string
     sql: CASE WHEN minpaymenttype = 1 THEN CAST('No Minimum' AS STRING) WHEN minpaymenttype = 2 THEN CAST('Percent' AS STRING) WHEN minpaymenttype = 3 THEN CAST('Amount' AS STRING) ELSE 'Unspecifed' END
@@ -76,7 +76,7 @@ columns:
       - dialect: DatabricksSQL
         sql: CASE WHEN minpaymenttype = 1 THEN CAST('No Minimum' AS STRING) WHEN minpaymenttype = 2 THEN CAST('Percent' AS STRING) WHEN minpaymenttype = 3 THEN CAST('Amount' AS STRING) ELSE 'Unspecifed' END    
   - name: numberemployees
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: orderfrequency
     data_type: string
   - name: orderfrequencydesc
@@ -92,7 +92,7 @@ columns:
       - dialect: DatabricksSQL      
         sql: CASE WHEN orderfrequency = 'A' THEN 'Annual' WHEN orderfrequency = 'S' THEN 'Bi-Annual' ELSE 'Quarterly' END   
   - name: ordermonth
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: ordermonthdesc
     data_type: string
     sql: CASE
@@ -187,8 +187,8 @@ columns:
   - name: reselleralternatekey
     data_type: string
   - name: resellerkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: resellername
     data_type: string
   - name: yearopened
-    data_type: "decimal(38,0)"
+    data_type: "long"

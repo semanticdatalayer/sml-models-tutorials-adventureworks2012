@@ -6,18 +6,18 @@ table: factfinance
 
 columns:
   - name: accountkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: amount
     data_type: double
   - name: date
     data_type: string
   - name: datekey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: departmentgroupkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: financekey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: organizationkey
-    data_type: "decimal(38,0)"
+    data_type: "long"
   - name: scenariokey
-    data_type: "decimal(38,0)"
+    data_type: "long"
