@@ -1,6 +1,7 @@
 unique_name: AdventureWorksDW2012
 label: AdventureWorksDW2012
 object_type: catalog
+description: The AdventureWorksDW2012 catalog contains the AdventureWorks2012 model which is based on AdventureWorks, a sample relational database from Microsoft that represents a fictional global manufacturing company. It models real-world business processes like product design, sales, purchasing, manufacturing, and human resources, making it a popular choice for learning, demos, and testing SQL Server features, data modeling, and analytics scenarios.
 version: 1.0
 aggressive_agg_promotion: false
 build_speculative_aggs: false
