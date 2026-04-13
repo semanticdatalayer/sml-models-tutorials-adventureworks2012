@@ -1,7 +1,13 @@
 unique_name: AdventureWorks2012
 object_type: model
 label: AdventureWorks2012
-description: The AdventureWorks2012 model is based on AdventureWorks, a sample relational database from Microsoft that represents a fictional global manufacturing company. It models real-world business processes like product design, sales, purchasing, manufacturing, and human resources, making it a popular choice for learning, demos, and testing SQL Server features, data modeling, and analytics scenarios.
+description: >-
+  The AdventureWorks2012 model is based on AdventureWorks, a sample relational
+  database from Microsoft that represents a fictional global manufacturing
+  company. It models real-world business processes like product design, sales,
+  purchasing, manufacturing, and human resources, making it a popular choice for
+  learning, demos, and testing SQL Server features, data modeling, and analytics
+  scenarios.
 dimensions:
   - Internet Sales Order Details
 drillthroughs:
@@ -44,8 +50,6 @@ metrics:
   - unique_name: Internet Order Count
     folder: Internet Sales
   - unique_name: Internet Sales Amount Local
-    folder: Internet Sales
-  - unique_name: Internet Sales Reason Count
     folder: Internet Sales
   - unique_name: Order Quantity Long
     folder: Internet Sales
@@ -108,7 +112,6 @@ perspectives:
       - Unit Price Discount Percent
       - Order Quantity Long
       - Internet Order Count
-      - Internet Sales Reason Count
       - Balance
       - Internet Sales Amount Local
 relationships:

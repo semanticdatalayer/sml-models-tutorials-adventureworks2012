@@ -1,19 +1,12 @@
 unique_name: InternetSalesReason
 object_type: dataset
 label: InternetSalesReason
-connection_id: Connection - AdventureWorks2012
-sql: SELECT * from adventureworks2012.factinternetsalesreason
-dialects:
-  - dialect: Postgresql
-    sql: SELECT * from adventureworks2012.factinternetsalesreason
-  - dialect: Snowflake
-    sql: SELECT * from "adventureworks2012"."factinternetsalesreason"
-  - dialect: BigQuery
-    sql: SELECT * from adventureworks2012.factinternetsalesreason  
 columns:
   - name: salesorderlinenumber
-    data_type: "long"
+    data_type: long
   - name: salesordernumber
     data_type: string
   - name: salesreasonkey
-    data_type: "long"
+    data_type: long
+connection_id: Connection - AdventureWorks2012
+table: factinternetsalesreason

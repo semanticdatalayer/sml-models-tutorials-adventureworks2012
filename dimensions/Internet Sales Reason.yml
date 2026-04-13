@@ -1,43 +1,36 @@
 unique_name: Internet Sales Reason
 object_type: dimension
 label: Internet Sales Reason
-type: standard
-
 hierarchies:
-
   - unique_name: Internet Sales Reason
     label: Internet Sales Reason
     folder: Internet Sales Reason
     levels:
-
       - unique_name: Sales Order And Line To Reason
         is_hidden: true
-
 level_attributes:
-
   - unique_name: Sales Order And Line To Reason
     label: Sales Order And Line To Reason
-    is_hidden: true
     dataset: InternetSalesReason
-    name_column: salesreasonkey
+    is_hidden: true
     key_columns:
       - salesordernumber
       - salesorderlinenumber
-
+    name_column: salesreasonkey
+modeler_metadata:
+  version: 0
+  modified: 'false'
 relationships:
-
   - unique_name: Internet Sales Reason
     from:
-      hierarchy: Internet Sales Reason
-      level: Sales Order And Line To Reason
       dataset: InternetSalesReason
+      hierarchy: Internet Sales Reason
       join_columns:
         - salesreasonkey
+      level: Sales Order And Line To Reason
+    m2m: true
     to:
       dimension: Sales Reason
       level: Sales Reason
     type: embedded
-
-modeler_metadata:
-  version: 0
-  modified: "false"
+type: standard
