@@ -1,6 +1,7 @@
 unique_name: Reseller Sales
 object_type: dataset
 label: Reseller Sales
+description: "Reseller sales fact table at order line grain: quantities, prices, discounts, costs, sales amount, tax, freight, employee and reseller keys, and order/ship/due dates."
 connection_id: Connection - AdventureWorks2012
 table: factresellersales
 

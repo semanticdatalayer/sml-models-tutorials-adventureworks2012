@@ -1,12 +1,14 @@
 unique_name: Internet Sales Reason
 object_type: dimension
 label: Internet Sales Reason
+description: "Hidden many-to-many bridge linking internet sales order lines to the Sales Reason dimension. Modeling utility, not for direct reporting."
 type: standard
 
 hierarchies:
 
   - unique_name: Internet Sales Reason
     label: Internet Sales Reason
+    description: "Hidden bridge hierarchy carrying the many-to-many join between internet order lines and sales reasons. Not for reporting."
     folder: Internet Sales Reason
     levels:
 
@@ -17,6 +19,7 @@ level_attributes:
 
   - unique_name: Sales Order And Line To Reason
     label: Sales Order And Line To Reason
+    description: "Hidden bridge key (order number plus line number) mapping internet order lines to sales reasons. Not for reporting."
     is_hidden: true
     dataset: InternetSalesReason
     name_column: salesreasonkey

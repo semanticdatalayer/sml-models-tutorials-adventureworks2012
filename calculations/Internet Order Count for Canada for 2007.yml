@@ -1,6 +1,7 @@
 unique_name: Internet Order Count for Canada for 2007
 object_type: metric_calc
 label: Internet Order Count for Canada for 2007
+description: "Internet Order Count fixed to Customer Country Canada and calendar year 2007 (tuple filter). Contrast Internet Order Count for Canada (all years)."
 expression: "([Customer].[Customer Geography].[Customer Country].&[Canada], \n   \
   \ [Date Custom].[StandardMonth].[Year].&[2007-01-01T00:00:00],\n    [Measures].[Internet\
   \ Order Count])"

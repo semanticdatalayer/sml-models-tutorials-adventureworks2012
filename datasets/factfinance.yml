@@ -1,6 +1,7 @@
 unique_name: Finance Facts
 object_type: dataset
 label: Finance Facts
+description: "Finance fact table: GL amounts by date, organization, department group, scenario, and account."
 connection_id: Connection - AdventureWorks2012
 table: factfinance
 

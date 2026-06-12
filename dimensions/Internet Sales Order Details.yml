@@ -1,12 +1,14 @@
 unique_name: Internet Sales Order Details
 object_type: dimension
 label: Internet Sales Order Details
+description: "Degenerate order detail dimension from the internet sales fact: sales order number and line item, for order-level drilldown."
 is_degenerate: true
 
 hierarchies:
 
   - unique_name: Internet Sales Orders
     label: Internet Sales Orders
+    description: "Internet order rollup Order Number > Item Description (order line items), degenerate from the internet sales fact."
     folder: Internet Sales Orders
     filter_empty: "yes"
 
@@ -20,6 +22,7 @@ level_attributes:
 
   - unique_name: Item Description
     label: Item Description
+    description: "Internet order line item keyed by order number plus line number. Leaf below Order Number; degenerate from the internet sales fact."
     dataset: Internet Sales
     name_column: salesordernumber
     key_columns:
@@ -28,6 +31,7 @@ level_attributes:
 
   - unique_name: Order Number
     label: Order Number
+    description: "Internet sales order number (e.g. SO43697). Groups order line items; degenerate from the internet sales fact."
     dataset: Internet Sales
     name_column: salesordernumber
     key_columns:

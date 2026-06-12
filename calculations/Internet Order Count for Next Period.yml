@@ -1,5 +1,6 @@
 unique_name: Internet Order Count for Next Period
 object_type: metric_calc
 label: Internet Order Count for Next Period
+description: "Internet Order Count one period ahead (Lead 1, next / following period), StandardMonth calendar. Contrast Last Period (one back)."
 expression: "([Date Custom].[StandardMonth].CurrentMember.Lead(1),[Measures].[Internet\
   \ Order Count])"

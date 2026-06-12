@@ -1,6 +1,7 @@
 unique_name: Internet Sales Quarter to Date
 object_type: metric_calc
 label: Internet Sales Quarter to Date
+description: "Quarter-to-date (QTD) aggregation of Internet Sales Amount Local within the current quarter, StandardMonth calendar; NULL when empty. Sales-based; contrast the order-count YTD calcs."
 expression: "CASE WHEN ISEMPTY([Measures].[Internet Sales Amount Local]) THEN NULL\
   \ \nELSE\nAggregate(\nPeriodsToDate(\n[Date Custom].[StandardMonth].[Quarter],\n\
   [Date Custom].[StandardMonth].CurrentMember),\n[Measures].[Internet Sales Amount\

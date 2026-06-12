@@ -1,5 +1,6 @@
 unique_name: Bike Internet Sales
 object_type: metric_calc
 label: Bike Internet Sales
+description: "Internet Sales Amount Local fixed to the Bikes category and Mountain product line (tuple filter). Contrast Bike Internet Sales in France (adds country filter)."
 expression: "([Product].[Product Categories].[Category].&[1],[Product].[Product Model\
   \ Lines].[Product Line].&[M],[Measures].[Internet Sales Amount Local])"

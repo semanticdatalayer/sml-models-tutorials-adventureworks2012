@@ -1,6 +1,7 @@
 unique_name: Balance
 object_type: metric
 label: Balance
+description: "Financial account balance / GL amount in dollars from the finance fact, by account, scenario, and date. Finance measure, not a sales amount."
 calculation_method: sum
 unrelated_dimensions_handling: repeat
 dataset: Finance Facts

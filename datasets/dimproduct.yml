@@ -1,6 +1,7 @@
 unique_name: Product Dataset
 object_type: dataset
 label: Product Dataset
+description: "Product master: names, subcategory key, costs and prices, color, size, weight, class, style, model, and availability dates."
 connection_id: Connection - AdventureWorks2012
 table: dimproduct
 

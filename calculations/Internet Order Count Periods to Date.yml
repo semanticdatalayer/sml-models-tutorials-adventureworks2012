@@ -1,6 +1,7 @@
 unique_name: Internet Order Count Periods to Date
 object_type: metric_calc
 label: Internet Order Count Periods to Date
+description: "Periods-to-date / year-to-date running sum of Internet Order Count within the current year, StandardMonth Gregorian calendar. Contrast the 2007-anchored variant and the YTD version."
 expression: |-
   Sum(
       PeriodsToDate([Date Custom].[StandardMonth].[Year]),
