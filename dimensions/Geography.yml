@@ -1,12 +1,14 @@
 unique_name: Geography
 object_type: dimension
 label: Geography
+description: "Reseller geography / location: country, state-province, city, and postal code of reseller addresses. Reseller locations; contrast the Customer Geography hierarchy (consumers)."
 type: standard
 
 hierarchies:
 
   - unique_name: Geography
     label: Geography
+    description: "Reseller location rollup Country > State-Province > City > Postal Code. Reseller addresses; contrast Customer Geography."
     folder: Reseller Location
     levels:
 
@@ -22,6 +24,7 @@ hierarchies:
 
           - unique_name: City Name
             label: City Name
+            description: "Reseller city name (e.g. Toronto). Descriptive attribute; contrast Customer City Name."
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: city
@@ -32,6 +35,7 @@ hierarchies:
 
           - unique_name: Country Name
             label: Country Name
+            description: "Reseller country name (e.g. United States). Descriptive attribute; contrast Customer Country Name."
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: englishcountryregionname
@@ -41,6 +45,7 @@ hierarchies:
 
           - unique_name: Postal Code Name
             label: Postal Code Name
+            description: "Reseller zip / postal code. Descriptive attribute; contrast Customer Postal Code Name."
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: postalcode
@@ -52,6 +57,7 @@ hierarchies:
 
           - unique_name: State-Province Name
             label: State-Province Name
+            description: "Reseller state / province code. Descriptive attribute; contrast Customer State-Province."
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: stateprovincecode
@@ -67,6 +73,7 @@ hierarchies:
 
           - unique_name: Geography Key
             label: Geography Key
+            description: "Geography surrogate key on the hidden key level. Technical join attribute, not for reporting."
             folder: Reseller Location
             dataset: Geography Dataset
             name_column: geographykey
@@ -78,6 +85,7 @@ level_attributes:
 
   - unique_name: City
     label: City
+    description: "Reseller city (e.g. Toronto). Within reseller Geography; contrast Customer City."
     dataset: Geography Dataset
     name_column: city
     key_columns:
@@ -86,6 +94,7 @@ level_attributes:
 
   - unique_name: Country
     label: Country
+    description: "Reseller country / nation (e.g. United States, France). Top of reseller Geography; contrast Customer Country."
     dataset: Geography Dataset
     name_column: englishcountryregionname
     key_columns:
@@ -93,6 +102,7 @@ level_attributes:
 
   - unique_name: Geography Key Level
     label: Geography Key Level
+    description: "Hidden geography surrogate key; join target linking resellers to geography. Not for reporting."
     is_hidden: true
     dataset: Geography Dataset
     name_column: geographykey
@@ -101,6 +111,7 @@ level_attributes:
 
   - unique_name: Postal Code
     label: Postal Code
+    description: "Reseller zip / postal code. Lowest visible level of reseller Geography; contrast Customer Postal Code."
     dataset: Geography Dataset
     name_column: postalcode
     key_columns:
@@ -110,6 +121,7 @@ level_attributes:
 
   - unique_name: State-Province
     label: State-Province
+    description: "Reseller state / province name (e.g. California). Within reseller Geography; contrast Customer State-Province."
     dataset: Geography Dataset
     name_column: stateprovincename
     key_columns:

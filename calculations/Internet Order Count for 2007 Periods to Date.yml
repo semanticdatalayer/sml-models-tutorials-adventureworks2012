@@ -1,6 +1,7 @@
 unique_name: Internet Order Count for 2007 Periods to Date
 object_type: metric_calc
 label: Internet Order Count for 2007 Periods to Date
+description: "Periods-to-date sum of Internet Order Count anchored to calendar year 2007 (fixed-year YTD example), StandardMonth calendar. Contrast the unanchored Periods to Date calc."
 expression: |-
   Sum(
       PeriodsToDate(

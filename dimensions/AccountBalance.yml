@@ -1,10 +1,12 @@
 unique_name: AccountBalance
 object_type: dimension
 label: AccountBalance
+description: "Financial account dimension: account number, description, type (e.g. Assets, Liabilities), and value type for finance fact analysis."
 type: standard
 hierarchies:
   - unique_name: AccountBalance Hierarchy
     label: AccountBalance Hierarchy
+    description: "Financial account rollup with the account key at the leaf; carries account number, description, type, and value type attributes."
     folder: Account Data
     levels:
       - unique_name: AccountKey
@@ -12,6 +14,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Account Description
             label: Account Description
+            description: "Account name / description (e.g. Cash, Accounts Receivable). Identifies the GL account."
             folder: Account Data
             dataset: Account
             key_columns:
@@ -20,6 +23,7 @@ hierarchies:
             sort_column: accountdescription
           - unique_name: Account Number
             label: Account Number
+            description: "Account code / number (alternate key) of the GL account."
             folder: Account Data
             dataset: Account
             key_columns:
@@ -28,6 +32,7 @@ hierarchies:
             sort_column: accountcodealternatekey
           - unique_name: Account Type
             label: Account Type
+            description: "Account classification (e.g. Assets, Liabilities, Revenue, Expenditures). Groups GL accounts."
             folder: Account Data
             dataset: Account
             key_columns:
@@ -36,6 +41,7 @@ hierarchies:
             sort_column: accounttype
           - unique_name: Value Type
             label: Value Type
+            description: "Whether account values are Currency or Units. GL account property."
             folder: Account Data
             dataset: Account
             key_columns:
@@ -45,6 +51,7 @@ hierarchies:
 level_attributes:
   - unique_name: AccountKey
     label: AccountKey
+    description: "Hidden account surrogate key; join target for finance facts. Not for reporting."
     dataset: Account
     is_hidden: true
     key_columns:

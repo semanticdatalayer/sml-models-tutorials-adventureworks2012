@@ -1,6 +1,7 @@
 unique_name: InternetSalesReason
 object_type: dataset
 label: InternetSalesReason
+description: "Bridge table mapping internet sales order lines to sales reasons (many-to-many)."
 connection_id: Connection - AdventureWorks2012
 sql: SELECT * from adventureworks2012.factinternetsalesreason
 dialects:
