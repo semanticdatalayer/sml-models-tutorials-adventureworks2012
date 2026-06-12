@@ -1,6 +1,7 @@
 unique_name: Internet Order Count for Bikes
 object_type: metric_calc
 label: Internet Order Count for Bikes
+description: "Internet Order Count fixed to the Bikes category and Mountain product line (tuple filter). Contrast Internet Order Count for Accessories."
 expression: |-
   ([Product].[Product Categories].[Category].&[1],[Product].[Product Model Lines].[Product Line].&[M],
   [Measures].[Internet Order Count])

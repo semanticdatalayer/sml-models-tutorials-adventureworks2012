@@ -1,6 +1,7 @@
 unique_name: Product Category
 object_type: dataset
 label: Product Category
+description: "Product category lookup: category key and names (e.g. Bikes, Components)."
 connection_id: Connection - AdventureWorks2012
 table: dimproductcategory
 

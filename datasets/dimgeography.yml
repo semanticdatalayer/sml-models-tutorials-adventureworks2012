@@ -1,6 +1,7 @@
 unique_name: Geography Dataset
 object_type: dataset
 label: Geography Dataset
+description: "Geography lookup: city, state-province, country, and postal code; shared by customers and resellers."
 connection_id: Connection - AdventureWorks2012
 table: dimgeography
 

@@ -1,6 +1,7 @@
 unique_name: Internet Sales 30 Period Moving Average
 object_type: metric_calc
 label: Internet Sales 30 Period Moving Average
+description: "Moving / rolling average of Internet Order Count over the current and prior period (2-period window) on the StandardMonth calendar. Note: despite the label, the expression averages 2 periods of order count, not 30 periods of sales amount."
 expression: "Avg(\n    [Date Custom].[StandardMonth].CurrentMember.Lag(1):\n    [Date\
   \ Custom].[StandardMonth].CurrentMember, \n    [Measures].[Internet Order Count]\n\
   )"

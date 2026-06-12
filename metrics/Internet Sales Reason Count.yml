@@ -1,6 +1,7 @@
 unique_name: Internet Sales Reason Count
 object_type: metric
 label: Internet Sales Reason Count
+description: "Count of sales reason attributions on internet order lines (bridge rows); one order line can carry multiple reasons. Hidden utility measure, not an order count."
 calculation_method: count non-null
 visible: false
 dataset: InternetSalesReason

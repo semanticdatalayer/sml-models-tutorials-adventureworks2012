@@ -1,6 +1,7 @@
 unique_name: Reseller Dataset
 object_type: dataset
 label: Reseller Dataset
+description: "Reseller master: name, business type, bank, order frequency and month, employees, annual sales and revenue, and geography key."
 connection_id: Connection - AdventureWorks2012
 table: dimreseller
 

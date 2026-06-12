@@ -1,12 +1,14 @@
 unique_name: Customer
 object_type: dimension
 label: Customer
+description: "Internet customer dimension: geography rollup down to the individual customer, demographics (income, education, occupation), and contact details. Individual consumers; contrast Reseller (wholesale)."
 type: standard
 
 hierarchies:
 
   - unique_name: Customer Geography
     label: Customer Geography
+    description: "Customer location rollup Country > State-Province > City > Postal Code > Customer. Customer addresses; contrast Geography (reseller locations)."
     folder: Location  
     levels:
 
@@ -24,6 +26,7 @@ hierarchies:
 
           - unique_name: Address
             label: Address
+            description: "Customer street address (address line 1). Customer contact detail, not reseller."
             folder: Location
             dataset: Customer Dataset
             name_column: addressline1
@@ -33,6 +36,7 @@ hierarchies:
 
           - unique_name: Birth Date
             label: Birth Date
+            description: "Customer date of birth, for age-based demographics."
             folder: Customer Data
             dataset: Customer Dataset
             name_column: birthdate
@@ -53,6 +57,7 @@ hierarchies:
 
           - unique_name: Commute Distance
             label: Commute Distance
+            description: "Customer commute distance bracket (e.g. 0-1 Miles, 10+ Miles). Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: commutedistance
@@ -82,6 +87,7 @@ hierarchies:
 
           - unique_name: Education
             label: Education
+            description: "Customer education level (e.g. Bachelors, High School). Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: englisheducation
@@ -91,6 +97,7 @@ hierarchies:
 
           - unique_name: Email Address
             label: Customer Email Address
+            description: "Customer email address. Customer contact, not reseller."
             folder: Customer Data
             dataset: Customer Dataset
             name_column: emailaddress
@@ -100,6 +107,7 @@ hierarchies:
 
           - unique_name: Gender
             label: Gender
+            description: "Customer gender / sex (M, F). Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: gender
@@ -109,6 +117,7 @@ hierarchies:
 
           - unique_name: Home Owner
             label: Home Owner
+            description: "Whether the customer owns a home (homeowner Yes/No). Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: houseownerdesc
@@ -118,6 +127,7 @@ hierarchies:
 
           - unique_name: Marital Status
             label: Marital Status
+            description: "Customer marital status (Married, Single). Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: maritalstatusdesc
@@ -127,6 +137,7 @@ hierarchies:
 
           - unique_name: Number of Cars Owned
             label: Number of Cars Owned
+            description: "Number of cars the customer owns (0-4). Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: numbercarsowned
@@ -136,6 +147,7 @@ hierarchies:
 
           - unique_name: Number of Children At Home
             label: Number of Children At Home
+            description: "Number of children living at the customer home. Demographic; contrast Total Children."
             folder: Demographic
             dataset: Customer Dataset
             name_column: numberchildrenathome
@@ -145,6 +157,7 @@ hierarchies:
 
           - unique_name: Occupation
             label: Occupation
+            description: "Customer occupation / profession (e.g. Professional, Skilled Manual, Management). Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: englishoccupation
@@ -154,6 +167,7 @@ hierarchies:
 
           - unique_name: Phone
             label: Customer Phone
+            description: "Customer phone number. Customer contact, not reseller."
             folder: Customer Data
             dataset: Customer Dataset
             name_column: phone
@@ -175,6 +189,7 @@ hierarchies:
 
           - unique_name: State-Province2
             label: State-Province2
+            description: "Customer state / province code (e.g. CA, WA). Alternate state attribute on the customer leaf level."
             folder: Location
             dataset: Geography Dataset
             name_column: stateprovincecode
@@ -185,6 +200,7 @@ hierarchies:
 
           - unique_name: Total Children
             label: Total Children
+            description: "Total number of children the customer has. Demographic; contrast Number of Children At Home."
             folder: Demographic
             dataset: Customer Dataset
             name_column: totalchildren
@@ -194,6 +210,7 @@ hierarchies:
 
           - unique_name: Yearly Income
             label: Yearly Income
+            description: "Customer annual / yearly income in dollars. Demographic attribute."
             folder: Demographic
             dataset: Customer Dataset
             name_column: yearlyincome
@@ -205,6 +222,7 @@ level_attributes:
 
   - unique_name: Customer City
     label: Customer City
+    description: "City where the customer lives (e.g. Seattle). Within Customer Geography; contrast City in the reseller Geography dimension."
     dataset: Geography Dataset
     name_column: city
     key_columns:
@@ -213,6 +231,7 @@ level_attributes:
 
   - unique_name: Customer Country
     label: Customer Country
+    description: "Country / nation where the customer lives (e.g. United States, Canada). Top of Customer Geography; contrast reseller Country."
     dataset: Geography Dataset
     name_column: englishcountryregionname
     key_columns:
@@ -220,6 +239,7 @@ level_attributes:
 
   - unique_name: Customer Postal Code
     label: Customer Postal Code
+    description: "Customer zip / postal code. Within Customer Geography; contrast reseller Postal Code."
     dataset: Geography Dataset
     name_column: postalcode
     key_columns:
@@ -227,6 +247,7 @@ level_attributes:
 
   - unique_name: Customer State-Province
     label: Customer State-Province
+    description: "State / province code where the customer lives (e.g. CA, WA). Within Customer Geography; contrast reseller State-Province."
     dataset: Geography Dataset
     name_column: stateprovincecode
     key_columns:
@@ -235,6 +256,7 @@ level_attributes:
 
   - unique_name: Customer
     label: Customer
+    description: "Individual customer keyed by customer key (member name shows the key). Leaf of Customer Geography; see Customer Full Name for readable names."
     dataset: Customer Dataset
     name_column: customerkey
     key_columns:

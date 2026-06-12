@@ -1,6 +1,7 @@
 unique_name: Product Subcategory
 object_type: dataset
 label: Product Subcategory
+description: "Product subcategory lookup: subcategory key, names, and parent category key."
 connection_id: Connection - AdventureWorks2012
 table: dimproductsubcategory
 

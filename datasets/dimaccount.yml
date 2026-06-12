@@ -1,6 +1,7 @@
 unique_name: Account
 object_type: dataset
 label: Account
+description: "Financial account master: account key, number, description, type (assets, liabilities, etc.), and value type."
 connection_id: Connection - AdventureWorks2012
 table: dimaccount
 

@@ -1,12 +1,14 @@
 unique_name: Reseller
 object_type: dimension
 label: Reseller
+description: "Reseller / business partner dimension: store business type, bank, order frequency and month, employees, annual sales. Wholesale channel; contrast Customer (consumers)."
 type: standard
 
 hierarchies:
 
   - unique_name: Reseller Type
     label: Reseller Type
+    description: "Reseller rollup Business Type > Reseller (e.g. Specialty Bike Shop, Warehouse). Contrast Reseller Bank, Order Frequency, and Order Month hierarchies."
     folder: Reseller Data
     levels:
 
@@ -18,6 +20,7 @@ hierarchies:
 
           - unique_name: Annual Revenue
             label: Annual Revenue
+            description: "Reseller total annual revenue in dollars. Reseller financial attribute; contrast Annual Sales."
             folder: Sales Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -28,6 +31,7 @@ hierarchies:
 
           - unique_name: Annual Sales
             label: Annual Sales
+            description: "Reseller total annual sales in dollars. Reseller financial attribute; contrast Annual Revenue."
             folder: Sales Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -38,6 +42,7 @@ hierarchies:
 
           - unique_name: Bank
             label: Bank
+            description: "Bank name used by the reseller. Mirrors the Bank Name level of the Reseller Bank hierarchy."
             folder: Order Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -48,6 +53,7 @@ hierarchies:
 
           - unique_name: Business Type Name
             label: Business Type Name
+            description: "Reseller business type (e.g. Specialty Bike Shop, Value Added Reseller, Warehouse). Mirrors the Business Type level."
             folder: Reseller Data
             associated_hierarchy: Reseller Type
             dataset: Reseller Dataset
@@ -58,6 +64,7 @@ hierarchies:
 
           - unique_name: First Order Year
             label: First Order Year
+            description: "Calendar year of the reseller first order. Contrast Last Order Year."
             folder: Order Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -68,6 +75,7 @@ hierarchies:
 
           - unique_name: Reseller Geography Key
             label: Reseller Geography Key
+            description: "Geography key linking the reseller to its location. Technical join attribute."
             folder: Reseller Location
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -78,6 +86,7 @@ hierarchies:
 
           - unique_name: Last Order Year
             label: Last Order Year
+            description: "Calendar year of the reseller most recent order. Contrast First Order Year."
             folder: Order Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -88,6 +97,7 @@ hierarchies:
 
           - unique_name: Min Payment Amount
             label: Min Payment Amount
+            description: "Minimum payment amount required from the reseller in dollars."
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: minpaymentamountdesc
@@ -97,6 +107,7 @@ hierarchies:
 
           - unique_name: Min Payment Type
             label: Min Payment Type
+            description: "Type of minimum payment required from the reseller."
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
             name_column: minpaymenttypedesc
@@ -106,6 +117,7 @@ hierarchies:
 
           - unique_name: Number of Employees
             label: Number of Employees
+            description: "Employee count / headcount of the reseller business."
             folder: Reseller Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -116,6 +128,7 @@ hierarchies:
 
           - unique_name: Order Frequency Name
             label: Order Frequency Name
+            description: "How often the reseller orders (e.g. Annual, Quarterly, Monthly). Mirrors the Order Frequency level."
             folder: Order Data
             associated_hierarchy: Reseller Order Frequency
             dataset: Reseller Dataset
@@ -126,6 +139,7 @@ hierarchies:
 
           - unique_name: Order Month Name
             label: Order Month Name
+            description: "Typical month the reseller places orders. Mirrors the Order Month level."
             folder: Order Data
             associated_hierarchy: Reseller Order Month
             dataset: Reseller Dataset
@@ -136,6 +150,7 @@ hierarchies:
 
           - unique_name: Reseller Product Line
             label: Reseller Product Line
+            description: "Product line carried by the reseller (e.g. Road, Mountain). Reseller attribute, not the Product dimension Product Line."
             folder: Reseller Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -146,6 +161,7 @@ hierarchies:
 
           - unique_name: Reseller Name
             label: Reseller Name
+            description: "Reseller / store name (e.g. A Bike Store), distinguished by reseller key. Contrast Customer Full Name (consumers)."
 
             associated_hierarchy: Reseller Type
             dataset: Reseller Dataset
@@ -157,6 +173,7 @@ hierarchies:
 
           - unique_name: Year Opened
             label: Year Opened
+            description: "Calendar year the reseller business opened."
             folder: Reseller Data
             associated_hierarchy: Reseller Bank
             dataset: Reseller Dataset
@@ -167,6 +184,7 @@ hierarchies:
 
   - unique_name: Reseller Bank
     label: Reseller Bank
+    description: "Reseller rollup Bank Name > Reseller, grouping resellers by their bank. Contrast Reseller Type."
     folder: Order Data
     filter_empty: "yes"
 
@@ -178,6 +196,7 @@ hierarchies:
 
   - unique_name: Reseller Order Frequency
     label: Reseller Order Frequency
+    description: "Reseller rollup Order Frequency > Reseller (e.g. Annual, Quarterly, Monthly ordering cadence)."
     folder: Order Data
     filter_empty: "yes"
 
@@ -189,6 +208,7 @@ hierarchies:
 
   - unique_name: Reseller Order Month
     label: Reseller Order Month
+    description: "Reseller rollup Order Month > Reseller, grouping resellers by their typical order month."
     folder: Order Data
     filter_empty: "yes"
 
@@ -202,6 +222,7 @@ level_attributes:
 
   - unique_name: Bank Name
     label: Bank Name
+    description: "Bank used by the reseller. Top of the Reseller Bank hierarchy."
     dataset: Reseller Dataset
     name_column: bankname
     key_columns:
@@ -209,6 +230,7 @@ level_attributes:
 
   - unique_name: Business Type
     label: Business Type
+    description: "Reseller business type (Specialty Bike Shop, Value Added Reseller, Warehouse). Top of the Reseller Type hierarchy."
     dataset: Reseller Dataset
     name_column: businesstype
     key_columns:
@@ -216,6 +238,7 @@ level_attributes:
 
   - unique_name: Order Frequency
     label: Order Frequency
+    description: "How often the reseller orders (e.g. Annual, Quarterly, Monthly). Top of the Reseller Order Frequency hierarchy."
     dataset: Reseller Dataset
     name_column: orderfrequencydesc
     key_columns:
@@ -223,6 +246,7 @@ level_attributes:
 
   - unique_name: Order Month
     label: Order Month
+    description: "Typical month the reseller places orders. Top of the Reseller Order Month hierarchy."
     dataset: Reseller Dataset
     name_column: ordermonthdesc
     key_columns:
@@ -230,6 +254,7 @@ level_attributes:
 
   - unique_name: Reseller
     label: Reseller
+    description: "Individual reseller / store by name (e.g. A Bike Store). Leaf of all reseller hierarchies; contrast Customer (consumers)."
     dataset: Reseller Dataset
     name_column: resellername
     key_columns:
