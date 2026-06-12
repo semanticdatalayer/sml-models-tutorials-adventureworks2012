@@ -1,6 +1,7 @@
 unique_name: Internet Order Count for Previous Month
 object_type: metric_calc
 label: Internet Order Count for Previous Month
+description: "Internet Order Count for the previous sibling member (PrevMember) at the current StandardMonth level. Same idea as Last Period (Lag 1)."
 expression: |-
   ([Date Custom].[StandardMonth].CurrentMember.PrevMember,
       [Measures].[Internet Order Count])

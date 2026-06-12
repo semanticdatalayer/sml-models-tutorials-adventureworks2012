@@ -1,12 +1,14 @@
 unique_name: Product
 object_type: dimension
 label: Product
+description: "Product master dimension: category / subcategory rollup, model lines, stock levels, pricing, and physical attributes (color, size, weight). Sold in both internet and reseller channels."
 type: standard
 
 hierarchies:
 
   - unique_name: Product Categories
     label: Product Categories
+    description: "Product rollup Category > Subcategory > Product (e.g. Bikes > Mountain Bikes). Contrast Product Model Lines and Stock Level."
     folder: Product Data
     levels:
 
@@ -20,6 +22,7 @@ hierarchies:
 
           - unique_name: Category Name
             label: Category Name
+            description: "Product category name (e.g. Bikes, Clothing). Descriptive attribute mirroring the Category level."
             folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Category
@@ -30,6 +33,7 @@ hierarchies:
 
           - unique_name: Class
             label: Class
+            description: "Product class (High, Medium, Low; Not Applicable for components). Stocking attribute."
             folder: Stocking
             custom_empty_member:
               key:
@@ -45,6 +49,7 @@ hierarchies:
 
           - unique_name: Color
             label: Color
+            description: "Product color / colour (e.g. Black, Red, Silver). Stocking attribute."
             folder: Stocking
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -55,6 +60,7 @@ hierarchies:
 
           - unique_name: Days to Manufacture
             label: Days to Manufacture
+            description: "Number of days required to manufacture the product. Stocking attribute."
             folder: Stocking
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -65,6 +71,7 @@ hierarchies:
 
           - unique_name: Dealer Price
             label: Dealer Price
+            description: "Dealer / wholesale price of the product in dollars. Contrast List Price (retail) and Standard Cost."
             folder: Financial
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -75,6 +82,7 @@ hierarchies:
 
           - unique_name: End Date
             label: End Date
+            description: "Date the product was discontinued; shows Active while still sold. History attribute; contrast Start Date."
             folder: History
             custom_empty_member:
               key:
@@ -90,6 +98,7 @@ hierarchies:
 
           - unique_name: Large Photo
             label: Large Photo
+            description: "Reference to the product large photo, keyed by product. Technical attribute."
             folder: Stocking
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -100,6 +109,7 @@ hierarchies:
 
           - unique_name: List Price
             label: List Price
+            description: "Suggested retail list price / MSRP of the product in dollars. Contrast Dealer Price and Standard Cost."
             folder: Financial
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -110,6 +120,7 @@ hierarchies:
 
           - unique_name: Model Name
             label: Model Name
+            description: "Product model name (e.g. Road-150); assembly components grouped under a default member. Contrast Product Name (individual item)."
             folder: Product Data
             custom_empty_member:
               key:
@@ -125,6 +136,7 @@ hierarchies:
 
           - unique_name: Product Line Name
             label: Product Line Name
+            description: "Product line name (e.g. Road, Mountain, Touring). Descriptive attribute mirroring the Product Line level."
             folder: Product Data
             associated_hierarchy: Product Model Lines
             dataset: Product Dataset
@@ -135,6 +147,7 @@ hierarchies:
 
           - unique_name: Product Name
             label: Product Name
+            description: "Product name in English (e.g. Mountain-200 Black, 38). Descriptive attribute mirroring the Product level."
             folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -145,6 +158,7 @@ hierarchies:
 
           - unique_name: Reorder Point
             label: Reorder Point
+            description: "Inventory reorder point threshold for the product. Stocking attribute; contrast Safety Stock Level."
             folder: Stocking
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -155,6 +169,7 @@ hierarchies:
 
           - unique_name: Safety Stock Level Name
             label: Safety Stock Level Name
+            description: "Safety stock level value for the product. Mirrors the Safety Stock Level hierarchy level."
             folder: Stocking
             associated_hierarchy: Stock Level
             dataset: Product Dataset
@@ -165,6 +180,7 @@ hierarchies:
 
           - unique_name: Size Range
             label: Size Range
+            description: "Product size range bracket (e.g. 38-40 CM). Stocking attribute; contrast Size (exact value)."
             folder: Stocking
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -175,6 +191,7 @@ hierarchies:
 
           - unique_name: Size
             label: Size
+            description: "Product size (e.g. 38, 42, L). Stocking attribute; contrast Size Range (bracket)."
             folder: Stocking
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -185,6 +202,7 @@ hierarchies:
 
           - unique_name: Standard Cost
             label: Standard Cost
+            description: "Standard manufacturing cost of the product in dollars. Contrast List Price and Dealer Price."
             folder: Financial
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -195,6 +213,7 @@ hierarchies:
 
           - unique_name: Start Date
             label: Start Date
+            description: "Date the product became available for sale. History attribute; contrast End Date."
             folder: History
             associated_hierarchy: Product Categories
             dataset: Product Dataset
@@ -205,6 +224,7 @@ hierarchies:
 
           - unique_name: Status
             label: Status
+            description: "Product status (Current or Historical). History attribute."
             folder: History
             custom_empty_member:
               key:
@@ -220,6 +240,7 @@ hierarchies:
 
           - unique_name: Style
             label: Style
+            description: "Product style (Womens, Mens, Universal; Not Applicable for components). Stocking attribute."
             folder: Stocking
             custom_empty_member:
               key:
@@ -235,6 +256,7 @@ hierarchies:
 
           - unique_name: Subcategory Name
             label: Subcategory Name
+            description: "Product subcategory name (e.g. Mountain Bikes, Helmets). Descriptive attribute mirroring the Subcategory level."
             folder: Product Data
             associated_hierarchy: Product Categories
             dataset: Product Subcategory
@@ -245,6 +267,7 @@ hierarchies:
 
           - unique_name: Weight
             label: Weight
+            description: "Product weight (0 when not applicable). Stocking attribute."
             folder: Stocking
             custom_empty_member:
               key:
@@ -260,6 +283,7 @@ hierarchies:
 
   - unique_name: Product Model Lines
     label: Product Model Lines
+    description: "Product rollup Product Line > Model > Product (e.g. Road > Road-150). Contrast Product Categories and Stock Level."
     folder: Product Data
     filter_empty: "yes"
 
@@ -273,6 +297,7 @@ hierarchies:
 
   - unique_name: Stock Level
     label: Stock Level
+    description: "Product rollup Safety Stock Level > Product, for stocking / inventory analysis. Contrast Product Categories."
     folder: Stocking
     filter_empty: "yes"
 
@@ -286,6 +311,7 @@ level_attributes:
 
   - unique_name: Category
     label: Category
+    description: "Product category (Bikes, Components, Clothing, Accessories). Top of the Product Categories hierarchy."
     dataset: Product Category
     name_column: englishproductcategoryname
     key_columns:
@@ -293,6 +319,7 @@ level_attributes:
 
   - unique_name: Model
     label: Model
+    description: "Product model name (e.g. Road-150); assembly components grouped under a default member. Between Product Line and Product."
     custom_empty_member:
       key:
         - Assembly Components
@@ -304,6 +331,7 @@ level_attributes:
 
   - unique_name: Product
     label: 'Product '
+    description: "Individual product by English name (e.g. Mountain-200 Black, 38). Leaf of all product hierarchies."
     dataset: Product Dataset
     name_column: englishproductname
     key_columns:
@@ -311,6 +339,7 @@ level_attributes:
 
   - unique_name: Product Line
     label: Product Line
+    description: "Product line (e.g. Road, Mountain, Touring). Top of the Product Model Lines hierarchy."
     dataset: Product Dataset
     name_column: productlinename
     key_columns:
@@ -318,6 +347,7 @@ level_attributes:
 
   - unique_name: Safety Stock Level
     label: Safety Stock Level
+    description: "Safety stock level threshold for inventory. Top of the Stock Level hierarchy."
     dataset: Product Dataset
     name_column: safetystocklevel
     key_columns:
@@ -325,6 +355,7 @@ level_attributes:
 
   - unique_name: Subcategory
     label: Subcategory
+    description: "Product subcategory (e.g. Mountain Bikes, Helmets). Between Category and Product."
     dataset: Product Subcategory
     name_column: englishproductsubcategoryname
     key_columns:

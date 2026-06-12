@@ -1,6 +1,7 @@
 unique_name: Internet Sales
 object_type: dataset
 label: Internet Sales
+description: "Internet sales fact table at order line grain: quantities, prices, discounts, costs, sales amount, tax, freight, and order/ship/due date keys."
 connection_id: Connection - AdventureWorks2012
 table: factinternetsales
 

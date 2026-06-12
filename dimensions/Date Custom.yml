@@ -1,9 +1,11 @@
 unique_name: Date Custom
 object_type: dimension
 label: Date Custom
+description: "Date dimension with Gregorian (StandardMonth, StandardWeek), Retail 4-4-5 (Retail445), and ISO 8601 week calendars. Role-played as Ship and Due dates; default join is order date."
 hierarchies:
   - unique_name: StandardMonth
     label: StandardMonth
+    description: "Standard Gregorian calendar rollup Year > Half Year > Quarter > Month > Date. Role-played as Ship / Due dates; default is order date. Contrast StandardWeek, Retail445, and ISO8601Week."
     folder: Dates
     levels:
       - unique_name: Year
@@ -12,6 +14,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Half Year Of Year
             label: Half Year Of Year
+            description: "Half year number within the year (1-2), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -22,6 +25,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Quarter Of Half Year
             label: Quarter Of Half Year
+            description: "Quarter number within the half year (1-2), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -30,6 +34,7 @@ hierarchies:
             sort_column: quarter_of_half_year
           - unique_name: Quarter Of Year
             label: Quarter Of Year
+            description: "Quarter number within the year (1-4), Gregorian calendar. Role-played as Ship / Due dates; default is order date. Not the Retail445 Reporting Quarter Of Year."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -50,6 +55,7 @@ hierarchies:
             sort_column: datekey
           - unique_name: Day Of Month
             label: Day Of Month
+            description: "Day number within the month (1-31), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -59,6 +65,7 @@ hierarchies:
             sort_column: day_of_month_name
           - unique_name: Day Of Quarter
             label: Day Of Quarter
+            description: "Day number within the quarter, Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -68,6 +75,7 @@ hierarchies:
             sort_column: day_of_quarter
           - unique_name: Day Of Week
             label: Day Of Week
+            description: "Weekday number within the week, Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -77,6 +85,7 @@ hierarchies:
             sort_column: day_of_week
           - unique_name: Day Of Year
             label: Day Of Year
+            description: "Day number within the year (1-366), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -86,6 +95,7 @@ hierarchies:
             sort_column: day_of_year
           - unique_name: Month Of Half Year
             label: Month Of Half Year
+            description: "Month number within the half year (1-6), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -95,6 +105,7 @@ hierarchies:
             sort_column: month_of_half_year
           - unique_name: Month Of Quarter
             label: Month Of Quarter
+            description: "Month number within the quarter (1-3), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -104,6 +115,7 @@ hierarchies:
             sort_column: month_of_quarter
           - unique_name: Month Of Year
             label: Month Of Year
+            description: "Month number within the year (1-12), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -113,6 +125,7 @@ hierarchies:
             sort_column: month_of_year
           - unique_name: Month Name
             label: Month Name
+            description: "Calendar month label (e.g. January 2007), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -122,6 +135,7 @@ hierarchies:
             sort_column: month
           - unique_name: Quarter Name
             label: Quarter
+            description: "Calendar quarter label (e.g. Q1 2007), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -131,6 +145,7 @@ hierarchies:
             sort_column: quarter
           - unique_name: Week Of Year
             label: Week Of Year
+            description: "Week number within the year (1-53), Gregorian StandardWeek calendar. Role-played as Ship / Due dates; default is order date. Not the Reporting or ISO 8601 variant."
             folder: Dates
             associated_hierarchy: StandardWeek
             dataset: DateCustom
@@ -140,6 +155,7 @@ hierarchies:
             sort_column: week_of_year
           - unique_name: Week Name
             label: Week Name
+            description: "Calendar week label, Gregorian StandardWeek calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardWeek
             dataset: DateCustom
@@ -149,6 +165,7 @@ hierarchies:
             sort_column: week
           - unique_name: Year Name
             label: Year Name
+            description: "Calendar year label (e.g. 2007), Gregorian calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             associated_hierarchy: StandardMonth
             dataset: DateCustom
@@ -158,6 +175,7 @@ hierarchies:
             sort_column: year
   - unique_name: StandardWeek
     label: StandardWeek
+    description: "Standard Gregorian weekly rollup Year > Week > Date. Contrast StandardMonth (monthly) and ISO8601Week (ISO week numbering)."
     folder: Dates
     filter_empty: 'yes'
     levels:
@@ -166,6 +184,7 @@ hierarchies:
       - unique_name: Date
   - unique_name: Retail445
     label: Retail445
+    description: "Retail 4-4-5 reporting calendar rollup Reporting Year > Half Year > Quarter > Month > Week > Day. Contrast StandardMonth (Gregorian)."
     folder: Dates
     filter_empty: 'yes'
     levels:
@@ -175,6 +194,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Half Year Of Year
             label: Reporting Half Year Of Year
+            description: "Reporting half year number within the year (1-2), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -185,6 +205,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Quarter Of Half Year
             label: Reporting Quarter Of Half Year
+            description: "Reporting quarter number within the half year (1-2), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -193,6 +214,7 @@ hierarchies:
             sort_column: reporting_quarter_of_half_year
           - unique_name: Reporting Quarter Of Year
             label: Reporting Quarter Of Year
+            description: "Reporting quarter number within the year (1-4), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date. Not the Gregorian Quarter Of Year."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -203,6 +225,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Month Of Half Year
             label: Reporting Month Of Half Year
+            description: "Reporting month number within the half year (1-6), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -211,6 +234,7 @@ hierarchies:
             sort_column: reporting_month_of_half_year
           - unique_name: Reporting Month Of Quarter
             label: Reporting Month Of Quarter
+            description: "Reporting month number within the quarter (1-3), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -219,6 +243,7 @@ hierarchies:
             sort_column: reporting_month_of_quarter
           - unique_name: Reporting Month Of Year
             label: Reporting Month Of Year
+            description: "Reporting month number within the year (1-12), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -229,6 +254,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: Reporting Day Of Half Year
             label: Reporting Day Of Half Year
+            description: "Reporting day number within the half year, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -237,6 +263,7 @@ hierarchies:
             sort_column: reporting_day_of_half_year_name
           - unique_name: Reporting Day Of Month
             label: Reporting Day Of Month
+            description: "Reporting day number within the month, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -245,6 +272,7 @@ hierarchies:
             sort_column: reporting_day_of_month_name
           - unique_name: Reporting Day Of Quarter
             label: Reporting Day Of Quarter
+            description: "Reporting day number within the quarter, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -253,6 +281,7 @@ hierarchies:
             sort_column: reporting_day_of_quarter_name
           - unique_name: Reporting Day Of Week
             label: Reporting Day Of Week
+            description: "Reporting day number within the week (1-7), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -261,6 +290,7 @@ hierarchies:
             sort_column: reporting_day_of_week
           - unique_name: Reporting Day Of Year
             label: Reporting Day Of Year
+            description: "Reporting day number within the year, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -269,6 +299,7 @@ hierarchies:
             sort_column: reporting_day_of_year_name
           - unique_name: Reporting Day Name
             label: Reporting Day Name
+            description: "Reporting day label (date), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             format: yyyy-MM-dd HH:mm:ss
@@ -278,6 +309,7 @@ hierarchies:
             sort_column: reporting_day
           - unique_name: Reporting Half Year Name
             label: Reporting Half Year Name
+            description: "Reporting half year label, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -286,6 +318,7 @@ hierarchies:
             sort_column: reporting_half_year_name
           - unique_name: Reporting Month Name
             label: Reporting Month Name
+            description: "Reporting month label, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date. Not the Gregorian Month Name."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -294,6 +327,7 @@ hierarchies:
             sort_column: reporting_month_name
           - unique_name: Reporting Quarter Name
             label: Reporting Quarter Name
+            description: "Reporting quarter label, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date. Not the Gregorian Quarter."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -303,6 +337,7 @@ hierarchies:
             sort_column: reporting_quarter
           - unique_name: Reporting Week Of Half Year
             label: Reporting Week Of Half Year
+            description: "Reporting week number within the half year, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -311,6 +346,7 @@ hierarchies:
             sort_column: reporting_week_of_half_year_name
           - unique_name: Reporting Week Of Month
             label: Reporting Week Of Month
+            description: "Reporting week number within the month (1-5), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -319,6 +355,7 @@ hierarchies:
             sort_column: reporting_week_of_month_name
           - unique_name: Reporting Week Of Quarter
             label: Reporting Week Of Quarter
+            description: "Reporting week number within the quarter, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -327,6 +364,7 @@ hierarchies:
             sort_column: reporting_week_of_quarter_name
           - unique_name: Reporting Week Of Year
             label: Reporting Week Of Year
+            description: "Reporting week number within the year (1-53), Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date. Not the Gregorian Week Of Year."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -335,6 +373,7 @@ hierarchies:
             sort_column: reporting_week_of_year
           - unique_name: Reporting Week Name
             label: Reporting Week Name
+            description: "Reporting week label, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -343,6 +382,7 @@ hierarchies:
             sort_column: reporting_week
           - unique_name: Reporting Year Name
             label: Reporting Year Name
+            description: "Reporting year label, Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date. Not the Gregorian Year Name."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -353,6 +393,7 @@ hierarchies:
         is_hidden: true
   - unique_name: ISO8601Week
     label: ISO8601Week
+    description: "ISO 8601 week-numbering calendar rollup Year > Week > Day. Contrast StandardWeek (Gregorian weeks)."
     folder: Dates
     filter_empty: 'yes'
     levels:
@@ -362,6 +403,7 @@ hierarchies:
         secondary_attributes:
           - unique_name: ISO 8601 Day Of Week
             label: ISO 8601 Day Of Week
+            description: "Day number within the week (1-7), ISO 8601 week calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -370,6 +412,7 @@ hierarchies:
             sort_column: iso_8601_day_of_week
           - unique_name: ISO 8601 Day Of Year
             label: ISO 8601 Day Of Year
+            description: "Day number within the year, ISO 8601 week calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -378,6 +421,7 @@ hierarchies:
             sort_column: iso_8601_day_of_year
           - unique_name: ISO 8601 Day Name
             label: ISO 8601 Day Name
+            description: "Day label, ISO 8601 week calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -386,6 +430,7 @@ hierarchies:
             sort_column: iso_8601_day
           - unique_name: ISO 8601 Week Of Year
             label: ISO 8601 Week Of Year
+            description: "Week number within the year (1-53), ISO 8601 week calendar. Role-played as Ship / Due dates; default is order date. Not the Gregorian or Reporting Week Of Year."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -394,6 +439,7 @@ hierarchies:
             sort_column: iso_8601_week_of_year
           - unique_name: ISO 8601 Week Name
             label: ISO 8601 Week Name
+            description: "Week label, ISO 8601 week calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -402,6 +448,7 @@ hierarchies:
             sort_column: iso_8601_week
           - unique_name: ISO 8601 Year Name
             label: ISO 8601 Year Name
+            description: "Year label, ISO 8601 week calendar. Role-played as Ship / Due dates; default is order date."
             folder: Dates
             dataset: DateCustom
             key_columns:
@@ -413,6 +460,7 @@ hierarchies:
 level_attributes:
   - unique_name: Date
     label: Date
+    description: "Hidden day-grain date key; join target for internet, reseller, and finance facts (order, ship, due dates). Not for reporting."
     dataset: DateCustom
     is_hidden: true
     is_unique_key: true
@@ -423,6 +471,7 @@ level_attributes:
     time_unit: day
   - unique_name: Half Year
     label: Half Year
+    description: "Calendar half year (H1, H2), Gregorian StandardMonth hierarchy. Role-played as Ship / Due dates; default is order date. Not Reporting Half Year (Retail445)."
     dataset: DateCustom
     key_columns:
       - half_year
@@ -431,6 +480,7 @@ level_attributes:
     time_unit: halfyear
   - unique_name: ISO 8601 Day
     label: ISO 8601 Day
+    description: "Day grain of the ISO 8601 week calendar. Role-played as Ship / Due dates; default is order date."
     dataset: DateCustom
     is_unique_key: true
     key_columns:
@@ -439,6 +489,7 @@ level_attributes:
     time_unit: day
   - unique_name: ISO 8601 Week
     label: ISO 8601 Week
+    description: "ISO 8601 week (week-numbering standard). Role-played as Ship / Due dates; default is order date. Not the Gregorian Week or Reporting Week."
     dataset: DateCustom
     key_columns:
       - iso_8601_week
@@ -447,6 +498,7 @@ level_attributes:
     time_unit: week
   - unique_name: ISO 8601 Year
     label: ISO 8601 Year
+    description: "ISO 8601 week-numbering year. Role-played as Ship / Due dates; default is order date. Not the Gregorian Year or Reporting Year."
     dataset: DateCustom
     key_columns:
       - iso_8601_year
@@ -455,6 +507,7 @@ level_attributes:
     time_unit: year
   - unique_name: Month
     label: Month
+    description: "Calendar month (e.g. January 2007), Gregorian StandardMonth hierarchy. Role-played as Ship / Due dates; default is order date. Not Reporting Month (Retail445)."
     dataset: DateCustom
     key_columns:
       - month
@@ -463,6 +516,7 @@ level_attributes:
     time_unit: month
   - unique_name: Quarter
     label: Quarter
+    description: "Calendar quarter (e.g. Q1 2007), Gregorian StandardMonth hierarchy. Role-played as Ship / Due dates; default is order date. Not Reporting Quarter (Retail445)."
     dataset: DateCustom
     key_columns:
       - quarter
@@ -471,6 +525,7 @@ level_attributes:
     time_unit: quarter
   - unique_name: Reporting Day
     label: Reporting Day
+    description: "Day grain of the Retail 4-4-5 reporting calendar. Role-played as Ship / Due dates; default is order date."
     dataset: DateCustom
     format: yyyy-MM-dd HH:mm:ss
     is_unique_key: true
@@ -481,6 +536,7 @@ level_attributes:
     time_unit: day
   - unique_name: Reporting Half Year
     label: Reporting Half Year
+    description: "Retail 4-4-5 reporting half year. Role-played as Ship / Due dates; default is order date. Not the Gregorian Half Year."
     dataset: DateCustom
     key_columns:
       - reporting_half_year
@@ -489,6 +545,7 @@ level_attributes:
     time_unit: halfyear
   - unique_name: Reporting Month
     label: Reporting Month
+    description: "Retail 4-4-5 reporting month (4 or 5 weeks). Role-played as Ship / Due dates; default is order date. Not the Gregorian Month."
     dataset: DateCustom
     key_columns:
       - reporting_month
@@ -497,6 +554,7 @@ level_attributes:
     time_unit: month
   - unique_name: Reporting Quarter
     label: Reporting Quarter
+    description: "Retail 4-4-5 reporting quarter (13 weeks); also the join level for sales quotas. Role-played as Ship / Due dates; default is order date. Not the Gregorian Quarter."
     dataset: DateCustom
     key_columns:
       - reporting_quarter_of_year
@@ -506,6 +564,7 @@ level_attributes:
     time_unit: quarter
   - unique_name: Reporting Week
     label: Reporting Week
+    description: "Retail 4-4-5 reporting week. Role-played as Ship / Due dates; default is order date. Not the Gregorian Week or ISO 8601 Week."
     dataset: DateCustom
     key_columns:
       - reporting_week
@@ -514,6 +573,7 @@ level_attributes:
     time_unit: week
   - unique_name: Reporting Year
     label: Reporting Year
+    description: "Retail 4-4-5 reporting / fiscal year. Role-played as Ship / Due dates; default is order date. Not the Gregorian Year."
     dataset: DateCustom
     key_columns:
       - reporting_year
@@ -522,6 +582,7 @@ level_attributes:
     time_unit: year
   - unique_name: Week
     label: Week
+    description: "Calendar week, Gregorian StandardWeek hierarchy. Role-played as Ship / Due dates; default is order date. Not Reporting Week (Retail445) or ISO 8601 Week."
     dataset: DateCustom
     key_columns:
       - week
@@ -530,6 +591,7 @@ level_attributes:
     time_unit: week
   - unique_name: Year
     label: Year
+    description: "Calendar year (e.g. 2007), Gregorian StandardMonth hierarchy. Role-played as Ship / Due dates; default is order date. Not Reporting Year (Retail445) or ISO 8601 Year."
     dataset: DateCustom
     key_columns:
       - year
@@ -538,6 +600,7 @@ level_attributes:
     time_unit: year
   - unique_name: Year-Week
     label: Year
+    description: "Calendar year at the top of the StandardWeek hierarchy; same members as Year in StandardMonth. Role-played as Ship / Due dates; default is order date."
     dataset: DateCustom
     key_columns:
       - year

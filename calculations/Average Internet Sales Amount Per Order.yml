@@ -1,5 +1,6 @@
 unique_name: Average Internet Sales Amount Per Order
 object_type: metric_calc
 label: Average Internet Sales Amount Per Order
+description: "Average internet sales revenue per order: Internet Sales Amount Local divided by Internet Order Count. Dollars per order, not per unit."
 expression: "[Measures].[Internet Sales Amount Local] / [Measures].[Internet Order\
   \ Count]"

@@ -1,6 +1,7 @@
 unique_name: Customer Dataset
 object_type: dataset
 label: Customer Dataset
+description: "Customer master: names, demographics (income, education, occupation, children, cars), contact info, and geography key."
 connection_id: Connection - AdventureWorks2012
 table: dimcustomer
 
@@ -16,7 +17,7 @@ columns:
   - name: commutedistancesort
     data_type: "long"
     sql: CASE
-              WHEN commutedistance = '0-1 Miles' THEN 1 
+              WHEN commutedistance = '0-1 Miles' THEN 1
               WHEN commutedistance = '1-2 Miles' THEN 2
               WHEN commutedistance = '2-5 Miles' THEN 3
               WHEN commutedistance = '5-10 Miles' THEN 4
@@ -25,7 +26,7 @@ columns:
     dialects:
       - dialect: Postgresql
         sql: CASE
-              WHEN commutedistance = '0-1 Miles' THEN 1 
+              WHEN commutedistance = '0-1 Miles' THEN 1
               WHEN commutedistance = '1-2 Miles' THEN 2
               WHEN commutedistance = '2-5 Miles' THEN 3
               WHEN commutedistance = '5-10 Miles' THEN 4
@@ -33,28 +34,28 @@ columns:
             END
       - dialect: Snowflake
         sql: CASE
-              WHEN "commutedistance" = '0-1 Miles' THEN 1 
+              WHEN "commutedistance" = '0-1 Miles' THEN 1
               WHEN "commutedistance" = '1-2 Miles' THEN 2
               WHEN "commutedistance" = '2-5 Miles' THEN 3
               WHEN "commutedistance" = '5-10 Miles' THEN 4
               WHEN "commutedistance" = '10+ Miles' THEN 5
-            END   
-      - dialect: BigQuery   
+            END
+      - dialect: BigQuery
         sql: CASE
-              WHEN commutedistance = '0-1 Miles' THEN 1 
+              WHEN commutedistance = '0-1 Miles' THEN 1
               WHEN commutedistance = '1-2 Miles' THEN 2
               WHEN commutedistance = '2-5 Miles' THEN 3
               WHEN commutedistance = '5-10 Miles' THEN 4
               WHEN commutedistance = '10+ Miles' THEN 5
-            END 
-      - dialect: DatabricksSQL   
+            END
+      - dialect: DatabricksSQL
         sql: CASE
-              WHEN commutedistance = '0-1 Miles' THEN 1 
+              WHEN commutedistance = '0-1 Miles' THEN 1
               WHEN commutedistance = '1-2 Miles' THEN 2
               WHEN commutedistance = '2-5 Miles' THEN 3
               WHEN commutedistance = '5-10 Miles' THEN 4
               WHEN commutedistance = '10+ Miles' THEN 5
-            END            		   
+            END
   - name: customeralternatekey
     data_type: string
   - name: customerkey
@@ -84,23 +85,23 @@ columns:
         sql: CASE
               WHEN middlename IS NULL THEN CONCAT(firstname, ' ', lastname)
               ELSE CONCAT(firstname, ' ', middlename, '.', ' ', lastname)
-            END  
-      - dialect: Snowflake       
-        sql: 
+            END
+      - dialect: Snowflake
+        sql:
             CASE
               WHEN "middlename" IS NULL THEN CONCAT("firstname", ' ', "lastname")
               ELSE CONCAT("firstname", ' ', "middlename", '.', ' ', "lastname")
-            END 
-      - dialect: BigQuery       
+            END
+      - dialect: BigQuery
         sql: CASE
               WHEN middlename IS NULL THEN CONCAT(firstname, ' ', lastname)
               ELSE CONCAT(firstname, ' ', middlename, '.', ' ', lastname)
             END
-      - dialect: DatabricksSQL   
+      - dialect: DatabricksSQL
         sql: CASE
               WHEN middlename IS NULL THEN CONCAT(firstname, ' ', lastname)
               ELSE CONCAT(firstname, ' ', middlename, '.', ' ', lastname)
-            END     
+            END
   - name: gender
     data_type: string
   - name: genderdesc
@@ -111,10 +112,10 @@ columns:
       sql: CASE WHEN gender = 'M' THEN 'Male' ELSE 'Female' END
     - dialect: Snowflake
       sql: CASE WHEN "gender" = 'M' THEN 'Male' ELSE 'Female' END
-    - dialect: BigQuery  
+    - dialect: BigQuery
       sql: CASE WHEN gender = 'M' THEN 'Male' ELSE 'Female' END
-    - dialect: DatabricksSQL  
-      sql: CASE WHEN gender = 'M' THEN 'Male' ELSE 'Female' END  
+    - dialect: DatabricksSQL
+      sql: CASE WHEN gender = 'M' THEN 'Male' ELSE 'Female' END
   - name: geographykey
     data_type: "long"
   - name: houseownerdesc
@@ -125,10 +126,10 @@ columns:
       sql: CASE WHEN houseownerflag = 1 THEN 'Yes' ELSE 'No' END
     - dialect: Snowflake
       sql: CASE WHEN "houseownerflag" = 1 THEN 'Yes' ELSE 'No' END
-    - dialect: BigQuery  
+    - dialect: BigQuery
       sql: CASE WHEN houseownerflag = 1 THEN 'Yes' ELSE 'No' END
-    - dialect: DatabricksSQL  
-      sql: CASE WHEN houseownerflag = 1 THEN 'Yes' ELSE 'No' END  
+    - dialect: DatabricksSQL
+      sql: CASE WHEN houseownerflag = 1 THEN 'Yes' ELSE 'No' END
   - name: houseownerflag
     data_type: "long"
   - name: lastname
@@ -143,10 +144,10 @@ columns:
       sql: CASE WHEN maritalstatus = 'S' THEN 'Single' ELSE 'Married' END
     - dialect: Snowflake
       sql: CASE WHEN "maritalstatus" = 'S' THEN 'Single' ELSE 'Married' END
-    - dialect: BigQuery  
+    - dialect: BigQuery
       sql: CASE WHEN maritalstatus = 'S' THEN 'Single' ELSE 'Married' END
-    - dialect: DatabricksSQL  
-      sql: CASE WHEN maritalstatus = 'S' THEN 'Single' ELSE 'Married' END  
+    - dialect: DatabricksSQL
+      sql: CASE WHEN maritalstatus = 'S' THEN 'Single' ELSE 'Married' END
   - name: middlename
     data_type: string
   - name: namestyle
@@ -168,7 +169,7 @@ columns:
       - dialect: BigQuery
         sql: CONCAT(EXTRACT(MONTH FROM datefirstpurchase), ' ', EXTRACT(DAY FROM datefirstpurchase), ', ', EXTRACT(YEAR FROM datefirstpurchase))
       - dialect: DatabricksSQL
-        sql: CONCAT(DAY(datefirstpurchase),' ',MONTH(datefirstpurchase),',',YEAR(datefirstpurchase))  
+        sql: CONCAT(DAY(datefirstpurchase),' ',MONTH(datefirstpurchase),',',YEAR(datefirstpurchase))
   - name: spanisheducation
     data_type: string
   - name: spanishoccupation

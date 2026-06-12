@@ -1,6 +1,7 @@
 unique_name: Sales Amount Quota
 object_type: metric
 label: Sales Amount Quota
+description: "Sales quota / target / plan amount in dollars by calendar year and quarter. Goal figure to compare against actual sales amounts."
 calculation_method: sum
 unrelated_dimensions_handling: repeat
 dataset: Sales Quota Facts

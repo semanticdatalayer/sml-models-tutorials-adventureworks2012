@@ -1,6 +1,7 @@
 unique_name: Sales Quota Facts
 object_type: dataset
 label: Sales Quota Facts
+description: "Sales quota fact table: target sales amount by employee and calendar year and quarter."
 connection_id: Connection - AdventureWorks2012
 table: factsalesquota
 

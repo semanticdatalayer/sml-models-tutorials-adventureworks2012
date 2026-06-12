@@ -1,6 +1,7 @@
 unique_name: DateCustom
 object_type: dataset
 label: DateCustom
+description: "Date dimension table with Gregorian, ISO 8601, and Retail 4-4-5 reporting calendars at day grain."
 connection_id: Connection - AdventureWorks2012
 table: datecustom
 
