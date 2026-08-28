@@ -3,7 +3,7 @@ object_type: metric
 label: Unit Price Discount Percent
 description: "Sum of unit price discount percentages on reseller sales lines; promotional discount rate input (hidden utility measure). Not a discount dollar amount."
 calculation_method: sum
-visible: false
+is_hidden: true
 unrelated_dimensions_handling: empty
 dataset: Reseller Sales
 column: unitpricediscountpct
